@@ -194,7 +194,8 @@ A Biblioteca de Conteúdos (projeto paralelo) já foi projetada para consumo por
 - ~~Skill `briefing-unity`~~ ✅ Criada com spec completa e gates definidos
 - ~~Gates de aprovação conversacionais~~ ✅ Definidos na skill (A/E/C)
 - ~~Instalar `calendario-comercial` no projeto~~ ✅ Instalada
-- Instalar skills restantes por ordem de fluxo (`schwartz-copy`, `ogilvy-copy`, geração de imagem, publicação) — ver [MAPA-TECNICO.md](MAPA-TECNICO.md)
+- ~~Instalar `schwartz-copy` e `ogilvy-copy`~~ ✅ Instaladas
+- Instalar skills de geração de imagem e publicação por ordem de fluxo — ver [MAPA-TECNICO.md](MAPA-TECNICO.md)
 
 **Fluxo:**
 ```

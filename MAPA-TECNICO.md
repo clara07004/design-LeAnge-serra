@@ -247,8 +247,8 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 |---|---|---|---|
 | 1 | `calendario-comercial` | Local (`_modelo-cliente`) | ✅ Instalada |
 | ✅ | `briefing-unity` | Criada neste projeto | ✅ Instalada |
-| 2a | `schwartz-copy` | github.com/duduesh/schwartz-copy | 🔜 Próxima |
-| 2b | `ogilvy-copy` | github.com/duduesh/ogilvy-copy | 🔜 Próxima |
+| 2a | `schwartz-copy` | github.com/duduesh/schwartz-copy | ✅ Instalada |
+| 2b | `ogilvy-copy` | github.com/duduesh/ogilvy-copy | ✅ Instalada |
 | 3a | `carrossel-unity` | github.com/duduesh/carrossel-ratos | 🔜 Antes da 1ª run |
 | 3b | `gpt-image2-unity` | github.com/duduesh/gpt-image2-ratos | 🔜 Antes da 1ª run |
 | 3c | `nanobanana-unity` | github.com/duduesh/nanobanana-ratos | 🔜 Fallback |
