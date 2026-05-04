@@ -40,10 +40,10 @@
 |---|---|---|---|
 | Plataforma/OS | `dobralabs/ccos-unity` | Orquestra skills no Claude Code, contexto persistente de marca, auto-sync GitHub | ✅ Pronto |
 | Calendário estratégico | `calendario-comercial` skill | Define QUANDO e POR QUÊ — janelas comerciais, cultura pop, sazonalidade | ✅ Pronto |
-| Geração de carrossel | `duduesh/carrossel-unity` | Texto + HTML + PNG via Playwright, 3 estilos, Instagram/TikTok | ✅ Pronto |
+| Geração de carrossel | `duduesh/carrossel-unity` | Texto + HTML + PNG via Playwright, 3 estilos, Instagram/TikTok; integra gpt-image2-unity para imagens fotográficas nos slides de capa e impacto (máx 3/carrossel) | ✅ Pronto |
 | Copy de marca | `duduesh/ogilvy-copy` | Framework Ogilvy — copy de longo prazo, construção de identidade | ✅ Pronto |
 | Copy de vendas | `duduesh/schwartz-copy` | Framework Schwartz — copy de conversão, 6 lead types, por nível de consciência | ✅ Pronto |
-| Geração de imagem (default) | `duduesh/gpt-image2-unity` | GPT Image 2 via OAuth ChatGPT — usa quota da assinatura, sem custo adicional; latência 60-180s | ✅ Pronto |
+| Geração de imagem (default) | `duduesh/gpt-image2-unity` | gpt-image-1 via OpenAI API (key em credentials/openai_key.txt); ~$0,02–$0,10/imagem quality:high; latência 60-180s | ✅ Instalada |
 | Geração de imagem (fallback) | `duduesh/nanobanana-unity` | Google Gemini, grátis, rápido — entra quando quota do ChatGPT estiver no limite | ✅ Pronto |
 | Geração de imagem (contingência) | `duduesh/image-gen-unity` | GPT Image 2 via FAL API — pago por uso: ~$0,06–$0,22/imagem; carrossel de 10 cards = até $2,20 | ✅ Pronto |
 | Publicação social | `duduesh/publicar-social-unity` | Instagram, TikTok, LinkedIn via Post for Me ou Meta Graph API | ✅ Pronto |
@@ -76,7 +76,7 @@
   Humano valida gancho, tom e direção antes de gerar assets
           │
           ├── formato carrossel ──→ [CARROSSEL-UNITY]  ← já existe
-          │                          PNG pronto para Instagram/TikTok
+          │                          Texto + imagens GPT (capa + impacto) + HTML + PNG
           │
           ├── formato imagem ────→ [GPT-IMAGE2-UNITY]  ← default (OAuth ChatGPT, sem custo adicional)
           │                       → [NANOBANANA-UNITY] ← fallback (Gemini, grátis, quota esgotada)
@@ -129,10 +129,10 @@
 |---|---|---|
 | Plataforma/OS | **CCOS-Unity** (Claude Code local) | ✅ Existe |
 | Calendário/contexto externo | **calendario-comercial** skill | ✅ Existe |
-| Geração de carrossel | **carrossel-unity** (HTML → PNG via Playwright, 3 estilos) | ✅ Existe |
+| Geração de carrossel | **carrossel-unity** (HTML → PNG via Playwright, 3 estilos; imagens via gpt-image2-unity integrado) | ✅ Existe |
 | Copy de marca | **ogilvy-copy** skill | ✅ Existe |
 | Copy de vendas | **schwartz-copy** skill | ✅ Existe |
-| Geração de imagem (default) | **gpt-image2-unity** (GPT Image 2 via OAuth ChatGPT) | ✅ Existe |
+| Geração de imagem (default) | **gpt-image2-unity** (gpt-image-1 via OpenAI API key; openai SDK 2.33.0 instalado) | ✅ Instalada |
 | Geração de imagem (fallback) | **nanobanana-unity** (Gemini, grátis) | ✅ Existe |
 | Geração de imagem (contingência) | **image-gen-unity** (GPT Image 2 via FAL API, pago) | ✅ Existe |
 | Publicação social | **publicar-social-unity** (Post for Me $10/mês ou Meta Graph API) | ✅ Existe |
@@ -158,9 +158,15 @@
 - Canva API no MVP — acesso restrito (programa de parceiros); carrossel-unity entrega o mesmo resultado
 
 **Hierarquia de geração de imagem:**
-1. `gpt-image2-unity` (default) — GPT Image 2 via OAuth ChatGPT; usa quota da assinatura ChatGPT (consome 3-5x mais rápido que texto); latência 60-180s por imagem
-2. `nanobanana-unity` (fallback) — Gemini, grátis e rápido; entra quando quota do ChatGPT estiver esgotada
-3. `image-gen-unity` (contingência) — GPT Image 2 via FAL API; ativar só quando as opções acima não estiverem disponíveis; custo: ~$0,06/imagem (média) a $0,22/imagem (alta qualidade) — carrossel de até 10 cards pode custar até $2,20
+1. `gpt-image2-unity` (default) — modelo gpt-image-1 via OpenAI API; API key em `credentials/openai_key.txt`; custo ~$0,02–$0,10/imagem (quality: high); latência 60-180s; usado diretamente pelo carrossel-unity e standalone
+2. `nanobanana-unity` (fallback) — Gemini, grátis e rápido; entra quando a key OpenAI não estiver disponível ou a API falhar — **pendente instalação**
+3. `image-gen-unity` (contingência) — GPT Image 2 via FAL API; ativar só quando as opções acima não estiverem disponíveis; custo: ~$0,06/imagem (média) a $0,22/imagem (alta qualidade) — carrossel de até 10 cards pode custar até $2,20 — **pendente instalação**
+
+**Uso do gpt-image2 no carrossel:**
+- Fase 1.5 do fluxo carrossel-unity: gera imagens fotográficas antes de criar os HTMLs
+- Slides com imagem: capa (sempre) + até 2 slides de impacto (máx 3/carrossel)
+- Imagens salvas como `img-slideXX.png` na pasta do carrossel; referenciadas por caminho relativo nos HTMLs
+- Overlay `rgba(0,0,0,0.45)` aplicado no HTML para garantir legibilidade do texto sobre a foto
 
 ---
 
@@ -250,7 +256,7 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 | 2a | `schwartz-copy` | github.com/duduesh/schwartz-copy | ✅ Instalada |
 | 2b | `ogilvy-copy` | github.com/duduesh/ogilvy-copy | ✅ Instalada |
 | 3a | `carrossel-unity` | github.com/duduesh/carrossel-ratos | ✅ Instalada |
-| 3b | `gpt-image2-unity` | github.com/duduesh/gpt-image2-ratos | 🔜 Antes da 1ª run |
+| 3b | `gpt-image2-unity` | github.com/duduesh/gpt-image2-ratos | ✅ Instalada |
 | 3c | `nanobanana-unity` | github.com/duduesh/nanobanana-ratos | 🔜 Fallback |
 | 3d | `image-gen-unity` | github.com/duduesh/image-gen-ratos | 🔜 Contingência |
 | 4 | `publicar-social-unity` | github.com/duduesh/publicar-social-ratos | 🔜 Quando chegar na publicação |
@@ -314,10 +320,10 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 | Skill | Repo | Input | Output |
 |---|---|---|---|
 | `calendario-comercial` | interno | mês, empresa, produtos | janelas comerciais, tema, timing |
-| `carrossel-unity` | duduesh/carrossel-unity | tema, estilo | PNGs 1080×1350 (Instagram) ou 1080×1920 (TikTok) |
+| `carrossel-unity` | duduesh/carrossel-unity | tema, estilo | PNGs 1080×1350 (Instagram) ou 1080×1920 (TikTok); imagens fotográficas geradas via gpt-image2-unity na capa e slides de impacto |
 | `ogilvy-copy` | duduesh/ogilvy-copy | briefing de marca | copy de longo prazo, headlines, manifestos |
 | `schwartz-copy` | duduesh/schwartz-copy | produto, audience, consciousness level | copy de conversão, 6 lead types |
-| `gpt-image2-unity` | duduesh/gpt-image2-unity | prompt, aspect ratio | imagem PNG via GPT Image 2 (OAuth ChatGPT, default) |
+| `gpt-image2-unity` | duduesh/gpt-image2-unity | prompt em inglês, aspect ratio (square/portrait/landscape) | imagem PNG via gpt-image-1 (OpenAI API key; openai SDK 2.33.0; ~$0,02–$0,10/img) |
 | `nanobanana-unity` | duduesh/nanobanana-unity | prompt em inglês, aspect ratio | imagem PNG via Gemini (grátis, fallback) |
 | `image-gen-unity` | duduesh/image-gen-unity | prompt, qualidade, aspect ratio, ref. opcional | imagem PNG via GPT Image 2 (FAL API, contingência paga) |
 | `publicar-social-unity` | duduesh/publicar-social-unity | imagem/texto, plataformas, data/hora | URLs dos posts publicados + IDs |

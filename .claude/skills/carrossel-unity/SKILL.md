@@ -17,6 +17,8 @@ description: >
 - **Tom de voz:** `_contexto/preferencias.md`
 - **Playwright CLI:** renderização via `npx playwright screenshot`
 - **Node.js:** já instalado (v24.15.0). PATH: `C:\Program Files\nodejs`
+- **Geração de imagem (default):** `.claude/skills/gpt-image2-unity/gerar-imagem.py` + `credentials/openai_key.txt`
+- **Geração de imagem (fallback):** `.claude/skills/nanobanana-unity/` (Gemini, grátis — se GPT falhar)
 
 ## Comando de renderização (Windows)
 
@@ -61,7 +63,50 @@ O usuário fornece:
 
 6. Salvar o texto em `conteudo/carrosseis/[tema]/carousel-text.md`
 
-**CHECKPOINT:** mostrar o texto completo + as 3 opções de capa. Aguardar o usuário escolher a capa e aprovar o texto antes de seguir pra Fase 2.
+**CHECKPOINT:** mostrar o texto completo + as 3 opções de capa. Aguardar o usuário escolher a capa e aprovar o texto antes de seguir pra Fase 1.5.
+
+---
+
+### Fase 1.5 — Geração de Imagens (GPT Image 2)
+
+Após o texto aprovado, identificar quais slides se beneficiam de uma imagem fotográfica de fundo ou de apoio:
+
+**Slides que recebem imagem:**
+- **Slide 1 (Capa):** sempre — imagem fotográfica que represente o tema principal
+- **Slides de impacto (dados, fatos, revelações):** opcional — imagem contextual que reforce o conteúdo
+- **Slides puramente tipográficos (listas, bullets, texto longo):** sem imagem — layout clean
+
+Regra: **menos é mais**. Máximo de 3 imagens por carrossel de 8-10 slides.
+
+#### Construir prompts para cada imagem
+
+Para cada slide que receberá imagem, criar um prompt em inglês:
+- Descrever a cena concreta relacionada ao conteúdo do slide (ex: "drywall installation in a modern apartment")
+- Incluir: `professional photography`, iluminação (natural/artificial), enquadramento
+- Incluir: `no text overlay`, `no watermarks`, `photorealistic`
+- Incluir contexto de construção a seco quando relevante: `drywall`, `steel frame`, `dry construction`
+- **Nunca:** obras com EPI incorreto, texto embutido na imagem, ilustrações genéricas
+- Aspect ratio: `portrait` (1024×1536) para encaixar em 1080×1350 via CSS object-fit
+
+Mostrar todos os prompts de uma vez antes de gerar qualquer imagem — usuário confirma ou ajusta.
+
+#### Gerar as imagens (GPT Image 2 → fallback Nanobanana)
+
+Para cada imagem, executar via PowerShell:
+```powershell
+python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "PROMPT" "conteudo/carrosseis/TEMA/instagram/img-slideXX.png" "portrait"
+```
+
+- Avisar o usuário que cada imagem leva 60-180s
+- Se o script falhar (exit code ≠ 0):
+  - Verificar se `credentials/openai_key.txt` existe — se não, pedir pro usuário adicionar
+  - Se a key existe mas falhou (quota/erro): avisar e oferecer fallback Nanobanana
+  - **Fallback Nanobanana:** usar `.claude/skills/nanobanana-unity/` com o mesmo prompt (se a skill estiver instalada)
+  - Se Nanobanana também não estiver disponível: prosseguir sem imagem nesse slide, avisar o usuário
+
+Salvar cada imagem em `conteudo/carrosseis/[tema]/instagram/img-slideXX.png`.
+
+**CHECKPOINT:** mostrar as imagens geradas. Usuário aprova ou pede regeneração individual antes de seguir pra Fase 2.
 
 ---
 
@@ -84,6 +129,20 @@ O usuário fornece:
 - Cor de destaque: cor do design guide (ou `#FFD600`)
 - Variação visual: usar pelo menos 2 layouts diferentes entre os slides (ex: texto simples, destaque com número grande, card com borda, citação em destaque)
 - Último slide: apenas branding e CTA, sem texto longo
+
+**Slides com imagem gerada (Fase 1.5):**
+- Referenciar com caminho relativo: `<img src="./img-slideXX.png">`
+- Imagem como fundo ou elemento visual — usar `object-fit: cover` quando for background
+- Sobrepor um overlay escuro semi-transparente (`rgba(0,0,0,0.45)`) para garantir legibilidade do texto
+- Exemplo de background com imagem:
+  ```html
+  <div style="position:relative; width:1080px; height:1350px; overflow:hidden;">
+    <img src="./img-slide01.png" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
+    <div style="position:relative;z-index:1; /* conteúdo do slide */ ">...</div>
+  </div>
+  ```
+- Slides sem imagem: usar fundo sólido normalmente
 
 4. Salvar HTMLs em `conteudo/carrosseis/[tema]/instagram/`
 5. Renderizar cada HTML em PNG via PowerShell (comando acima)
@@ -113,10 +172,13 @@ Se sim:
 conteudo/carrosseis/[tema]/
   carousel-text.md          ← texto aprovado + legenda sugerida
   instagram/
+    img-slide01.png          ← imagem gerada pelo GPT (capa)
+    img-slide04.png          ← imagem gerada pelo GPT (slide de impacto, se houver)
     slide-01.html → slide-01.png
     slide-02.html → slide-02.png
     ...
   tiktok/ (se solicitado)
+    img-slide01.png          ← mesma imagem, reutilizada
     slide-01.html → slide-01.png
     ...
 ```
