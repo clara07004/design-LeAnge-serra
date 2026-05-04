@@ -83,7 +83,7 @@ O sistema não parte do zero — as seguintes ferramentas já existem como skill
 | Publicação social | `duduesh/publicar-social-unity` | Instagram, TikTok, LinkedIn via Post for Me ou Meta Graph API |
 | Triagem YouTube | `duduesh/triagem-youtube-unity` | Score editorial, SEO e títulos otimizados via DataForSEO |
 
-**Status de instalação:** `calendario-comercial` ✅ e `briefing-unity` ✅ instaladas. Demais skills sendo instaladas por ordem de fluxo — ver [MAPA-TECNICO.md](MAPA-TECNICO.md).
+**Status de instalação:** `calendario-comercial` ✅, `briefing-unity` ✅, `schwartz-copy` ✅, `ogilvy-copy` ✅, `carrossel-unity` ✅ instaladas. Demais skills sendo instaladas por ordem de fluxo — ver [MAPA-TECNICO.md](MAPA-TECNICO.md).
 
 ---
 
@@ -161,7 +161,7 @@ Projeto paralelo que alimenta o `briefing-unity` com dados técnicos reais sobre
 
 | Fase | O que entrega |
 |---|---|
-| **MVP** | ✅ `briefing-unity` + gates criados. Skills sendo instaladas por fluxo. Validação: 10 conteúdos. |
+| **MVP** | ✅ Skills do fluxo principal instaladas (`calendario`, `briefing`, `copy`, `carrossel`). Node.js + Playwright prontos. Próximo: 1ª run real do fluxo. Validação: 10 conteúdos. |
 | **V1** | Deploy remoto (n8n Cloud / VPS) + biblioteca técnica + `roteiro-unity` |
 | **V2** | Publicação automática + coleta de métricas + registro no Supabase |
 | **V3** | Loop de inteligência + score de conteúdo + sugestão proativa + dashboard |
@@ -195,5 +195,4 @@ Cada empresa do Grupo Unity opera com seu próprio workspace CCOS independente �
 
 ---
 
-*Documentação atualizada em 2026-05-03.*  
-*Última atualização: 2026-05-03 — `briefing-unity` criada, `calendario-comercial` instalada, roadmap de instalação em andamento.*
+*Última atualização: 2026-05-04 — `carrossel-unity` instalada, Node.js 24 + Playwright configurados e testados. Fluxo MVP pronto para 1ª run.*
