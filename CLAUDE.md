@@ -35,43 +35,43 @@ Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o
 ## Skills disponíveis
 
 **Skills do sistema CCOS (genéricas):**
-- `/iniciar` — carrega o contexto do negócio no começo de cada sessão
 - `/setup` — configura o sistema pro seu negócio (rodar na primeira vez)
 - `/syncar` — salva o trabalho no GitHub (commit + push)
 - `/mapear` — entrevista processos repetitivos e cria skills personalizadas
 
 **Skills de conteúdo Unity:**
-- `/briefing-unity` — gera briefing completo a partir do calendario-comercial + contexto da marca
-- `/carrossel-unity` — gera carrossel HTML → PNG via Playwright (Instagram/TikTok)
-- `/gpt-image2-unity` — geração de imagem via GPT Image 2 (OAuth ChatGPT, sem custo extra)
-- `/nanobanana-unity` — geração de imagem via Gemini (grátis, fallback)
-- `/image-gen-unity` — geração de imagem via FAL API (pago, contingência)
-- `/publicar-social-unity` — publica em Instagram, TikTok, LinkedIn
+- `/calendario-comercial` — mapa de oportunidades do período (quando e o quê postar)
+- `/briefing-unity` — briefing completo de um tema: objetivo, mensagem, formato, referências
+- `/carrossel-unity` — produção de carrossel: texto + HTML + PNG via Playwright
+- `/estatico-unity` — produção de post card único: foto IA + HTML + PNG via Playwright
+- `/roteiro-unity` — roteiro de vídeo para Reels/TikTok (orgânico via Ogilvy, tráfego via Schwartz)
+- `/publicar-social-unity` — publica conteúdo aprovado no Instagram, TikTok, LinkedIn
 - `/triagem-youtube-unity` — análise editorial para YouTube
 
-**Skills genéricas instaladas:**
-- `/schwartz-copy` — copy de resposta direta e conversão (metodologia Eugene Schwartz)
-- `/ogilvy-copy` — copy de marca, posicionamento e branding (metodologia David Ogilvy)
-- `/copywriting` — copy de marketing para qualquer página
-- `/brainstorming` — exploração criativa antes de implementar
-- `/frontend-design` — interfaces web de alta qualidade
-- `/landing-page-design` — landing pages otimizadas para conversão
-- `/ai-seo` — otimização para IA e motores de busca
-- `/ads` — auditoria e otimização de campanhas pagas
-- `/adversarial-review` — revisão crítica cross-model
+**Motores (usados internamente pelas skills de produção):**
+- `/gpt-image2-unity` — gera foto de fundo via GPT Image 2 (motor de imagem do carrossel e post estático)
+- `/nanobanana-unity` — fallback de imagem via Gemini (grátis)
+- `/image-gen-unity` — contingência de imagem via FAL API (pago)
+- `/ogilvy-copy` — copy de marca e conteúdo orgânico (motor do roteiro orgânico)
+- `/schwartz-copy` — copy de resposta direta (motor do roteiro de tráfego pago)
 
 ---
 
 ## Fluxo principal de conteúdo
 
 ```
-/calendario → [aprova] → /briefing-unity → [aprova] → /carrossel-unity
-                                                      → /gpt-image2-unity (→ /nanobanana → /image-gen)
-                                                      → /roteiro-unity (V1)
-                                          → [aprova] → /publicar-social-unity
+/calendario-comercial
+    ↓ [aprova calendário]
+/briefing-unity  →  define o formato do conteúdo
+    ↓ [aprova briefing]
+    ├── formato carrossel  →  /carrossel-unity         (motor: gpt-image2-unity)
+    ├── formato imagem     →  /estatico-unity          (motor: gpt-image2-unity)
+    └── formato vídeo      →  /roteiro-unity           (motor: ogilvy ou schwartz)
+    ↓ [aprova conteúdo]
+/publicar-social-unity
 ```
 
-**Aprovação humana obrigatória** em cada etapa crítica — o fluxo para e aguarda antes de avançar.
+**Aprovação humana obrigatória** em cada etapa — o fluxo para e aguarda antes de avançar.
 
 ---
 

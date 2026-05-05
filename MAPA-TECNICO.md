@@ -49,7 +49,7 @@
 | Publicação social | `duduesh/publicar-social-unity` | Instagram, TikTok, LinkedIn via Post for Me ou Meta Graph API | ✅ Pronto |
 | Triagem YouTube | `duduesh/triagem-youtube-unity` | Análise editorial de temas — score, SEO, títulos otimizados (DataForSEO) | ✅ Pronto |
 
-**O que falta construir:** skill `roteiro-unity` (V1). `briefing-unity` e gates de aprovação já estão definidos.
+**Atualização 2026-05-05:** `estatico-unity` e `roteiro-unity` criadas. `gpt-image2-unity`, `ogilvy-copy` e `schwartz-copy` reclassificados como motores internos (não são acionados diretamente no fluxo de produção — são chamados por outras skills). `/setup` reescrito com checkpoint de confirmação obrigatório, pergunta de manual da marca e coleta de frequência por plataforma. `/iniciar` removido. `calendario-comercial` atualizado para ler contexto e gerar output proporcional à frequência configurada.
 
 ---
 
@@ -78,12 +78,13 @@
           ├── formato carrossel ──→ [CARROSSEL-UNITY]  ← já existe
           │                          Texto + imagens GPT (capa + impacto) + HTML + PNG
           │
-          ├── formato imagem ────→ [GPT-IMAGE2-UNITY]  ← default (OAuth ChatGPT, sem custo adicional)
-          │                       → [NANOBANANA-UNITY] ← fallback (Gemini, grátis, quota esgotada)
-          │                       → [IMAGE-GEN-UNITY]  ← contingência (FAL API, pago — até $2,20/carrossel)
+          ├── formato imagem ────→ [ESTATICO-UNITY]  ← ✅ criado (2026-05-05)
+          │                          motor foto: gpt-image2-unity → nanobanana → image-gen
+          │                          monta HTML + renderiza PNG via Playwright
           │
-          └── formato vídeo ─────→ [ROTEIRO-UNITY]  ← a construir (V1)
-                                    Script cena a cena para Reels/TikTok/YouTube
+          └── formato vídeo ─────→ [ROTEIRO-UNITY]  ← ✅ criado (2026-05-05)
+                                    motor copy: ogilvy-copy (orgânico) ou schwartz-copy (tráfego)
+                                    Output: roteiro cena a cena para Reels/TikTok
           │
           ▼
 [GATE: APROVAÇÃO DO CONTEÚDO FINAL]  ← a construir
@@ -138,7 +139,8 @@
 | Publicação social | **publicar-social-unity** (Post for Me $10/mês ou Meta Graph API) | ✅ Existe |
 | Briefing orchestrator | **briefing-unity** | ✅ Skill criada — aguarda validação com runs reais |
 | Gates de aprovação | Fluxo conversacional no Claude Code (A/E/C) | ✅ Definidos na skill |
-| Roteiro de vídeo | **roteiro-unity** | 🔜 V1 |
+| Post card único | **estatico-unity** (foto GPT + HTML → PNG via Playwright) | ✅ Criado |
+| Roteiro de vídeo | **roteiro-unity** (motor: ogilvy / schwartz) | ✅ Criado |
 | Biblioteca técnica | **Supabase pgvector + REST API** | 🔄 Projeto paralelo |
 | Base de performance | **Supabase** (tabela separada da biblioteca) | 🔜 V2 |
 | Coleta de métricas | **Python** — Meta Insights API + LinkedIn Analytics | 🔜 V2 |
@@ -332,10 +334,6 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 ### A construir
 
 ```
-roteiro-unity  ← V1
-  Input: briefing aprovado, plataforma alvo, duração estimada
-  Output: roteiro estruturado cena a cena (falas, cortes, orientações de câmera)
-
 coletor-metricas.py  ← V2, Python
   Input: IDs dos posts, janela de tempo
   Output: registro estruturado no Supabase (gancho, formato, tema, métricas)
@@ -348,4 +346,4 @@ analista-performance  ← V3
 ---
 
 *Mapa gerado em sessão de arquitetura — 2026-05-02.*
-*Para retomar: o ponto de entrada é construir o `briefing-unity` em cima do CCOS com perfil empresa (template `claude-md-empresa.md`), não agência.*
+*Atualizado em 2026-05-05: `estatico-unity` e `roteiro-unity` criadas e integradas ao fluxo. Arquitetura de motores definida: gpt-image2-unity é chamado internamente por carrossel-unity e estatico-unity; ogilvy-copy e schwartz-copy são motores do roteiro-unity. `/setup` reescrito. `/iniciar` removido. Empresa piloto atualizada: Ecoframe.*

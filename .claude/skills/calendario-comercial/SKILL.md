@@ -18,6 +18,54 @@ Use esta skill quando precisar criar, ajustar ou analisar calendários comerciai
 
 ---
 
+## 0. LEITURA DE CONTEXTO E COLETA INICIAL
+
+### Ler antes de qualquer coisa
+
+1. Ler `_contexto/empresa.md` — carregar: nome da empresa, setor, ICP, plataformas ativas, frequência de postagem, mix de conteúdo
+2. Ler `_contexto/estrategia.md` — carregar: objetivo atual, prioridades do período
+3. Ler `marca/design-guide.md` — carregar: tom visual e estilo (para orientar sugestões de formato)
+
+### Perguntar apenas o que falta
+
+Com o contexto carregado, perguntar só o que não está disponível:
+
+**Período** (sempre perguntar — é específico de cada calendário):
+> "Qual período você quer cobrir? (ex: Junho 2026, próximas 4 semanas, Q3)"
+
+**Se frequência de postagem não estiver em empresa.md:**
+> "Qual é a frequência de postagem por plataforma? (ex: Instagram 5x/sem, TikTok 3x/sem)"
+
+**Se mix de conteúdo não estiver definido:**
+> "Como você costuma dividir o conteúdo? Por exemplo: 60% educacional, 30% venda, 10% institucional — ou prefere que eu sugira?"
+
+**Se objetivo do período não estiver em estrategia.md:**
+> "Tem algum objetivo específico pra esse período?"
+
+### Confirmação antes de avançar
+
+Mostrar resumo do que foi carregado e perguntar:
+
+> "Vou montar o calendário com:
+>
+> - **Empresa:** [nome]
+> - **Período:** [período]
+> - **Plataformas e frequência:** [ex: Instagram 5x/sem, TikTok 3x/sem]
+> - **Mix:** [proporção]
+> - **Objetivo:** [objetivo]
+>
+> Posso avançar para a pesquisa cultural?"
+
+Só avançar após confirmação.
+
+### Calendário proporcional à frequência
+
+O calendário gerado deve refletir a frequência informada. Se a frequência for 5 posts/semana no Instagram e 3 posts/semana no TikTok, o mapa de oportunidades deve mostrar 5 slots semanais para Instagram e 3 para TikTok — não uma ação genérica por semana.
+
+Distribuir os slots de acordo com as janelas (🟢🟡🔴) identificadas na pesquisa cultural: concentrar lançamentos e conversão nas janelas quentes, conteúdo leve e institucional nas mornas, mínimo necessário nas frias.
+
+---
+
 ## Metodologia: Análise de Timing Comercial
 
 ### Framework MOMENTO
@@ -317,7 +365,7 @@ web_search("tendências [setor do cliente] [ano]")
 
 ## 6. EXEMPLOS PRÁTICOS
 
-### Exemplo 1: Fast Sistemas (Construção Civil)
+### Exemplo 1: Empresa de Construção Civil
 
 **Contexto fixo:**
 - Produtos: Drywall, Steel Frame, Forros

@@ -14,12 +14,34 @@ description: >
 
 Antes de qualquer coisa, verifique se `_contexto/empresa.md` existe e tem conteúdo real (não apenas o template).
 
-- Se **não existe ou está vazio**: inicia o fluxo de onboarding abaixo.
-- Se **já tem conteúdo**: informa ao usuário que o setup já foi feito e pergunta se quer refazer ou apenas atualizar alguma parte.
+**Se não existe ou está vazio:** inicia o fluxo de onboarding abaixo.
+
+**Se já tem conteúdo:** leia o arquivo e mostre ao usuário o que está configurado atualmente:
+
+> "Já tem uma configuração aqui:
+>
+> - **Empresa:** [extraído]
+> - **O que faz:** [extraído]
+> - **Perfil:** [extraído]
+>
+> O que você quer fazer?"
+
+Apresentar as opções:
+1. **Configurar para uma nova empresa** — substitui tudo, começa do zero para outra empresa
+2. **Atualizar informações** — preserva o que está certo, ajusta o que mudou
+3. **Cancelar** — não alterar nada
+
+**Se escolher nova empresa:** avisar claramente antes de continuar:
+
+> "Certo. Vou reconfigurar tudo para uma nova empresa. O conteúdo atual de `_contexto/empresa.md`, `_contexto/estrategia.md`, `_contexto/preferencias.md` e `marca/design-guide.md` será substituído. Pode continuar?"
+
+Aguardar confirmação explícita. Só continuar para o onboarding depois de confirmar.
+
+**Se escolher atualizar:** perguntar qual parte atualizar e ir direto para ela — não refazer o fluxo todo.
 
 ---
 
-## Onboarding (primeira vez)
+## Onboarding (nova configuração)
 
 Comece com uma mensagem curta de boas-vindas:
 
@@ -149,19 +171,51 @@ Aguardar o usuário colar a resposta. Com o que vier:
 
 *(Exemplos: Notion, Google Drive, Canva, Gmail, Meta Ads, Google Ads, Figma, Slack, WhatsApp Business — qualquer uma que use com frequência)*
 
-### Pergunta 6 — Identidade visual
+### Pergunta 5.5 — Redes sociais e frequência de postagem
 
-"Sua marca tem identidade visual? Se sim, como prefere compartilhar?"
+*(Perguntar só se o usuário produz conteúdo pra redes sociais — confirmado na Pergunta 3. Se não produz, pular.)*
 
-Apresentar as opções de forma natural, não como lista formal:
+"Quais redes sociais você usa para o negócio? E qual é a frequência de postagem em cada uma?"
 
-> "Pode me mandar o link do seu site, jogar alguns prints na pasta `dados/` e me dizer o nome dos arquivos, descrever em texto mesmo (cores, estilo, fontes), ou dizer que ainda não tem definido. Qualquer uma dessas funciona."
+*(Exemplos: "Instagram 5x por semana, TikTok 3x por semana" / "LinkedIn só 2x por semana" / "Instagram todo dia, TikTok quando dá")*
+
+Se a frequência for vaga ("quando dá", "às vezes"), perguntar:
+
+> "Qual seria o ideal pra você — quantas vezes por semana você quer postar em cada rede?"
+
+Salvar no contexto: plataformas ativas + frequência por plataforma + frequência ideal se diferente da atual.
+
+---
+
+### Pergunta 6 — Identidade visual e marca
+
+Fazer as duas perguntas em sequência:
+
+**6a)** "Você tem manual da marca? Pode ser PDF, Word, link do Figma, Google Drive — qualquer documento de identidade visual."
+
+**Se sim:**
+- Pedir pra colocar o arquivo na pasta `dados/` e informar o nome, ou colar o link
+- Ler o arquivo ou acessar o link
+- Extrair: nome da empresa como aparece na marca, cores, tipografia, estilo visual, elementos obrigatórios
+- **Antes de usar qualquer informação do documento, mostrar o que foi encontrado e confirmar:**
+  > "Extraí isso do manual: nome '[nome no doc]', cores [X, Y, Z], tipografia [fonte], estilo [adjetivo]. Confere com o que você tem?"
+- Aguardar confirmação. Ajustar conforme feedback.
+- **Atenção especial ao nome da empresa:** se o nome no documento for diferente do que o usuário disse, surfaçar o conflito antes de prosseguir. Usar sempre o nome que o usuário confirmou verbalmente.
+
+**Se não tem manual:**
+- Continuar para 6b
+
+**6b)** "Como prefere compartilhar a identidade visual?"
+
+Apresentar as opções de forma natural:
+
+> "Pode me mandar o link do site, jogar prints ou imagens na pasta `dados/`, descrever em texto (cores, fontes, estilo), ou me dizer que ainda não tem definido."
 
 **Se compartilhar URL:**
 - Buscar o conteúdo do site com WebFetch
 - Analisar: cores dominantes, tipografia aparente, estilo geral (clean/bold/editorial/etc), tom visual
 - Apresentar o que foi detectado antes de preencher o design-guide:
-  > "Vi no seu site: fundo [cor], destaque em [cor], tipografia sem serifa, estilo [adjetivo]. Bate com a sua marca?"
+  > "Vi no seu site: fundo [cor], destaque em [cor], tipografia [tipo], estilo [adjetivo]. Bate com a sua marca?"
 - Ajustar conforme feedback e preencher `marca/design-guide.md`
 
 **Se compartilhar imagens (prints de Instagram, logo, etc.):**
@@ -189,9 +243,31 @@ Apresentar as opções de forma natural, não como lista formal:
 
 ---
 
+## Checkpoint de confirmação obrigatório
+
+Antes de escrever qualquer arquivo, mostrar um resumo completo de tudo que foi coletado e aguardar confirmação explícita do usuário.
+
+> "Antes de salvar, confirme se está tudo certo:
+>
+> - **Nome da empresa:** [nome exato como o usuário disse]
+> - **Seu nome:** [nome]
+> - **O que fazem:** [descrição em 1-2 frases]
+> - **Perfil detectado:** [agencia / freelancer / solopreneur / criador / empresa / profissional-clt]
+> - **Foco atual:** [prioridade principal]
+> - **Tom de voz:** [resumo do estilo e o que evitar]
+> - **Identidade visual:** [preenchida com [X] / pronta pra preencher depois]
+> - **Ferramentas:** [lista]
+> - **Equipe:** [solo / com equipe]
+>
+> Está tudo certo? Tem algo pra corrigir antes de eu salvar?"
+
+Aguardar resposta. Se o usuário corrigir qualquer campo, atualizar o resumo e mostrar novamente antes de prosseguir. Só escrever os arquivos após "pode salvar", "sim", "correto" ou resposta equivalentemente afirmativa.
+
+---
+
 ## Processamento das respostas
 
-Com todas as respostas, detecte o perfil principal:
+Com todas as respostas confirmadas, detecte o perfil principal:
 
 **Perfis possíveis:**
 - `agencia` — atende múltiplos clientes, tem processos de entrega
@@ -307,13 +383,18 @@ Quando o usuário pedir pra criar uma nova skill:
 # Contexto da Empresa — [Nome]
 
 **Nome:** [nome do usuário]
-**Negócio:** [nome do negócio]
+**Negócio:** [nome do negócio — exatamente como o usuário confirmou]
 **O que faz:** [descrição]
-**Perfil:** [agencia / freelancer / solopreneur / criador / profissional-clt]
+**Perfil:** [agencia / freelancer / solopreneur / criador / empresa / profissional-clt]
 **Atende clientes:** [sim/não/ambos]
 **Equipe:** [solo / com equipe — detalhe se mencionou]
 **Ferramentas:** [lista]
 **Principais entregas:** [lista do que mais produz]
+
+## Redes sociais
+**Plataformas ativas:** [Instagram, TikTok, LinkedIn, etc.]
+**Frequência de postagem:** [ex: Instagram 5x/sem, LinkedIn 2x/sem]
+**Mix de conteúdo:** [ex: 60% educacional, 30% venda, 10% institucional — ou "não definido"]
 
 ## Contexto adicional
 [qualquer informação relevante que surgiu nas respostas]
@@ -360,7 +441,7 @@ Quando o usuário pedir pra criar uma nova skill:
 
 ### 5. Pré-preencher `marca/design-guide.md`
 
-Se o usuário descreveu cores e estilo, preencha com o que foi dito.
+Se o usuário descreveu cores e estilo, preencha com o que foi confirmado.
 Se não tem identidade definida, preencha com campos em branco e um comentário orientando como preencher depois.
 
 Em ambos os casos, manter este aviso no topo do arquivo (logo abaixo do título):
@@ -503,3 +584,7 @@ Após gerar todos os arquivos, envie uma mensagem de encerramento:
 - Se o usuário der respostas vagas, faz uma pergunta de acompanhamento antes de continuar
 - Gera os arquivos todos de uma vez no final, não um a um durante as perguntas
 - Após gerar, mostra a mensagem final resumida — não lista cada linha de cada arquivo
+- **O nome da empresa é o que o usuário disse ou confirmou, nunca o que aparece em documentos fornecidos.** Se houver divergência entre o nome no documento e o que o usuário disse, surfaçar o conflito explicitamente antes de prosseguir: "No documento vi '[nome no doc]', mas você disse '[nome que o usuário disse]' — qual é o correto?"
+- **A confirmação antes de salvar é obrigatória — nunca pular essa etapa.** Se o usuário corrigir algo no resumo, atualizar e mostrar novamente antes de salvar.
+- Quando analisar documentos ou URLs de identidade visual, sempre mostrar o que foi extraído e aguardar confirmação do usuário antes de usar os dados
+- A instrução verbal do usuário prevalece sobre qualquer conteúdo de documento fornecido. Em caso de conflito, perguntar qual prevalece

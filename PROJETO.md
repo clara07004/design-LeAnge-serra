@@ -2,37 +2,43 @@
 
 ## Status atual
 
-**Fase:** MVP — conectar as peças que já existem
+**Fase:** MVP em validação — fluxo completo rodando com empresa piloto (Ecoframe)
 
-**Skills instaladas:**
-- `calendario-comercial` ✅
-- `briefing-unity` ✅ (gates de aprovação conversacionais incluídos)
-- `schwartz-copy` ✅
-- `ogilvy-copy` ✅
-- `carrossel-unity` ✅ (integra gpt-image2-unity para imagens fotográficas nos slides)
-- `gpt-image2-unity` ✅ (gpt-image-1 via OpenAI API; key em `credentials/openai_key.txt`)
+**Skills de produção instaladas:**
+- `calendario-comercial` ✅ (atualizado: lê contexto, coleta frequência de postagem, output proporcional)
+- `briefing-unity` ✅
+- `carrossel-unity` ✅
+- `estatico-unity` ✅ (novo: post card único — foto GPT + HTML + Playwright → PNG pronto)
+- `roteiro-unity` ✅ (novo: script de vídeo — motor Ogilvy para orgânico, Schwartz para tráfego)
+
+**Motores (usados internamente pelas skills de produção):**
+- `gpt-image2-unity` ✅ (motor de imagem do carrossel e estatico-unity)
+- `nanobanana-unity` ✅ (fallback gratuito)
+- `ogilvy-copy` ✅ (motor de copy orgânica — roteiro-unity + conteúdo de marca)
+- `schwartz-copy` ✅ (motor de copy de tráfego — roteiro-unity + criativos pagos)
 
 **Infraestrutura:**
 - Node.js 24.15.0 instalado
 - Playwright + Chromium instalados e testados (renderização HTML → PNG OK)
-- Python 3.14 + openai SDK 2.33.0 instalados (geração de imagem)
+- Python 3.14 + openai SDK 2.33.0 instalados
+
+**Setup:**
+- `/setup` reescrito: confirmação obrigatória antes de salvar, pergunta de manual da marca, coleta de frequência de postagem por plataforma, regra verbal > documento
+- `/iniciar` removido (redundante — CLAUDE.md já carrega contexto automaticamente)
 
 ## Próximo passo
 
-1. Adicionar API key OpenAI em `credentials/openai_key.txt`
-2. Preencher `marca/design-guide.md` com identidade visual da empresa piloto
-3. Fazer a 1ª run real do fluxo completo: `/calendario` → `/briefing-unity` → `/carrossel-unity`
-4. Validar com 10 conteúdos produzidos pelo fluxo
+1. Validar fluxo completo com 10 conteúdos produzidos para a Ecoframe
+2. Medir: tempo total vs. processo anterior, taxa de aprovação sem ajuste, qualidade percebida
+3. Instalar `publicar-social-unity` quando chegar na etapa de publicação
 
-## Skills pendentes (instalar conforme fluxo avança)
+## Skills pendentes
 
 | Skill | Status |
 |---|---|
-| `nanobanana-unity` | 🔜 Fallback de imagem (quando GPT falhar) |
-| `image-gen-unity` | 🔜 Contingência |
+| `image-gen-unity` | 🔜 Contingência (FAL API, pago) |
 | `publicar-social-unity` | 🔜 Quando chegar na publicação |
 | `triagem-youtube-unity` | 🔜 V1 |
-| `roteiro-unity` | 🔜 V1 (a construir) |
 
 ---
 
