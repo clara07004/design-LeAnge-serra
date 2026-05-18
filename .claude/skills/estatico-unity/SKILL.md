@@ -31,6 +31,12 @@ Usar `npx.cmd` no PowerShell. Caminhos no `file:///` com barras normais `/`.
 
 ---
 
+## Histórico de execuções
+
+Antes de iniciar, verificar se existe `conteudo/imagens/[tema]/_aprovado.md`. Se existir, ler e usar como referência de qualidade mínima: reaproveitar o prompt de imagem aprovado como ponto de partida, reproduzir o ângulo de copy aprovado, evitar o que estiver marcado em "O que evitar".
+
+---
+
 ## Input
 
 - Briefing aprovado em `conteudo/[semana]/[post].md` (vindo do /briefing-unity)
@@ -130,6 +136,25 @@ npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///CAM
    - Se ajuste for na foto: voltar para Fase 2, gerar nova foto, re-renderizar
    - Só entregar como finalizado após aprovação explícita
 
+8. **Após aprovação explícita:** salvar `conteudo/imagens/[tema]/_aprovado.md` com:
+   ```markdown
+   # Execução aprovada — [data]
+
+   ## Copy aprovada
+   - Ângulo: [ex: autoridade técnica]
+   - Headline: "[headline aprovada]"
+   - Ajustes feitos: [X foi corrigido para Y — ou "nenhum"]
+
+   ## Prompt de imagem aprovado
+   - foto-fundo: "[prompt exato usado]"
+
+   ## O que funcionou bem
+   - [o que passou sem ajuste]
+
+   ## O que evitar
+   - [o que foi rejeitado ou exigiu muita correção]
+   ```
+
 ---
 
 ## Output final
@@ -146,6 +171,7 @@ conteudo/imagens/[tema]/
 
 ## Regras
 
+- **Fundo de cor sólida é proibido.** O post estático SEMPRE tem foto de fundo gerada por IA. Cadeia de tentativas: GPT Image 2 → Nanobanana → image-gen-unity. Se um motor falhar, sinalizar ao usuário e tentar o próximo sem interromper o fluxo. Só parar se todos os três falharem.
 - Copy aprovada no Checkpoint da Fase 1 não muda na Fase 3 sem nova confirmação
 - Sempre mostrar o post renderizado antes de encerrar — nunca entregar sem aprovação
 - Nunca embutir texto dentro do prompt da imagem (texto vai no HTML, não na foto)

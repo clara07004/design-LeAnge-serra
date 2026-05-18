@@ -10,6 +10,12 @@ Invoke após o calendário comercial do mês ser aprovado. Para cada janela de c
 
 ---
 
+## Histórico de execuções
+
+Antes de iniciar, verificar se existe `conteudo/briefings/[tema]/_aprovado.md`. Se existir, ler e usar como referência de qualidade mínima: reaproveitar o gancho e ângulo aprovados como ponto de partida, evitar o que estiver marcado em "O que evitar".
+
+---
+
 ## Input esperado
 
 O usuário deve fornecer (ou o CCOS deve ter em contexto):
@@ -78,7 +84,7 @@ BRIEFING GERADO. Revise antes de continuar.
 ---
 ```
 
-- **[A]**: acione a skill indicada nos metadados (`/carrossel-unity`, `/gpt-image2-unity` ou `/roteiro-unity`)
+- **[A]**: salvar `conteudo/briefings/[tema]/_aprovado.md` com gancho aprovado, ângulo e ajustes feitos; depois acionar a skill indicada nos metadados (`/carrossel-unity`, `/gpt-image2-unity` ou `/roteiro-unity`)
 - **[E]**: reescreva apenas a seção indicada e apresente novamente o gate
 - **[C]**: registre o cancelamento e encerre
 

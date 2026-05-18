@@ -30,6 +30,12 @@ npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///CAM
 Usar `npx.cmd` (não `npx`) no PowerShell do Windows para contornar a política de execução de scripts.
 Caminhos no `file:///` precisam usar barras normais `/`, não `\`.
 
+## Histórico de execuções
+
+Antes de iniciar, verificar se existe `conteudo/carrosseis/[tema]/_aprovado.md`. Se existir, ler e usar como referência de qualidade mínima: reaproveitar prompts de imagem aprovados como ponto de partida, reproduzir o ângulo de copy aprovado, evitar o que estiver marcado em "O que evitar".
+
+---
+
 ## Input
 
 O usuário fornece:
@@ -72,11 +78,11 @@ O usuário fornece:
 Após o texto aprovado, identificar quais slides se beneficiam de uma imagem fotográfica de fundo ou de apoio:
 
 **Slides que recebem imagem:**
-- **Slide 1 (Capa):** sempre — imagem fotográfica que represente o tema principal
+- **Slide 1 (Capa):** SEMPRE — obrigatório, sem exceção. Cadeia de tentativas: GPT Image 2 → Nanobanana → image-gen-unity. Se um motor falhar, sinalizar ao usuário e tentar o próximo sem interromper o fluxo. Só parar se todos os três falharem.
 - **Slides de impacto (dados, fatos, revelações):** opcional — imagem contextual que reforce o conteúdo
 - **Slides puramente tipográficos (listas, bullets, texto longo):** sem imagem — layout clean
 
-Regra: **menos é mais**. Máximo de 3 imagens por carrossel de 8-10 slides.
+Regra: **menos é mais** para slides intermediários. Máximo de 2 imagens adicionais além da capa (total: até 3 por carrossel).
 
 #### Construir prompts para cada imagem
 
@@ -147,6 +153,26 @@ Salvar cada imagem em `conteudo/carrosseis/[tema]/instagram/img-slideXX.png`.
 **CHECKPOINT:** mostrar slide 1 renderizado. Se aprovado, renderizar os demais.
 
 Salvar PNGs em `conteudo/carrosseis/[tema]/instagram/`.
+
+**Após aprovação explícita dos slides finais:** salvar `conteudo/carrosseis/[tema]/_aprovado.md` com:
+```markdown
+# Execução aprovada — [data]
+
+## Copy aprovada
+- Ângulo: [ex: educacional / provocativo]
+- Headline da capa: "[headline aprovada]"
+- Ajustes feitos: [X foi corrigido para Y — ou "nenhum"]
+
+## Prompts de imagem aprovados
+- Slide 1 (capa): "[prompt exato usado]"
+- Slide [N]: "[prompt exato usado]" (se houver)
+
+## O que funcionou bem
+- [o que passou sem ajuste]
+
+## O que evitar
+- [o que foi rejeitado ou exigiu muita correção]
+```
 
 ---
 

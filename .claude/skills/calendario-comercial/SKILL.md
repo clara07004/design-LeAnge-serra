@@ -25,6 +25,7 @@ Use esta skill quando precisar criar, ajustar ou analisar calendários comerciai
 1. Ler `_contexto/empresa.md` — carregar: nome da empresa, setor, ICP, plataformas ativas, frequência de postagem, mix de conteúdo
 2. Ler `_contexto/estrategia.md` — carregar: objetivo atual, prioridades do período
 3. Ler `marca/DESIGN.md` — carregar: tom visual e estilo (para orientar sugestões de formato)
+4. Verificar se existe `conteudo/calendarios/[periodo]/_aprovado.md` — se existir, ler e usar como referência: reaproveitar o tema narrativo e estrutura aprovados, evitar janelas ou ângulos marcados em "O que evitar"
 
 ### Perguntar apenas o que falta
 
@@ -453,6 +454,22 @@ Antes de entregar qualquer calendário, confirme:
 - [ ] Criei tema narrativo que conecta as ações
 - [ ] Calendário está formatado e legível
 - [ ] Comparei com período anterior (se houver histórico)
+- [ ] Salvei `conteudo/calendarios/[periodo]/_aprovado.md` após aprovação do calendário
+
+Estrutura do `_aprovado.md`:
+```markdown
+# Execução aprovada — [data]
+
+## Copy aprovada
+- Tema narrativo aprovado: "[fio condutor]"
+- Ajustes feitos: [X foi corrigido para Y — ou "nenhum"]
+
+## O que funcionou bem
+- [slots ou ângulos que passaram sem discussão]
+
+## O que evitar
+- [janelas ou abordagens rejeitadas]
+```
 
 ---
 

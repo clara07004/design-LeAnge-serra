@@ -26,6 +26,12 @@ description: >
 
 ---
 
+## Histórico de execuções
+
+Antes de iniciar, verificar se existe `conteudo/roteiros/[tema]/_aprovado.md`. Se existir, ler e usar como referência de qualidade mínima: reaproveitar o ângulo e gancho aprovados como ponto de partida, evitar o que estiver marcado em "O que evitar".
+
+---
+
 ## Workflow
 
 ### Fase 1 — Leitura e diagnóstico
@@ -140,7 +146,23 @@ conteudo/roteiros/[tema]/roteiro-[plataforma].md
    - Duração diferente entre plataformas → ajustar cortes
    - CTA diferente (ex: link na bio no Instagram vs link direto no TikTok) → adaptar
 
-3. Confirmar entrega:
+3. Salvar `conteudo/roteiros/[tema]/_aprovado.md` com:
+   ```markdown
+   # Execução aprovada — [data]
+
+   ## Copy aprovada
+   - Motor usado: [Ogilvy / Schwartz]
+   - Gancho aprovado: "[frase exata do gancho]"
+   - Ajustes feitos: [X foi corrigido para Y — ou "nenhum"]
+
+   ## O que funcionou bem
+   - [o que passou sem ajuste]
+
+   ## O que evitar
+   - [o que foi rejeitado ou exigiu muita correção]
+   ```
+
+4. Confirmar entrega:
    > "Roteiro salvo em `conteudo/roteiros/[tema]/`. Próximo passo: gravar e passar pelo /publicar-social-unity."
 
 ---
