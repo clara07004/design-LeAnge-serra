@@ -53,6 +53,24 @@ Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o
 - `/publicar-social-unity` — publica conteúdo aprovado no Instagram, TikTok, LinkedIn
 - `/triagem-youtube-unity` — análise editorial para YouTube
 
+**Skills de pesquisa e ideação:**
+- `/gerador-de-angulos-para-um-tema` — 10 lentes criativas para explorar um tema antes do briefing
+- `/gerador-de-angulos-de-conteudo` — matrix perspectivas × audiência × formatos narrativos, 10 ângulos únicos
+- `/banco-de-objecoes-do-avatar` — mapeia 6 tipos de objeção por ICP com resposta em conteúdo
+
+**Skills de copy e distribuição:**
+- `/hooks-para-carrossel` — 5 opções de capa para carrossel com direção visual (usar antes do /carrossel-unity)
+- `/hooks-para-instagram-reels` — 7 tipos de hook combinados (primeiro frame + frase de abertura)
+- `/legenda-para-carrossel` — legenda orientada a save com CTA específico
+- `/legenda-para-reel` — legenda que complementa o vídeo sem repetir o script
+- `/legenda-para-post-estatico` — 4 tipos de legenda para post estático
+- `/carrossel-de-quebra-de-objecao` — carrossel de fundo de funil em 3 movimentos (nomeação → reframe → prova)
+- `/1-conteudo-em-7-formatos` — repurposing: transforma 1 conteúdo em Reel, Carrossel, Story, Thread, LinkedIn, E-mail e Post estático
+
+**Skills de imagem:**
+- `/gerador-de-prompts-de-imagem` — prompt estruturado para gpt-image-1 (usar antes de gerar imagem)
+- `/gerador-de-prompts-para-imagens-de-produto` — prompts para as 3 estéticas de produto da Ecoframe (dark_lifestyle, architectural_installation, product_closeup)
+
 **Motores (usados internamente pelas skills de produção):**
 - `/gpt-image2-unity` — gera foto de fundo via GPT Image 2 (motor de imagem do carrossel e post estático)
 - `/nanobanana-unity` — fallback de imagem via Gemini (grátis)
@@ -65,15 +83,42 @@ Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o
 ## Fluxo principal de conteúdo
 
 ```
+/gerador-de-angulos-para-um-tema  ou  /gerador-de-angulos-de-conteudo   ← ideação
+    ↓ [escolhe ângulo]
 /calendario-comercial
     ↓ [aprova calendário]
 /briefing-unity  →  define o formato do conteúdo
     ↓ [aprova briefing]
-    ├── formato carrossel  →  /carrossel-unity         (motor: gpt-image2-unity)
-    ├── formato imagem     →  /estatico-unity          (motor: gpt-image2-unity)
-    └── formato vídeo      →  /roteiro-unity           (motor: ogilvy ou schwartz)
+    ├── formato carrossel  →  /hooks-para-carrossel
+    │                              ↓
+    │                         /carrossel-unity  (motor: gpt-image2-unity)
+    │                              ↓
+    │                         /legenda-para-carrossel
+    │
+    ├── formato imagem     →  /gerador-de-prompts-de-imagem  ou  /gerador-de-prompts-para-imagens-de-produto
+    │                              ↓
+    │                         /estatico-unity  (motor: gpt-image2-unity)
+    │                              ↓
+    │                         /legenda-para-post-estatico
+    │
+    └── formato vídeo      →  /hooks-para-instagram-reels
+                                   ↓
+                              /roteiro-unity  (motor: ogilvy ou schwartz)
+                                   ↓
+                              /legenda-para-reel
     ↓ [aprova conteúdo]
+/1-conteudo-em-7-formatos   ← opcional: distribui para outros canais
+    ↓
 /publicar-social-unity
+```
+
+**Fluxo alternativo — conteúdo de fundo de funil:**
+```
+/banco-de-objecoes-do-avatar
+    ↓ [escolhe objeção]
+/carrossel-de-quebra-de-objecao
+    ↓
+/carrossel-unity  +  /legenda-para-carrossel
 ```
 
 **Aprovação humana obrigatória** em cada etapa — o fluxo para e aguarda antes de avançar.
