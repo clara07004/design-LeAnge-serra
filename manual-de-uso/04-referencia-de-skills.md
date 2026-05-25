@@ -64,9 +64,19 @@ Você também pode descrever o que quer em linguagem natural — o Claude identi
 
 **Quando usar:** Quando o briefing define formato "carrossel" ou você quer um post de múltiplos slides.
 
+**Dois modos de uso:**
+
+**Fluxo rápido** — tudo em um:
+`/carrossel-unity` cuida de texto + prompt + imagem IA + HTML + PNG internamente. Use quando não precisa de controle manual sobre as imagens.
+
+**Fluxo enriquecido** — imagem aprovada antes:
+Use `/gerador-de-prompts-para-imagens-de-produto` ou `/gerador-de-prompts-de-imagem` → gere e aprove a imagem via `/gpt-image2-unity` → só então chame `/carrossel-unity`, que monta o HTML usando a imagem já gerada.
+
+> Quando houver fotos reais disponíveis no Google Drive (`_contexto/referencias.md` → pasta "Fotos do Produto"), usá-las tem prioridade sobre geração IA — resultado superior e sem custo de API.
+
 **Fases:**
 1. **Texto** (8–10 slides) + 3 opções de capa
-2. **Imagens** via GPT Image 2 (capa obrigatória + até 2 slides de impacto)
+2. **Imagens** (Drive, fluxo enriquecido, ou geração automática interna)
 3. **HTML + PNG** via Playwright — um arquivo por slide
 
 **Checkpoints:** após texto, após imagens, após slide 1 renderizado, após todos os slides
@@ -76,13 +86,14 @@ Você também pode descrever o que quer em linguagem natural — o Claude identi
 **Output:**
 ```
 conteudo/carrosseis/[tema]/instagram/
-  img-slide01.png
+  img-slide01.png (ou .jpg se veio do Drive)
   slide-01.html → slide-01.png
   slide-02.html → slide-02.png
   ...
 ```
 
 **Regras importantes:**
+- Todo slide tem foto real ou gerada como fundo — nunca fundo sólido com texto
 - Cada slide tem layout visual diferente (nunca repete template)
 - Fonte nunca abaixo dos valores mínimos do DESIGN.md
 - Texto em excesso: cortar parágrafo, nunca reduzir fonte
@@ -290,29 +301,22 @@ conteudo/imagens/[tema]/
 
 ## Skills de imagem
 
-### `/gerador-de-prompts-de-imagem`
-**Arquivo:** `.claude/skills/gerador-de-prompts-de-imagem/SKILL.md`
+Existem três caminhos para obter imagens para os posts. Use o melhor para cada situação:
 
-**Para que serve:** Constrói um prompt estruturado e otimizado para o `gpt-image-1` — mais elaborado que o gerado automaticamente pelas skills de produção.
-
-**Quando usar:** Antes de gerar qualquer imagem via IA quando quiser mais controle sobre o visual.
-
-**Input:** uso da imagem + o que deve aparecer + estética + proporção
-
-**Output:**
-- Prompt principal completo e otimizado
-- Variação A (mais minimalista)
-- Variação B (mais impactante)
-- Comando PowerShell pronto para copiar e executar
+| Caminho | Quando usar | Resultado |
+|---|---|---|
+| **Fotos reais do Drive** | Quando há foto de instalação ou produto disponível | Melhor — fotos reais de obra |
+| `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` | Imagem de produto em estética específica, ou quando Drive não tem o que precisa | Muito bom — prompt calibrado para Ecoframe |
+| `/gerador-de-prompts-de-imagem` → `/gpt-image2-unity` | Imagem de contexto ou cena genérica | Bom — prompt estruturado mas menos específico |
 
 ---
 
 ### `/gerador-de-prompts-para-imagens-de-produto`
 **Arquivo:** `.claude/skills/gerador-de-prompts-para-imagens-de-produto/SKILL.md`
 
-**Para que serve:** Versão especializada focada nas 3 estéticas fotográficas da Ecoframe para produto.
+**Para que serve:** Constrói prompts otimizados para as 3 estéticas fotográficas da Ecoframe. Mais preciso que o genérico porque conhece as linhas de produto e os estilos da marca.
 
-**Quando usar:** Quando a imagem precisa mostrar o produto Ecoframe — esquadrias instaladas, detalhes técnicos, produto em contexto arquitetônico.
+**Quando usar:** Quando a imagem precisa mostrar o produto Ecoframe — esquadrias instaladas, detalhes técnicos, produto em contexto arquitetônico. Use este antes do genérico sempre que o produto for o foco.
 
 **Input:** linha (`iTEC`, `euroTEC`, `TECplus100` ou `MAXXI`) + estilo desejado
 
@@ -321,7 +325,24 @@ conteudo/imagens/[tema]/
 - `dark_lifestyle` — pessoa em ação no ambiente (arquiteto em obra, proprietário apreciando)
 - `product_closeup` — macro do perfil PVC, câmaras internas, detalhes de vedação
 
-**Output:** prompts para os 3 estilos + comando PowerShell pronto
+**Output:** prompt principal + variação + comando PowerShell para `/gpt-image2-unity`
+
+---
+
+### `/gerador-de-prompts-de-imagem`
+**Arquivo:** `.claude/skills/gerador-de-prompts-de-imagem/SKILL.md`
+
+**Para que serve:** Constrói um prompt estruturado e otimizado para `gpt-image-1` para qualquer tipo de cena — não específico de produto.
+
+**Quando usar:** Quando a imagem é de contexto (cena arquitetônica, ambiente, atmosfera) e não precisa mostrar o produto diretamente. Segunda opção quando o `/gerador-de-prompts-para-imagens-de-produto` não se aplica.
+
+**Input:** uso da imagem + o que deve aparecer + estética + proporção
+
+**Output:**
+- Prompt principal completo e otimizado
+- Variação A (mais minimalista)
+- Variação B (mais impactante)
+- Comando PowerShell pronto para `/gpt-image2-unity`
 
 ---
 
@@ -467,14 +488,15 @@ GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity 
 
 ## Tabela resumo — skills por formato de conteúdo
 
-| Formato | Skill principal | Motor de imagem | Motor de copy |
+| Formato | Skill principal | Imagem (em ordem de preferência) | Motor de copy |
 |---|---|---|---|
-| Carrossel educativo | `/carrossel-unity` | `gpt-image2-unity` | Direto na skill |
-| Carrossel de objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-unity` | `gpt-image2-unity` | Direto na skill |
-| Post estático | `/estatico-unity` | `gpt-image2-unity` | Direto na skill |
+| Carrossel (rápido) | `/carrossel-unity` | Drive → geração interna automática | Direto na skill |
+| Carrossel (enriquecido) | `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` → `/carrossel-unity` | Drive → prompt enriquecido → GPT | Direto na skill |
+| Carrossel de objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-unity` | Drive → GPT automático | Direto na skill |
+| Post estático | `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` → `/estatico-unity` | Prompt enriquecido → GPT | Direto na skill |
 | Reel/TikTok orgânico | `/roteiro-unity` | — | `ogilvy-copy` |
 | Reel/TikTok pago | `/roteiro-unity` | — | `schwartz-copy` |
-| Imagem avulsa | `/gpt-image2-unity` | — | — |
+| Imagem avulsa | `/gpt-image2-unity` | GPT direto | — |
 | Calendário | `/calendario-comercial` | — | — |
 | Briefing | `/briefing-unity` | — | `ogilvy-copy` ou `schwartz-copy` |
 

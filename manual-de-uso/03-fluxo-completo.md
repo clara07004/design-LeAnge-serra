@@ -12,13 +12,26 @@
         │
         ├── formato carrossel  →  /hooks-para-carrossel
         │                               ↓ escolhe 1 capa
-        │                         /carrossel-unity
+        │                         /carrossel-unity   ← FLUXO RÁPIDO (tudo em um)
         │                               ↓ você aprova
         │                         /legenda-para-carrossel
         │
-        ├── formato imagem     →  /gerador-de-prompts-de-imagem
-        │                         (ou /gerador-de-prompts-para-imagens-de-produto)
+        │                         — ou, com mais controle sobre a imagem —
+        │
+        │                         /gerador-de-prompts-para-imagens-de-produto
+        │                         (ou /gerador-de-prompts-de-imagem)
         │                               ↓ você aprova o prompt
+        │                         /gpt-image2-unity  ← gera e aprova a imagem antes
+        │                               ↓ você aprova a imagem
+        │                         /carrossel-unity   ← FLUXO ENRIQUECIDO
+        │                               ↓ você aprova
+        │                         /legenda-para-carrossel
+        │
+        ├── formato imagem     →  /gerador-de-prompts-para-imagens-de-produto
+        │                         (ou /gerador-de-prompts-de-imagem)
+        │                               ↓ você aprova o prompt
+        │                         /gpt-image2-unity
+        │                               ↓ você aprova a imagem
         │                         /estatico-unity
         │                               ↓ você aprova
         │                         /legenda-para-post-estatico
@@ -161,16 +174,25 @@ O texto segue `_contexto/preferencias.md` — tom técnico acessível, sem trave
 
 ### Fase 1.5 — Imagens
 
-Após o texto aprovado, o Claude identifica quais slides se beneficiam de imagem:
-- **Slide 1 (capa):** SEMPRE recebe imagem — obrigatório
+Após o texto aprovado, o Claude identifica quais slides recebem imagem:
+- **Slide 1 (capa):** SEMPRE — obrigatório
 - **Slides de impacto** (dados, fatos, revelações): opcional, máximo 2 adicionais
 - **Slides tipográficos** (listas, texto longo): sem imagem — layout clean
 
-Para cada imagem, o Claude constrói um prompt em inglês e mostra todos antes de gerar.
+**Três formas de obter as imagens (em ordem de qualidade):**
 
-**Checkpoint:** você confirma os prompts antes de qualquer geração (antes de gastar crédito).
+**1. Fotos reais do Drive** ← melhor resultado
+Buscar nas pastas de produto do Google Drive (`_contexto/referencias.md`). São fotos reais de instalações e obras — autenticidade que IA não reproduz. O Claude baixa, seleciona e usa diretamente.
 
-Após confirmação, o script Python é executado para cada imagem:
+**2. Fluxo enriquecido** — gerar antes de entrar no carrossel
+Usar `/gerador-de-prompts-para-imagens-de-produto` (estéticas específicas da Ecoframe) ou `/gerador-de-prompts-de-imagem` (genérico) para construir o prompt, aprovar, e só depois gerar. Mais controle sobre o resultado.
+
+**3. Geração automática** ← padrão do fluxo rápido
+No fluxo rápido, o `/carrossel-unity` constrói os prompts internamente e gera via `/gpt-image2-unity` sem etapa separada.
+
+**Checkpoint (fluxos 2 e 3):** você confirma os prompts antes de qualquer geração.
+
+Geração via script Python:
 ```powershell
 python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "PROMPT" "conteudo/carrosseis/TEMA/instagram/img-slide01.png" "portrait"
 ```
