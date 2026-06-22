@@ -1,46 +1,46 @@
-# Empresa: Ecoframe
+# Empresa: [Nome da empresa]
 
 ## O que faz
-Fabricação e venda consultiva de esquadrias em PVC de alta performance para projetos em Steel Frame, Drywall e arquitetura contemporânea.
+[Descreva o produto ou serviço principal da empresa. Inclua o diferencial, o problema que resolve e como entrega valor.]
 
-Foco em conforto termoacústico, eficiência energética, durabilidade, baixa manutenção e acabamento superior.
+Foco em [atributos principais: ex. qualidade, prazo, inovação, conforto, etc.].
 
-A Ecoframe não vende apenas portas e janelas — entrega uma solução técnica de fechamento para obras que exigem desempenho, estética e valorização do imóvel.
+[Nome da empresa] não vende apenas [produto genérico] — entrega [proposta de valor específica: o que o cliente realmente compra além do produto físico].
 
-**Fornecedor de perfis:** Primeira Linha (1ª Linha Indústria Comércio e Importação de Esquadrias em uPVC Ltda) — linhas iTEC, euroTEC, TECplus100 e MAXXI.
+**Fornecedor / parceiro principal:** [Nome do fornecedor ou parceiro estratégico, se houver] — [breve descrição do que fornece].
 
 ---
 
 ## Público-alvo (ICP)
 
-### 1. Arquitetos e especificadores
-Projetos residenciais ou comerciais de médio/alto e alto padrão.
-- Objetivos: especificar materiais compatíveis, entregar conforto, reduzir risco técnico, manter coerência estética
-- Medos: comprometer a percepção de valor do projeto, problemas de instalação/vedação, reclamações do cliente final
+### 1. [Perfil 1 — ex.: Profissional técnico / Especificador]
+[Descreva o contexto: quem é, em que momento entra em contato, como decide.]
+- Objetivos: [o que busca alcançar ao comprar ou contratar]
+- Medos: [o que teme ao contratar ou ao errar a escolha]
 
-### 2. Construtores e empresas de Steel Frame / Drywall
-Precisam de soluções compatíveis com construção a seco, velocidade de execução e qualidade de acabamento.
-- Objetivos: reduzir retrabalho, valorizar o imóvel, usar materiais coerentes com o padrão construtivo
-- Medos: incompatibilidade de produto, reclamações sobre ruído/calor/infiltração, parecer obra barata
+### 2. [Perfil 2 — ex.: Empresa parceira / Distribuidor / Construtor]
+[Idem]
+- Objetivos: [...]
+- Medos: [...]
 
-### 3. Proprietários de imóveis de alto padrão
-Clientes finais que constroem ou reformam buscando conforto, silêncio, eficiência e baixa manutenção.
-- Objetivos: casa confortável e silenciosa, durabilidade, valorização do imóvel
-- Medos: pagar caro e receber acabamento comum, ser mal orientado tecnicamente
+### 3. [Perfil 3 — ex.: Cliente final / Proprietário / Consumidor]
+[...]
+- Objetivos: [...]
+- Medos: [...]
 
 ---
 
 ## Modelo de negócio
-Venda consultiva por orçamento — sem e-commerce, sem preço exposto. Lead entra por formulário, WhatsApp ou contato comercial e avança para orçamento técnico conforme o projeto.
+[Descreva como a empresa vende: e-commerce, venda consultiva por orçamento, assinatura, marketplace, ponto de venda físico, etc. Inclua como o lead entra e avança no funil comercial.]
 
 ---
 
 ## Posicionamento
-**Premium técnico.** Não é marca de esquadrias populares. Não soa como grife artificial.
+**[Rótulo de posicionamento — ex.: Premium técnico / Custo-benefício / Especialista em nicho X / Referência regional em Y].**
 
-O território é desempenho técnico aplicado à arquitetura contemporânea.
+[Uma ou duas frases que descrevem o espaço de mercado que a empresa ocupa e o que a diferencia dos concorrentes diretos.]
 
-> "Ecoframe é uma marca de esquadrias em PVC de alta performance para projetos em Steel Frame, Drywall e arquitetura contemporânea, combinando conforto termoacústico, eficiência energética, durabilidade e acabamento superior em uma venda consultiva voltada para obras de maior exigência técnica e estética."
+> "[Parágrafo de posicionamento completo — descreve a empresa, produto, benefícios e público-alvo em 2-3 linhas. Este parágrafo deve poder ser usado como bio da marca ou descrição institucional.]"
 
 ---
 
@@ -48,32 +48,30 @@ O território é desempenho técnico aplicado à arquitetura contemporânea.
 
 | Objeção | Abordagem |
 |---|---|
-| "PVC parece plástico/barato" | Mostrar aplicação real, estética limpa, contexto arquitetônico de alto padrão |
-| "Alumínio é mais resistente" | PVC oferece vantagens em isolamento térmico, acústico, vedação e baixa manutenção — escolha feita pelo desempenho esperado |
-| "PVC amarela com o tempo?" | Explicar composição, proteção UV e resistência a intempéries com base técnica |
-| "É mais caro?" | Falar de valor: conforto, eficiência, durabilidade, baixa manutenção, valorização da obra |
-| "Serve para qualquer projeto?" | Posicionar como especialista em Steel Frame, Drywall e arquitetura contemporânea |
+| "[Objeção 1 — dúvida ou resistência comum]" | [Como responder com argumento de valor] |
+| "[Objeção 2]" | [Como responder] |
+| "[Objeção 3]" | [Como responder] |
+| "[Objeção 4]" | [Como responder] |
+| "[Objeção 5]" | [Como responder] |
 
 ---
 
 ## Canais ativos
-- Instagram (foco técnico/visual)
-- Meta Ads (educação e geração de demanda)
-- Google Ads (demanda ativa por buscas)
-- WhatsApp comercial consultivo
-- Site institucional / landing pages de captação
-- Materiais técnicos para arquitetos e construtores
+- [Canal 1] ([foco: ex. conteúdo técnico/visual])
+- [Canal 2] ([foco: ex. geração de demanda paga])
+- [Canal 3] ([foco: ex. relacionamento e conversão])
+- [Canal 4] ([foco: ex. site institucional / landing pages])
 
 ## Frequência e dias de postagem
-- **Plataforma principal:** Instagram
-- **Frequência:** 6x/semana
-- **Dias:** terça a domingo (Ter–Dom) — segunda-feira sem post
-- **Fins de semana:** sábado e domingo são publicados via agendamento (`--agendar`), não manualmente
-- **Horário de agendamento:** definido a cada post — não há horário fixo
+- **Plataforma principal:** [ex. Instagram]
+- **Frequência:** [ex. 5x/semana]
+- **Dias:** [ex. segunda a sexta / terça a domingo]
+- **Fins de semana:** [política — agendamento automático ou manual]
+- **Horário de agendamento:** [fixo ou definido a cada post]
 
 ---
 
 ## Credenciais disponíveis
-- API OpenAI (gpt-image2 para geração de imagens)
+- API OpenAI (gpt-image-1 para geração de imagens)
 - API Gemini (fallback de imagem, gratuito)
 - Meta token (publicação no Instagram/Facebook)

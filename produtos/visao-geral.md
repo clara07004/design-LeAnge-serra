@@ -1,102 +1,70 @@
-# Visão Geral — Esquadrias em PVC
+# Visão Geral — [Nome do produto/serviço principal]
 
-## O que são esquadrias em PVC
+> **Template:** Substitua este arquivo com a documentação real do produto ou serviço.
+> Use como guia as seções abaixo — elas cobrem o que o sistema de conteúdo precisa
+> para gerar posts, briefings e carrosseis com informação técnica verdadeira.
 
-Esquadrias em PVC são janelas e portas fabricadas a partir de perfis extrudados de UPVC (PVC rígido, sem plastificante, com proteção contra mudança de cor). Por serem um produto altamente industrializado, apresentam alto nível de precisão e padronização de qualidade na fabricação.
+---
 
-A esquadria em PVC se compõe de:
+## O que é
 
-- **Perfis de UPVC** — UPVC = PVC com proteção contra mudança de cor por UV
-- **Alma de aço galvanizado** — interna ao perfil, garante resistência à pressão do vento
-- **Cantos soldados** — pelo processo de fusão térmica, garantem total estanqueidade e protegem o aço interno
-- **Ferragens e acessórios** — roldanas, cremonas, dobradiças, fechaduras, puxadores, escovas e borrachas de vedação
-- **Vidros** — especificados conforme a norma ABNT NBR 7199
+[Descrição objetiva do produto ou serviço. O que é, como funciona em alto nível, qual problema resolve.]
 
-## Posicionamento de mercado
+[Exemplo: "[Produto] é [definição técnica]. Ele [função principal]. Indicado para [contexto de uso].]
 
-A **Primeira Linha**, fabricante parceira da Ecoframe, foi fundada em 2002 e é especializada em:
+---
 
-1. Fabricação de esquadrias em uPVC
-2. Distribuição de perfis e tecnologia
-3. Engenharia de desenvolvimento, pós-venda e qualidade total
+## Composição e materiais
 
-**Foco da marca:**
-- Construção civil residencial de **médio e alto padrão**
-- Indústria hoteleira
-- Indústria hospitalar
+[Descrever de que é feito o produto, seus componentes principais, tecnologia envolvida.]
 
-**Mais de 40 mil fornecimentos concluídos** em residências, clínicas, edifícios comerciais, universidades, creches, hotéis, indústrias.
+| Material/Componente | Função | Observação |
+|---|---|---|
+| [Material 1] | [Para que serve] | [Dado técnico relevante] |
+| [Material 2] | [Para que serve] | [...] |
+| [Material 3] | [...] | [...] |
 
-**Equipes próprias de instalação** treinadas e especializadas.
+---
 
-## Características técnicas do PVC
+## Vantagens técnicas e benefícios
 
-| Propriedade | O que significa |
-|---|---|
-| **Isolamento térmico** | Reduz transferência de calor — economia de ar condicionado |
-| **Isolamento acústico** | Material de baixa propagação sonora — ideal para áreas urbanas |
-| **Estanqueidade** | Cantos soldados eliminam infiltração |
-| **Resistência à corrosão** | Não enferruja — substitui alumínio e aço em áreas litorâneas |
-| **Resistência à maresia** | Aprovado para uso em região litorânea com manutenção a cada 3 meses (vs. 12 meses urbano) |
-| **Resistência mecânica** | Reforço de aço interno suporta cargas de vento de até 1820 Pa (todas as regiões do Brasil) |
-| **Conforto ao toque** | Não conduz frio nem calor — superfície agradável |
-| **Isenção de manutenção** | Não precisa de pintura, lixamento, calafetagem |
-| **Durabilidade** | Expectativa de vida superior a **40 anos** |
-| **Reciclável** | 100% reciclável ao final do ciclo de vida |
-| **Inerte** | Resistente a ataques de cimento, cal e outros compostos da obra |
-| **Auto-extinguível** | Não propaga chamas |
-| **Acabamento** | Fosco aveludado de fábrica |
+[Listar as vantagens reais do produto — com base em dados técnicos documentados, não em marketing genérico.]
 
-## Por que PVC versus alumínio versus aço
+- **[Benefício 1]:** [explicação técnica com dado real se disponível]
+- **[Benefício 2]:** [explicação]
+- **[Benefício 3]:** [explicação]
+- **[Benefício 4]:** [explicação]
+- **[Benefício 5]:** [explicação]
 
-| Material | Quando indicar |
-|---|---|
-| **Aço** | Esquadrias de desempenho classes C e D (mais simples) |
-| **Alumínio** | Fachadas cortina, guarda-corpos, acústica classes B e C |
-| **PVC** | Mercado residencial, hoteleiro, hospitalar — isolamento térmico/acústico classes acima de B |
+---
 
-**Dado de mercado:** com a NBR 15.575, o custo por m² de uma esquadria em PVC é **inferior** ao de um similar em alumínio com desempenho equivalente. Quanto maior a exigência acústica, maior o diferencial de preço do alumínio em relação ao PVC.
+## Posicionamento no mercado
 
-## Mercado brasileiro vs Europa/EUA (2004 referência)
+[Como o produto se posiciona vs. alternativas — qual é o argumento diferenciador, para que tipo de projeto/cliente faz sentido.]
 
-- **Europa:** 44,69 milhões de unidades/ano em PVC
-- **EUA:** 30,7 milhões de unidades/ano em PVC
-- **Brasil:** 1,6 milhão — mercado em expansão acelerada após a NBR 15.575/2013
+---
 
-## Por que o Brasil demorou a adotar
+## Limitações e quando NÃO indicar
 
-Histórico que explica por que o PVC custou a ganhar tração no país:
-- Produção de bauxita (alumínio) abundante e barata
-- Produtos de baixa qualidade nas primeiras gerações
-- Altos custos de desenvolvimento
-- Ausência de normativas até a NBR 15.575 (vigente a partir de 2013)
+[Ser honesto sobre onde o produto não é a melhor escolha — credibilidade no conteúdo técnico.]
 
-## Tipologias produzidas
+- [Situação 1 em que não é indicado]
+- [Situação 2]
 
-- Janelas e portas de **correr** de 1, 2, 3, 4, 6, 8 folhas
-- Janelas e portas de **abrir** de 1 e 2 folhas (para dentro e para fora)
-- Janelas **maximares**
-- Janelas **guilhotinas** (com mecanismo automático)
-- Janelas tipo **camarão**
-- **Requadros fixos**
-- Peças com **bandeiras e peitoris**
-- **Persianas de enrolar** manuais e motorizadas
-- **Venezianas** (cegas, ventiladas, orientáveis fixas e móveis)
-- **Portas e janelas suspensas** (sem marco inferior)
-- **Pinázios** (divisórias visuais)
-- Peças compostas: **Bay Windows**, janelas de canto, janelas em ângulos diversos
-- Peças em **formatos irregulares**
+---
 
-## Cores e acabamentos
+## Dados de sustentabilidade (se aplicável)
 
-3 tecnologias para aplicação de cores nos perfis:
+[Informações reais sobre impacto ambiental, reciclabilidade, certificações ambientais, expectativa de vida útil.]
 
-1. **Laminação** — aplicação de filme com cores ou acabamentos (madeirados, fosco, brilho)
-2. **Co-extrusão** — camada de tinta acrílica (PMMA ou ASA) aplicada na saída da extrusora — indicada para grandes volumes
-3. **Pintura** — tinta acrílica específica para perfis de PVC, em todas as cores RAL — similar a pintura automotiva, indicada para pequenos volumes
+---
 
-## Garantia
+## Perguntas frequentes de especificadores
 
-- **Perfis:** 10 anos
-- **Acessórios:** 5 anos
-- **Contratos formalizados:** todas as vendas com especificações e prazos contratuais
+[Dúvidas técnicas mais comuns de quem especifica ou compra o produto.]
+
+**[Pergunta 1]**
+[Resposta técnica com dado real]
+
+**[Pergunta 2]**
+[Resposta técnica]

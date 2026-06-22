@@ -1,21 +1,17 @@
 ---
 name: 1-conteudo-em-7-formatos
-description: Transforma 1 conteúdo aprovado da Ecoframe em 7 adaptações completas prontas para publicar — Reel, Carrossel, Story, Thread, LinkedIn, E-mail e Post estático. Use APÓS aprovar um briefing ou conteúdo para distribuir sem reescrever do zero para cada canal. Dispara quando: "repurposing", "distribuir esse conteúdo", "transformar em outros formatos", "1 conteúdo em vários formatos", "escalar conteúdo".
+description: Transforma 1 conteúdo aprovado em 7 adaptações completas prontas para publicar — Reel, Carrossel, Story, Thread, LinkedIn, E-mail e Post estático. Use APÓS aprovar um briefing ou conteúdo para distribuir sem reescrever do zero para cada canal. Dispara quando: "repurposing", "distribuir esse conteúdo", "transformar em outros formatos", "1 conteúdo em vários formatos", "escalar conteúdo".
 ---
 
-# Conteúdo em 7 Formatos — Ecoframe
+# Conteúdo em 7 Formatos
 
 ## Contexto
 
 Antes de adaptar, confirmar que tem em contexto:
-- `_contexto/empresa.md` — canais ativos da Ecoframe (Instagram, Meta Ads, WhatsApp, LinkedIn, site)
+- `_contexto/empresa.md` — canais ativos da empresa (ver seção "Canais")
 - `_contexto/preferencias.md` — tom de voz por canal, restrições
 
-**Canais ativos da Ecoframe:**
-- Instagram (foco técnico/visual) → Reel + Carrossel + Story + Post estático
-- LinkedIn → conteúdo técnico B2B para arquitetos e construtores
-- WhatsApp → comunicação consultiva direta (não broadcast de marketing)
-- E-mail → nutrição de leads, materiais técnicos
+**Canais ativos:** conforme `_contexto/empresa.md`. Verificar quais estão configurados antes de adaptar para cada plataforma.
 
 **O princípio central: adaptar não é copiar.** Cada plataforma tem gramática própria — colar o mesmo texto em todo lugar reduz alcance em todos eles.
 
@@ -107,7 +103,7 @@ Card 5: conclusão + CTA (link, DM, salva post do feed)
 **Por que essa estrutura:** No LinkedIn, comentários são o sinal principal de alcance. Tom mais técnico-profissional.
 
 **O que entrego:**
-- Post completo para o perfil da Ecoframe ou do fundador
+- Post completo para o perfil da empresa ou do fundador/porta-voz
 - Primeira linha como hook isolado
 
 **Estrutura:**

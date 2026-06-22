@@ -11,7 +11,7 @@ description: >
 # /atualizar — Baixar do GitHub
 
 Traz pro computador local o que foi alterado no GitHub. Use no começo do trabalho
-ou quando alguém (a Ecoframe ou outro colaborador) tiver feito mudanças no repositório.
+ou quando um colaborador tiver feito mudanças no repositório.
 
 ## Verificação inicial
 

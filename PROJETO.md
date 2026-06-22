@@ -1,8 +1,8 @@
-# Projeto — Unity Content (Status de Implementação)
+# Projeto — CCOS (Status de Implementação)
 
 ## Status atual
 
-**Fase:** MVP em validação — fluxo completo rodando com empresa piloto (Ecoframe)
+**Fase:** MVP validado — fluxo completo rodando. Template base pronto para replicação por empresa.
 
 **Skills de produção instaladas:**
 - `calendario-comercial` ✅ (atualizado: lê contexto, coleta frequência de postagem, output proporcional)
@@ -28,8 +28,8 @@
 
 ## Próximo passo
 
-1. Validar fluxo completo com 10 conteúdos produzidos para a Ecoframe
-2. Medir: tempo total vs. processo anterior, taxa de aprovação sem ajuste, qualidade percebida
+1. Replicar o template para cada empresa-alvo (rodar `/setup` em cada repositório)
+2. Medir por empresa: tempo total vs. processo anterior, taxa de aprovação sem ajuste, qualidade percebida
 3. Instalar `publicar-social-unity` quando chegar na etapa de publicação
 
 ## Skills pendentes

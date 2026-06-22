@@ -102,7 +102,7 @@ O imgbb hospeda as imagens publicamente para que o Instagram possa buscá-las du
 
 ## Passo 2 — Configurar o contexto da empresa
 
-Os arquivos em `_contexto/` já estão preenchidos com o contexto da Ecoframe. Se você está usando este repositório para a Ecoframe, pule para o Passo 3. Se está adaptando para outro negócio, edite estes arquivos.
+Os arquivos em `_contexto/` são templates — preencha cada um com o contexto da empresa antes de usar o sistema.
 
 ### `_contexto/empresa.md`
 
@@ -160,7 +160,7 @@ Abra `marca/DESIGN.md` e confirme que:
 3. A tipografia está definida
 4. Os `layout_templates` estão preenchidos (ou pelo menos o básico)
 
-Para a Ecoframe, este arquivo já está completo. Não edite a menos que a identidade visual mude.
+Para uma nova empresa, preencher todos os campos com a identidade visual real. Alterar `status` para `configured` somente quando todos os campos obrigatórios estiverem preenchidos.
 
 ---
 
@@ -170,7 +170,7 @@ Para verificar que tudo está funcionando, faça um teste simples:
 
 **Teste de geração de imagem:**
 ```powershell
-python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "modern apartment window, PVC frame, natural light, architectural photography, no text" "conteudo/_teste/foto-teste.png" "square"
+python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "modern apartment, natural light, architectural photography, no text" "conteudo/_teste/foto-teste.png" "square"
 ```
 
 Resultado esperado:
@@ -198,9 +198,9 @@ Deve retornar a versão do Playwright.
 Abra o Claude Code neste diretório. O sistema vai ler automaticamente todos os arquivos de contexto.
 
 Para confirmar que está tudo certo, você pode perguntar:
-> "O que é a Ecoframe?"
+> "O que é [nome da empresa]?"
 
-O Claude deve responder com informações precisas sobre esquadrias em PVC, Steel Frame, Drywall e o posicionamento premium técnico — sem você ter precisado explicar nada.
+O Claude deve responder com informações precisas sobre o negócio, produtos e posicionamento — sem você ter precisado explicar nada.
 
 Se a resposta for genérica ou errada, verifique se o arquivo `_contexto/empresa.md` está preenchido corretamente.
 
@@ -229,7 +229,7 @@ Antes de usar o sistema pela primeira vez, marque cada item:
 
 ## Adaptando para outro cliente
 
-Este repositório foi configurado para a Ecoframe, mas a arquitetura é reutilizável. Para adaptar:
+Este repositório é um template reutilizável para qualquer negócio. Para adaptar:
 
 1. Edite `_contexto/empresa.md` com o contexto do novo negócio
 2. Edite `_contexto/preferencias.md` com o tom de voz da nova marca
@@ -238,4 +238,4 @@ Este repositório foi configurado para a Ecoframe, mas a arquitetura é reutiliz
 5. Atualize `CLAUDE.md` se o nome da empresa aparecer no texto
 6. Substitua as credenciais em `credentials/`
 
-O CLAUDE.md menciona "Ecoframe" e "construção a seco" em alguns pontos — atualize essas referências.
+Revise o `CLAUDE.md` se precisar ajustar o nome da empresa ou contexto do negócio na seção de "Contexto do negócio".

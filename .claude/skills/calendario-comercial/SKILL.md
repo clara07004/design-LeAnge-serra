@@ -159,7 +159,7 @@ web_search("trending X brasil hoje arquitetura construção reforma")
 
 **Por que importa:** O X é o termômetro cultural mais rápido — debates que começam lá chegam ao Instagram e TikTok 24–72h depois. Identificar uma narrativa no X antes de viralizar permite criar conteúdo com timing perfeito. Também revela o que o mercado está discutindo fora das métricas de engajamento do Instagram.
 
-**Atenção:** Nem todo trending topic do X tem tração no Instagram — filtre pelo ICP. Um debate técnico sobre construção a seco no X pode ser ouro para a Ecoframe mesmo com poucos retweets.
+**Atenção:** Nem todo trending topic do X tem tração no Instagram — filtre pelo ICP. Um debate técnico do setor no X pode ser ouro para a empresa mesmo com poucos retweets.
 
 ### 📅 Calendário Comportamental Brasileiro
 ```
@@ -563,7 +563,7 @@ Grid de calendário renderizável com identidade visual da marca. Derivado **dir
   - Lista de apagões com horários
   - Próximos a produzir (próximos 3)
 
-Tipografia: Poppins (títulos) + Montserrat (corpo). Paleta: Azul Ecoframe `#4A61A0`, Verde `#2C6D14`, Off-white `#F5F5F0`, Ink `#1A1A1A`. Fundo off-white texturizado leve. Logo Ecoframe no canto superior direito.
+Tipografia, paleta e logo conforme `marca/DESIGN.md`. Fundo off-white texturizado leve. Logo da empresa no canto superior direito.
 
 **Template de apoio:** `templates/dashboard-calendario.html` — usar como base, substituir os campos `{{...}}` pelos dados do mês.
 

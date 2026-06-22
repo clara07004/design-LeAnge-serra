@@ -5,18 +5,18 @@ description: Cria prompts precisos e estruturados para geração de imagem com I
 
 # Gerador de Prompts de Imagem
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de gerar, ler:
-- `_contexto/empresa.md` — produtos (iTEC, euroTEC, TECplus100, MAXXI), contexto de uso (Steel Frame, Drywall, arquitetura contemporânea)
-- `marca/DESIGN.md` → seção `image_style` — fotografia (dark_lifestyle, architectural_installation, product_closeup), paleta, estilo Ecophon adaptado
+- `_contexto/empresa.md` — produtos, contexto de uso e posicionamento da empresa
+- `marca/DESIGN.md` → seção `image_style` — estilos fotográficos (dark_lifestyle, architectural_installation, product_closeup), paleta
 - `_contexto/preferencias.md` — restrições visuais (sem EPI incorreto, sem obras improvisadas)
 
-**Regras fixas da Ecoframe para qualquer prompt:**
+**Regras fixas para qualquer prompt:**
 - Sempre em inglês
 - Sempre incluir: `no text overlay`, `no watermarks`, `photorealistic`
 - Nunca: obras com EPI incorreto, texto embutido, ilustrações genéricas
-- Contexto preferencial: Steel Frame, Drywall, arquitetura contemporânea, alto padrão
+- Contexto preferencial: ambiente de uso do produto, arquitetura contemporânea, alto padrão
 
 **Ferramenta alvo:** `gpt-image-1` (OpenAI). Os prompts são otimizados para este modelo.
 
@@ -38,11 +38,11 @@ Confirmar antes de gerar:
 [SUJEITO] + [AÇÃO/ESTADO] + [AMBIENTE/CONTEXTO] + [ESTILO] + [ILUMINAÇÃO] + [QUALIDADE] + [RESTRIÇÕES]
 ```
 
-**Exemplos por camada para Ecoframe:**
+**Exemplos por camada (adaptar ao produto da empresa):**
 
-**Sujeito:** "PVC window frames in modern apartment", "steel frame construction with installed windows", "close-up of PVC window profile cross-section"
+**Sujeito:** "[produto] in modern apartment", "[produto] installed in contemporary project", "close-up of [produto] technical detail"
 
-**Ambiente/Contexto:** "contemporary Brazilian residence", "high-end steel frame building under construction", "modern minimal interior with floor-to-ceiling windows"
+**Ambiente/Contexto:** "contemporary Brazilian residence", "high-end construction site", "modern minimal interior with natural light"
 
 **Estilo:** "professional architectural photography", "cinematic still", "editorial architectural photography"
 
@@ -54,14 +54,14 @@ Confirmar antes de gerar:
 
 ---
 
-## Prompts por caso de uso Ecoframe
+## Prompts por caso de uso
 
 ### Capa de Carrossel (portrait 1024×1536)
 ```
 [Cena arquitetônica contemporânea relacionada ao tema do carrossel],
 [iluminação natural ou dramática], [composição com área inferior disponível para texto],
 professional architectural photography, dark moody atmosphere, high-end residential context,
-steel frame or drywall construction visible, PVC window frames if applicable,
+[produto da empresa se aplicável ao tema],
 no text overlay, no watermarks, photorealistic, portrait format
 ```
 

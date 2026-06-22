@@ -126,14 +126,17 @@ Se você escolher **[A]**, o Claude informa qual skill acionar e pode já inicia
 **Exemplo de conversa:**
 ```
 Você: /briefing-unity
-       Janela: semana 2 de junho — isolamento acústico
-       Produto: linha euroTEC
+       Janela: semana 2 de junho — [tema do período]
+       Produto: [linha/produto X]
        Plataforma: Instagram
        Formato: carrossel
 Claude: [entrega briefing completo]
 Você: A — vamos pro carrossel
 Claude: Vou acionar /carrossel-unity com este briefing. Posso começar?
 Você: Sim
+```
+
+---
 ```
 
 ---
@@ -200,7 +203,7 @@ Após o texto aprovado, o Claude identifica quais slides recebem imagem:
 Buscar nas pastas de produto do Google Drive (`_contexto/referencias.md`). São fotos reais de instalações e obras — autenticidade que IA não reproduz. O Claude baixa, seleciona e usa diretamente.
 
 **2. Fluxo enriquecido** — gerar antes de entrar no carrossel
-Usar `/gerador-de-prompts-para-imagens-de-produto` (estéticas específicas da Ecoframe) ou `/gerador-de-prompts-de-imagem` (genérico) para construir o prompt, aprovar, e só depois gerar. Mais controle sobre o resultado.
+Usar `/gerador-de-prompts-para-imagens-de-produto` (estilos fotográficos configurados em DESIGN.md) ou `/gerador-de-prompts-de-imagem` (genérico) para construir o prompt, aprovar, e só depois gerar. Mais controle sobre o resultado.
 
 **3. Geração automática** ← padrão do fluxo rápido
 No fluxo rápido, o `/carrossel-unity` constrói os prompts internamente e gera via `/gpt-image2-unity` sem etapa separada.
@@ -287,7 +290,7 @@ python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "PROMPT" "conteudo/post
 O Claude monta o HTML (1080×1350px) com:
 - Foto de fundo em full-bleed (100% do card)
 - Overlay gradiente suave
-- Logo da Ecoframe no topo
+- Logo da empresa no topo
 - Copy na base (tagline → separador → headline → texto de apoio)
 - Cores e tipografia do DESIGN.md
 
@@ -363,7 +366,7 @@ Se você já sabe o que quer postar e não precisa do calendário:
 
 ```
 Você: /briefing-unity
-      Tema: diferença entre PVC e alumínio
+      Tema: [tema do produto — ex.: diferença entre as linhas do portfólio]
       Plataforma: Instagram
       Formato: carrossel
 Claude: [entrega briefing]
@@ -381,9 +384,9 @@ Se já tem o briefing aprovado e quer ir direto para o conteúdo:
 
 ```
 Você: /carrossel-unity
-      Tema: isolamento acústico das esquadrias euroTEC
-      Ângulo: comparativo técnico com alumínio
-      Público: arquitetos e construtores
+      Tema: [tema técnico do produto]
+      Ângulo: [ângulo escolhido para o post]
+      Público: [avatar conforme empresa.md]
 ```
 
 O Claude vai perguntar o que faltar e iniciar a Fase 1 diretamente.
@@ -420,4 +423,4 @@ Depois que um carrossel ou post é aprovado, o arquivo `_aprovado.md` registra o
 Se um slide ficou ruim mas os outros estão bons, você pode pedir para regenerar só aquele. "O slide 3 ficou confuso — refaz só ele com outro ângulo." O Claude edita o HTML e re-renderiza somente o slide afetado.
 
 **Prompt de imagem é iterativo:**
-Se a foto de fundo não ficou boa, descreva o que faltou e o Claude ajusta o prompt e gera novamente. "A foto ficou muito escura e sem produto visível — quero uma cena mais iluminada, com esquadrias de PVC claramente visíveis num interior contemporâneo."
+Se a foto de fundo não ficou boa, descreva o que faltou e o Claude ajusta o prompt e gera novamente. "A foto ficou muito escura e sem produto visível — quero uma cena mais iluminada, com o produto claramente visível num contexto de uso contemporâneo."

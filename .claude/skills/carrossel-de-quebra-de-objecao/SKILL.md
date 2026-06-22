@@ -1,15 +1,15 @@
 ---
 name: carrossel-de-quebra-de-objecao
-description: Cria a estrutura de um carrossel que nomeia e desmonta uma objeção específica do ICP da Ecoframe — slide a slide, com o leitor no próprio ritmo. Diferente do /carrossel-unity (educativo/autoridade): este é focado em conversão e fundo de funil. Use após o /banco-de-objecoes-do-avatar para criar conteúdo para cada objeção mapeada. Dispara quando: "carrossel sobre PVC vs alumínio", "como responder objeções em carrossel", "carrossel para quem está na dúvida", "conteúdo de fundo de funil".
+description: Cria a estrutura de um carrossel que nomeia e desmonta uma objeção específica do ICP — slide a slide, com o leitor no próprio ritmo. Diferente do /carrossel-unity (educativo/autoridade): este é focado em conversão e fundo de funil. Use após o /banco-de-objecoes-do-avatar para criar conteúdo para cada objeção mapeada. Dispara quando: "carrossel sobre [produto] vs [alternativa]", "como responder objeções em carrossel", "carrossel para quem está na dúvida", "conteúdo de fundo de funil".
 ---
 
-# Carrossel de Quebra de Objeção — Ecoframe
+# Carrossel de Quebra de Objeção
 
 ## Contexto
 
 Antes de executar, ler:
 - `_contexto/empresa.md` → objeções frequentes e contra-argumentos já mapeados
-- `_contexto/preferencias.md` → restrições: comparativo com alumínio sempre consultivo, nunca agressivo; sem promessas absolutas
+- `_contexto/preferencias.md` → restrições: comparativos com a concorrência sempre consultivos, nunca agressivos; sem promessas absolutas
 - `marca/DESIGN.md` → identidade visual para o /carrossel-unity usar depois
 
 **Fluxo recomendado:**
@@ -75,10 +75,10 @@ O título é a objeção do avatar — não uma pergunta retórica.
 Por que essa objeção existe — não como falha do avatar, mas como consequência do mercado.
 
 **Slides 4-5 — O reframe**
-- Objeção de preço → custo de material vs. custo total da obra (manutenção, durabilidade, conforto)
-- Objeção de percepção → PVC popular vs. uPVC multi-câmara de alto desempenho
-- Objeção de confiança → laudos PSQ, certificação AQUA, casos documentados
-- Objeção de relevância → contexto específico de Steel Frame e por que o PVC é a escolha técnica mais coerente
+- Objeção de preço → custo de entrada vs. custo total (manutenção, durabilidade, resultado)
+- Objeção de percepção → versão popular vs. versão de alto desempenho do produto
+- Objeção de confiança → laudos técnicos, certificações, casos documentados
+- Objeção de relevância → contexto específico do projeto do cliente e por que o produto é a escolha técnica mais coerente
 
 **Slide 6 — O custo da objeção não resolvida**
 O que continua acontecendo enquanto o avatar não toma a decisão.
@@ -89,7 +89,7 @@ Alguém que tinha a mesma objeção — com perfil, situação, a decisão que t
 
 **Slide final — CTA com baixo atrito**
 Não pressiona — convida o próximo passo natural.
-"Tem um projeto em Steel Frame? Me chama para conversar sobre especificação." ou "Link na bio para falar com um especialista."
+"[ex.: Tem um projeto como esse? Me chama para conversar.]" ou "Link na bio para falar com um especialista."
 
 ---
 

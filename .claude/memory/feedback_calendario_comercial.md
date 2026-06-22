@@ -20,12 +20,11 @@ aprovação e a visão do mês se perdem.
 O dashboard **não é opcional** — entrega obrigatória junto com o calendário, mesmo sem pedido
 explícito. Após gerar o HTML, perguntar se renderiza o PNG via Playwright (esse passo é opcional).
 
-**Pesquisa de tendências — a cultural padrão não basta para a Ecoframe.** Sempre adicionar:
-- **X (Twitter)** — debate técnico de arquitetos/engenheiros em tempo real: Steel Frame, Drywall,
-  eficiência energética, NBR 15575, alto padrão. `WebSearch` com queries tipo
-  `"arquitetura X.com [mês] [ano]"`, `"NBR 15575 X discussão"`, `"esquadrias PVC X arquiteto"`.
-- Instagram de referência (`@ecophon_brasil`, arquitetos especificadores, construtoras Steel Frame)
-- LinkedIn de arquitetura · mídia setorial (Galeria da Arquitetura, ArchDaily Brasil, PINI)
+**Pesquisa de tendências — ir além da pesquisa cultural padrão.** Sempre adicionar:
+- **X (Twitter)** — debate do setor em tempo real: usar os termos e temas definidos em `_contexto/estrategia.md`
+  (dores do ICP, tópicos técnicos, palavras-chave do setor). `WebSearch` com `"[termo] X.com [mês] [ano]"`.
+- Perfis de referência no Instagram — contas do setor configuradas em `_contexto/referencias.md`
+- LinkedIn setorial · mídia especializada do setor (conforme `_contexto/estrategia.md`)
 
 Cruzar o que pega no X com o calendário comercial — janela quente surge de sinal de conversa,
 não só de evento agendado. Ver [[feedback-consulta-produtos-obrigatoria]].

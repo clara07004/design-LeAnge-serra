@@ -1,55 +1,55 @@
-# Estratégia atual — Ecoframe
-**Última revisão:** Maio 2026 — revisar a cada trimestre ou quando a estratégia mudar
+# Estratégia atual — [Nome da empresa]
+**Última revisão:** [mês/ano] — revisar a cada trimestre ou quando a estratégia mudar
 
 ## Foco principal
-Construir autoridade no território de **premium técnico** para esquadrias em PVC. Sair da disputa de produto (preço, prazo, variedade) e ocupar o espaço de desempenho técnico aplicado à arquitetura contemporânea.
+[Descreva o objetivo estratégico de conteúdo do período: o que precisa ser construído, qual posição de mercado ocupar, qual percepção mudar no público. Ex.: "Construir autoridade no território X. Sair da disputa de Y e ocupar o espaço de Z."]
 
 ---
 
 ## Gaps prioritários a resolver com conteúdo
 
-1. **Percepção do PVC como material simples/popular** → conteúdo que eleva a percepção técnica e mostra aplicações de alto padrão
-2. **Falta de clareza sobre PVC vs. alumínio** → comparativos objetivos e consultivos (nunca agressivos)
-3. **Ausência de casos documentados** → galeria de obras, antes/depois, depoimentos com nome e contexto real
-4. **Falta de prova técnica visível** → laudos, fichas técnicas do fornecedor (Primeira Linha), certificações
+1. **[Gap 1 — ex.: Percepção de produto como commodity]** → [como o conteúdo endereça: ex. mostrar diferenciais técnicos e aplicações premium]
+2. **[Gap 2 — ex.: Falta de clareza sobre o diferencial vs. concorrente]** → [ex. comparativos objetivos e consultivos]
+3. **[Gap 3 — ex.: Ausência de prova social / cases documentados]** → [ex. galeria de obras, depoimentos, antes/depois]
+4. **[Gap 4 — ex.: Falta de prova técnica visível]** → [ex. laudos, fichas técnicas, certificações]
 
 ---
 
 ## Jornada de conteúdo por etapa do funil
 
 **Descoberta**
-Conteúdo educativo e visual mostrando por que esquadrias influenciam conforto, isolamento, acabamento e valorização da obra.
+[Que tipo de conteúdo serve à descoberta da marca. Ex.: conteúdo educativo e visual que mostra por que o produto/serviço influencia o resultado final do cliente.]
 
 **Consideração**
-Comparativos objetivos entre PVC e alumínio, aplicações em Steel Frame e Drywall, explicações sobre vedação, manutenção e eficiência energética.
+[Que tipo de conteúdo ajuda o lead a avaliar. Ex.: comparativos, aplicações específicas, explicações sobre diferenciadores.]
 
 **Prova**
-Galeria de obras, cases, depoimentos, fichas técnicas, detalhes de instalação e diferenciais de acabamento.
+[Que tipo de conteúdo gera credibilidade. Ex.: cases reais, depoimentos com nome e contexto, fichas técnicas, detalhes de entrega.]
 
 **Conversão**
-CTA para orçamento consultivo via formulário ou WhatsApp.
+[CTA e formato para conversão. Ex.: CTA para orçamento via formulário ou WhatsApp.]
 
 **Nutrição**
-Follow-up com conteúdos técnicos, cases e argumentos de valor para reduzir objeções.
+[Como nutrir leads que ainda não converteram. Ex.: follow-up com conteúdos técnicos, argumentos de valor, cases que reduzem objeções.]
 
 ---
 
 ## Campanhas prioritárias
 
-- **Google Ads (demanda ativa):** buscas por "esquadrias de PVC", "esquadrias para Steel Frame", "janela PVC alto padrão", "porta PVC sob medida"
-- **Meta Ads (educação):** conforto térmico, acústico, baixa manutenção, comparação com alumínio
-- **Meta Ads (prova visual):** obras reais, detalhes de acabamento, projetos contemporâneos
-- **Remarketing:** visitantes do site, leads de formulário, engajamento no Instagram
+- **[Canal 1] ([objetivo — ex.: demanda ativa]):** [keywords ou segmentações principais]
+- **[Canal 2] ([objetivo — ex.: educação]):** [tipo de conteúdo e ângulo]
+- **[Canal 3] ([objetivo — ex.: prova visual]):** [tipo de conteúdo]
+- **Remarketing:** [públicos de retargeting: visitantes do site, leads de formulário, engajamento nas redes]
 
 ---
 
 ## Isca digital planejada
-"Guia de Esquadrias em PVC para Obras em Steel Frame e Drywall" — material técnico para público de arquitetos e construtores.
+"[Nome do material rico]" — [descrição do material e para qual perfil de ICP ele serve].
 
 ---
 
 ## Segmentações prioritárias para anúncios
-Arquitetos, construtores, engenharia civil, construção a seco, Steel Frame, Drywall, alto padrão, reforma residencial, arquitetura contemporânea, decoração e interiores.
+[Interesses, profissões, comportamentos e perfis a segmentar em campanhas pagas. Ex.: profissionais da área X, segmento Y, comportamento Z, alto padrão, região geográfica.]
 
 ---
 
@@ -57,8 +57,8 @@ Arquitetos, construtores, engenharia civil, construção a seco, Steel Frame, Dr
 
 | Etapa | KPIs |
 |---|---|
-| Descoberta | Alcance, visualizações, retenção de vídeo, CTR |
-| Consideração | Cliques no site, tempo na página, rolagem, engajamento |
-| Conversão | CPL, taxa de conversão da landing page, cliques no WhatsApp |
-| Comercial | Taxa de orçamento enviado, taxa de fechamento, ticket médio |
-| Qualidade | % de leads compatíveis com perfil, motivo de perda, origem dos melhores leads |
+| Descoberta | [ex.: alcance, visualizações, retenção de vídeo, CTR] |
+| Consideração | [ex.: cliques no site, tempo na página, engajamento] |
+| Conversão | [ex.: CPL, taxa de conversão, cliques no WhatsApp] |
+| Comercial | [ex.: taxa de orçamento enviado, taxa de fechamento, ticket médio] |
+| Qualidade | [ex.: % de leads compatíveis com ICP, motivo de perda, origem dos melhores leads] |

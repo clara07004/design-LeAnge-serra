@@ -15,9 +15,9 @@
 
 **Opção 2 — Linguagem natural:**
 Descreva o que quer. O Claude identifica a skill certa automaticamente.
-- "quero ideias de conteúdo sobre alumínio vs PVC" → aciona `/gerador-de-angulos-para-um-tema`
+- "quero ideias de conteúdo sobre [tema]" → aciona `/gerador-de-angulos-para-um-tema`
 - "faz um carrossel sobre desempenho térmico" → aciona `/carrossel-unity`
-- "quais as objeções do arquiteto sobre PVC?" → aciona `/banco-de-objecoes-do-avatar`
+- "quais as objeções do [avatar] sobre [produto]?" → aciona `/banco-de-objecoes-do-avatar`
 
 **Regra geral:** se existir uma skill para o que você quer, o Claude usa ela. Se não existir, executa normalmente e pergunta se quer criar uma skill para a próxima vez.
 
@@ -32,19 +32,19 @@ Descreva o que quer. O Claude identifica a skill certa automaticamente.
 #### `/gerador-de-angulos-para-um-tema`
 **O que faz:** Pega um tema e gera 10 lentes criativas para abordá-lo — cada uma com um ângulo diferente para o mesmo assunto.
 
-**Quando usar:** Antes do briefing, quando você tem um tema mas não sabe qual ângulo explorar. Ex: "quero falar sobre PVC, mas não sei como entrar no assunto."
+**Quando usar:** Antes do briefing, quando você tem um tema mas não sabe qual ângulo explorar. Ex: "quero falar sobre [tema], mas não sei como entrar no assunto."
 
 **Como invocar:**
 ```
 /gerador-de-angulos-para-um-tema [tema]
 ```
-Exemplo: `/gerador-de-angulos-para-um-tema PVC vs alumínio`
+Exemplo: `/gerador-de-angulos-para-um-tema [tema]`
 
-**O que precisa fornecer:** o tema. Pode ser amplo ("PVC") ou específico ("durabilidade das esquadrias no litoral").
+**O que precisa fornecer:** o tema. Pode ser amplo ("[produto]") ou específico ("[aspecto específico do setor]").
 
 **O que entrega:**
 - 10 ângulos prontos para usar como ponto de partida do briefing
-- Cada ângulo com: título do post sugerido, gancho, por que funciona para a Ecoframe
+- Cada ângulo com: título do post sugerido, gancho, por que funciona para a empresa
 
 **Resultado esperado:** você escolhe 1 dos 10 ângulos e leva para o `/briefing-unity`.
 
@@ -69,7 +69,7 @@ Exemplo: `/gerador-de-angulos-para-um-tema PVC vs alumínio`
 ---
 
 #### `/banco-de-objecoes-do-avatar`
-**O que faz:** Mapeia todas as objeções que o ICP tem antes de especificar, comprar ou recomendar a Ecoframe — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
+**O que faz:** Mapeia todas as objeções que o ICP tem antes de especificar, comprar ou recomendar o produto — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
 
 **Quando usar:** Quando quer criar conteúdo de meio/fundo de funil, ou quando percebe que os posts não estão convertendo e quer entender o que trava o cliente.
 
@@ -93,7 +93,7 @@ Exemplo: `/gerador-de-angulos-para-um-tema PVC vs alumínio`
 ---
 
 #### `/calendario-comercial`
-**O que faz:** Cria o mapa estratégico de conteúdo para o mês — cruzando eventos culturais, datas relevantes e objetivos da Ecoframe para identificar quando e o que postar.
+**O que faz:** Cria o mapa estratégico de conteúdo para o mês — cruzando eventos culturais, datas relevantes e objetivos da empresa para identificar quando e o que postar.
 
 **Quando usar:** Uma vez por mês, antes de começar qualquer produção.
 
@@ -205,13 +205,13 @@ conteudo/carrosseis/[periodo]/[dia-tema]/instagram/
 #### `/carrossel-de-quebra-de-objecao`
 **O que faz:** Cria a estrutura de um carrossel específico para desmontar uma objeção — slide a slide, em 3 movimentos: nomeação → reframe → prova.
 
-**Quando usar:** Para conteúdo de fundo de funil, quando quer converter quem está com dúvida sobre PVC. Diferente do carrossel educativo: este foca em conversão.
+**Quando usar:** Para conteúdo de fundo de funil, quando quer converter quem está com dúvida sobre o produto. Diferente do carrossel educativo: este foca em conversão.
 
 **Como invocar:**
 ```
 /carrossel-de-quebra-de-objecao [a objeção] [avatar]
 ```
-Exemplo: `/carrossel-de-quebra-de-objecao "PVC é mais caro que alumínio" arquiteto`
+Exemplo: `/carrossel-de-quebra-de-objecao "[objeção específica]" [avatar]`
 
 **O que precisa fornecer:**
 - A objeção exata (como o avatar formula)
@@ -342,19 +342,19 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 ---
 
 #### `/gerador-de-prompts-para-imagens-de-produto`
-**O que faz:** Versão especializada do gerador de prompts, focada nas 3 estéticas fotográficas da Ecoframe para produto.
+**O que faz:** Versão especializada do gerador de prompts, focada nos estilos fotográficos configurados em `marca/DESIGN.md`.
 
-**Quando usar:** Quando a imagem precisa mostrar o produto Ecoframe — esquadrias instaladas, detalhes técnicos, produto em contexto arquitetônico.
+**Quando usar:** Quando a imagem precisa mostrar o produto da empresa — produto instalado, detalhes técnicos, produto em contexto de uso.
 
 **Como invocar:**
 ```
-/gerador-de-prompts-para-imagens-de-produto [linha: iTEC/euroTEC/TECplus100/MAXXI] [estilo: architectural_installation / dark_lifestyle / product_closeup]
+/gerador-de-prompts-para-imagens-de-produto [linha/variante] [estilo: architectural_installation / dark_lifestyle / product_closeup]
 ```
 
 **Os 3 estilos:**
 - `architectural_installation` — produto instalado em projeto acabado, luz natural, ambiente premium
 - `dark_lifestyle` — pessoa em ação no ambiente (arquiteto em obra, proprietário apreciando)
-- `product_closeup` — macro do perfil PVC, câmaras internas, detalhes de vedação
+- `product_closeup` — macro do produto com detalhes técnicos específicos
 
 **O que entrega:** prompts para os 3 estilos + comando PowerShell pronto
 
@@ -446,7 +446,7 @@ Passo 4: /legenda-para-carrossel
          → legenda orientada a conversão
 ```
 
-**Resultado final:** carrossel completo pronto para publicar, focado em converter quem está com dúvida sobre PVC.
+**Resultado final:** carrossel completo pronto para publicar, focado em converter leads com dúvidas sobre o produto.
 
 ---
 
@@ -545,7 +545,7 @@ Resultado: 7 adaptações prontas — Reel, Carrossel, Stories, Thread, LinkedIn
 | Quero a legenda do Reel | `/legenda-para-reel` |
 | Quero a legenda do post estático | `/legenda-para-post-estatico` |
 | Quero um prompt melhor para imagem | `/gerador-de-prompts-de-imagem` |
-| Quero foto do produto Ecoframe | `/gerador-de-prompts-para-imagens-de-produto` |
+| Quero foto do produto da empresa | `/gerador-de-prompts-para-imagens-de-produto` |
 | Quero distribuir o conteúdo em outros canais | `/1-conteudo-em-7-formatos` |
 | Quero salvar o trabalho no GitHub | `/syncar` |
 | Quero criar uma skill para um processo meu | `/mapear` |

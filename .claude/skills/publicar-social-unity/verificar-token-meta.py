@@ -116,7 +116,7 @@ def main():
       </ol>
 
       <p style="font-size: 13px; color: #999; margin-bottom: 0; border-top: 1px solid #eee; padding-top: 16px;">
-        Alerta automático — Unity Content · Conta: Ecoframe Instagram
+        Alerta automático — Unity Content · Conta: [empresa] Instagram
       </p>
     </div>
   </div>

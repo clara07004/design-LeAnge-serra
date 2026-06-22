@@ -1,136 +1,123 @@
 # Referências Visuais — Google Drive
 
 ## Pasta raiz do projeto
-**Link:** https://drive.google.com/drive/u/1/folders/0AMsBWrb3TtHBUk9PVA
-**ID:** `0AMsBWrb3TtHBUk9PVA`
+**Link:** [URL da pasta raiz no Google Drive]
+**ID:** `[ID_DA_PASTA_RAIZ]`
 
 ---
 
 ## Identidade Visual
 **Descrição:** Logos, assets da marca, Manual de Marca oficial
-**Link:** https://drive.google.com/drive/folders/1SQnjs_fX7KzzGlch9B4KB1SO2xcm3C6y
-**ID da pasta:** `1SQnjs_fX7KzzGlch9B4KB1SO2xcm3C6y`
+**Link:** [URL]
+**ID da pasta:** `[ID_DA_PASTA_IDENTIDADE_VISUAL]`
 
-Contém: Asset 23-29 (PNG), ecoframe 7-10 (PNG), subpasta Manual de Marca.
+Contém: [listar arquivos presentes: ex. logo em PNG, versões de cor, manual de marca em PDF]
 
-### Manual de Marca (subpasta)
-**ID da pasta:** `1la7OG8bnOXpBxnxWIQ_E5n909inrKPrj`
-**Arquivo PDF:** ID `1IXVW6bXfz-qoNooWMti9bvajVOMiwUrf`
-
----
-
-## Fotos do Produto (Material Base — Primeira Linha)
-**Descrição:** Fotos reais de instalações e produtos da linha Primeira Linha (~20 imagens de obra real). Inclui subpasta "LeAnge - Mar" (projeto cliente).
-**Link:** https://drive.google.com/drive/folders/1yMl_zKBySogepmeM7WTyihTYuXZFuZb6
-**ID da pasta:** `1yMl_zKBySogepmeM7WTyihTYuXZFuZb6`
+### Manual de Marca (subpasta, se houver)
+**ID da pasta:** `[ID]`
+**Arquivo PDF:** ID `[ID]`
 
 ---
 
-## Catálogo Técnico (Material Base — Primeira Linha)
-**Descrição:** Documentação técnica do fornecedor de perfis (Primeira Linha). Usar como referência de produto, linhas, especificações e prova técnica.
-**Link:** https://drive.google.com/drive/folders/19dBEQLjpSNZiGVrumPi891fcj_fUcekQ
-**ID da pasta:** `19dBEQLjpSNZiGVrumPi891fcj_fUcekQ`
+## Fotos do Produto / Material Visual
+**Descrição:** [Descreva o tipo de material: fotos reais de instalações, produtos, obras, ambientes, eventos, etc.]
+**Link:** [URL]
+**ID da pasta:** `[ID_DA_PASTA_FOTOS]`
+
+---
+
+## Catálogo Técnico / Material de Produto
+**Descrição:** [Documentação técnica do produto/serviço: catálogos, fichas técnicas, manuais, laudos, relatórios de ensaio]
+**Link:** [URL]
+**ID da pasta:** `[ID_DA_PASTA_CATALOGO]`
 
 Arquivos disponíveis:
-- Catálogo Comercial 2022 (produtos, tipologias, preços)
-- Catálogo Técnico 2022 (linhas iTEC, euroTEC, TECplus100, MAXXI)
-- Manual de Instalação 2022
-- Relatório Técnico euroTEC (laudos PSQ)
-- Relatório Técnico TECplus100
-- Orientações de Limpeza e Manutenção
-- Apresentação Primeira Linha (empresa, mercado PVC no Brasil)
-- Processo AQUA / Certificação ambiental
+- [Arquivo 1 — ex.: Catálogo Comercial]
+- [Arquivo 2 — ex.: Ficha Técnica]
+- [Arquivo 3 — ex.: Manual de Instalação / Uso]
+- [Arquivo 4 — ex.: Laudos e relatórios técnicos]
+- [...]
 
 ---
 
-## Referências de Estilo Visual — Ecophon France (Drive)
-**Descrição:** Posts do Instagram da Ecophon France — ambientes arquitetônicos sofisticados, foco em desempenho acústico, estética clean. Usar como referência de estilo e padrão visual, não de produto.
-**Link:** https://drive.google.com/drive/folders/1alyGkuiSZAzhpfE6s1QKNEduzYi1V073
-**ID da pasta:** `1alyGkuiSZAzhpfE6s1QKNEduzYi1V073`
+## Referências de Estilo Visual
+**Descrição:** [Materiais de referência visual — concorrentes referência, marcas do mesmo ecossistema, estilo visual desejado. Usar para referência de estilo, não de produto.]
+**Link:** [URL]
+**ID da pasta:** `[ID_DA_PASTA_REFERENCIAS]`
 
 ---
 
-## Referência Editorial — @ecophon_brasil (Instagram)
-**Perfil:** [@ecophon_brasil](https://www.instagram.com/ecophon_brasil/) — 1.261 posts, 10,2 mil seguidores
-**Marca:** Ecophon (Saint-Gobain) — forros acústicos removíveis em lã de vidro
-**Por que é referência:** empresa do mesmo ecossistema construtivo (Steel Frame, Drywall, acabamentos de alto padrão), mesmo público-alvo (arquitetos, construtores, especificadores), mesmo posicionamento técnico-premium.
+## Referência Editorial — @[perfil] (Instagram)
+**Perfil:** [@perfil](https://www.instagram.com/perfil/) — [número de posts e seguidores]
+**Marca:** [nome da marca de referência] — [breve descrição do produto/serviço deles]
+**Por que é referência:** [justificativa — ex.: mesmo ecossistema, mesmo público-alvo (arquitetos, construtores, especificadores), mesmo posicionamento técnico-premium]
 
 ### Formatos de conteúdo
 
-**1. Carrossel Catálogo de Produto**
-- Slide 1: Amostras do produto sobre fundo neutro + label (categoria + nome)
-- Slides 2+: Um produto por slide → nome + descrição + foto de aplicação em retângulo arredondado + barra de specs
+**1. [Formato 1 — ex.: Carrossel Catálogo de Produto]**
+- [Descrição do layout e estrutura de slides]
 
-**2. Carrossel Editorial/Educativo** ← formato principal
-- Slide 1 (Cover): Foto escura + headline bold branca + anotação colorida
-- Slide 2: Lifestyle + keyword em highlight
-- Slide 3: "Regra simples" — infográfico SEM vs COM
-- Slides 4+: Produto/solução
-- Última slide: CTA
+**2. [Formato 2 — ex.: Carrossel Editorial/Educativo]** ← formato principal
+- [Slide 1: ...]
+- [Slides 2+: ...]
+- [Última slide: CTA]
 
-**3. Post Estático**
-- Foto arquitetônica com produto instalado (cinema, academia, escritório)
-- Texto mínimo: categoria pequena + produto em bold + logo no rodapé
+**3. [Formato 3 — ex.: Post Estático]**
+- [Descrição]
 
-**4. Reels — Cases**
-- Projeto real + desafio + solução aplicada — autoridade por associação
+**4. [Formato 4 — ex.: Reels/Cases]**
+- [Descrição]
 
 ### Padrão de copy (legenda)
-1. Observação concreta sobre o contexto
-2. Desenvolvimento do problema (2-3 parágrafos curtos)
-3. Insight/virada
-4. Solução ampla → produto específico
-5. CTA: "link da bio" (nunca WhatsApp direto)
-6. 3-5 hashtags específicas
+1. [Passo 1 — ex.: Observação concreta sobre o contexto]
+2. [Passo 2 — ex.: Desenvolvimento do problema]
+3. [Passo 3 — ex.: Insight/virada]
+4. [Passo 4 — ex.: Solução ampla → produto específico]
+5. [Passo 5 — ex.: CTA]
+6. [Passo 6 — ex.: hashtags]
 
-**Tom:** educativo, técnico-acessível, sem emojis, parágrafos de 2-4 linhas
+**Tom:** [características — ex.: educativo, técnico-acessível, sem emojis, parágrafos curtos]
 
-### Adaptação para Ecoframe
+### Adaptação para [Nome da empresa]
 
-| Ecophon | Ecoframe |
+| [Referência] | [Empresa] |
 |---|---|
-| "forros acústicos" | "esquadrias em PVC de alta performance" |
-| "espaços" | "obras" / "projetos" |
-| "sem tratamento acústico" | "sem esquadria de alto desempenho" |
-| Spec: NRC | Spec: Rw dB + Ug W/m²K |
-| Cases internacionais | Cases nacionais Ecoframe |
-| SEM vs COM forro | alumínio comum vs PVC alta performance |
+| "[elemento visual/copy deles]" | "[equivalente na empresa]" |
+| "[elemento deles]" | "[equivalente]" |
+| "[spec deles]" | "[spec da empresa]" |
+| "[caso de uso deles]" | "[caso de uso da empresa]" |
 
 ---
 
-## Referência de Design Visual — @ecophon_brasil (Instagram)
+## Referência de Design Visual — @[perfil] (Instagram)
 
-**Perfil:** [@ecophon_brasil](https://www.instagram.com/ecophon_brasil/)
-**Relevância:** mesma categoria construtiva, mesmo público premium, mesmo posicionamento técnico.
+**Perfil:** [@perfil](https://www.instagram.com/perfil/)
+**Relevância:** [Por que esse perfil serve como referência de design — mesma categoria, mesmo público, mesmo posicionamento]
 **Uso:** referência exclusivamente de design visual e estilo de imagem — não de conteúdo ou produto.
 **Especificação completa:** ver seção `image_style` em `marca/DESIGN.md`
 
 ### DNA visual em síntese
 
-**Cores de destaque (deles → Ecoframe):** Amarelo #F5C518 → Azul #4A61A0
+**Cor de destaque (deles → empresa):** [Cor deles] → [Cor primária da empresa]
 
 **Fotografia:**
-- Covers: fotos escuras, moody, pessoas em ação no ambiente real
-- Solução: fotos arquitetônicas clean, produto instalado, luz natural
-- Detalhe: close-up da textura/estrutura do produto
+- Covers: [estilo — ex.: fotos escuras, moody, pessoas em ação]
+- Solução: [estilo — ex.: fotos arquitetônicas clean, produto instalado, luz natural]
+- Detalhe: [estilo — ex.: close-up da textura/estrutura do produto]
 
-**Elementos gráficos recorrentes (todos adaptados para Azul Ecoframe):**
-- Box de highlight colorido atrás de palavras-chave no texto
-- Oval/loop desenhado à mão em volta de sujeitos ou produto
-- Colchete geométrico branco em volta do headline do cover
-- Card branco flutuante com soft shadow sobre fotos
-- Linhas curvas paralelas (ondas sonoras) flanqueando elementos
-- Círculos coloridos com ícone branco em infográficos
-- Blob/meia-lua colorida aparecendo pelo canto (transição para CTA)
-- Botão pill/cápsula de contorno (sem preenchimento) para CTA
+**Elementos gráficos recorrentes:**
+- [Elemento 1 — ex.: box de highlight colorido atrás de palavras-chave]
+- [Elemento 2 — ex.: oval desenhado à mão em volta de sujeitos]
+- [Elemento 3 — ex.: card branco flutuante com soft shadow sobre fotos]
+- [...]
 
-**7 templates de layout identificados:**
-1. Cover atmosférico (foto escura + colchete branco + headline misto)
-2. Problema com highlight (fundo off-white + boxes de cor nas keywords)
-3. Regra simples (infográfico SEM vs COM — ícones + highlight)
-4. Split dinâmico (foto escura 60% + painel colorido 40%, borda curva)
-5. Full photo + floating card (foto + card flutuante + ondas)
-6. Solução produto (off-white + produto em arch-frame + material close-up)
-7. CTA acento (fundo azul sólido + logo + headline curto + pill CTA)
+**Templates de layout identificados:**
+1. [Template 1 — ex.: Cover atmosférico]
+2. [Template 2 — ex.: Problema com highlight]
+3. [Template 3 — ex.: Regra simples (SEM vs COM)]
+4. [Template 4 — ex.: Split dinâmico]
+5. [Template 5 — ex.: Full photo + floating card]
+6. [Template 6 — ex.: Solução produto]
+7. [Template 7 — ex.: CTA acento]
 
-**Spec bar em produtos:** `Rw: XX dB | Ug: X,X W/m²K | Linha: euroTEC / iTEC / MAXXI`
+**Spec bar em produtos:** `[Spec 1: valor] | [Spec 2: valor] | [Linha/categoria: nome]`

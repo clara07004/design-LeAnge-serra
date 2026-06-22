@@ -307,7 +307,7 @@ Gerado **após o ok do usuário**. Contém: data da aprovação, tema narrativo 
 
 ### 3. `dashboard.html` — visão de mês inteiro
 
-Grid visual derivado **direto do `calendario-detalhado.md`**, usando o template `templates/dashboard-calendario.html`. Identidade visual da marca (Poppins + Montserrat, Azul Ecoframe `#4A61A0`, off-white texturizado), canvas 1920×1080. Estrutura: header (mês + tema + mix), grid 7 colunas (Dom–Sab) com uma célula por dia, sidebar com mix em barra, picos, apagões e próximos a produzir.
+Grid visual derivado **direto do `calendario-detalhado.md`**, usando o template `templates/dashboard-calendario.html`. Identidade visual da marca (tipografia e paleta conforme `marca/DESIGN.md`, off-white texturizado), canvas 1920×1080. Estrutura: header (mês + tema + mix), grid 7 colunas (Dom–Sab) com uma célula por dia, sidebar com mix em barra, picos, apagões e próximos a produzir.
 
 Após gerar o HTML, **perguntar** se renderiza o `dashboard.png` via Playwright (esse passo é opcional).
 

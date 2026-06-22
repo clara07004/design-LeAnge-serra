@@ -25,7 +25,7 @@ abaixo do padrão.**
 | Label uppercase | 18px | 700 (Montserrat) |
 | Tagline header | 16px | 700 (Montserrat) |
 
-**Famílias:** Poppins (títulos, headlines, identidade) · Montserrat (corpo, labels, legendas).
-Máximo 2 famílias. Sem serifa em digital. Headline escuro de referência: Poppins 88px / 700 /
+**Famílias:** conforme `marca/DESIGN.md` (`typography.display.fontFamily` + `typography.body.fontFamily`).
+Máximo 2 famílias. Sem serifa em digital. Headline de referência: display 88px / 700 /
 line-height 1.06 / letter-spacing -0.022em. Ver [[feedback-carousel-design-aprovado]].
 </content>

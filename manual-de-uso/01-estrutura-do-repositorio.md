@@ -3,11 +3,11 @@
 ## Mapa completo de pastas
 
 ```
-Design-ecoframe/
+Design-template/
 │
 ├── CLAUDE.md                        ← Regras do sistema (lido automaticamente)
 ├── MAPA-TECNICO.md                  ← Documentação técnica do projeto
-├── PROJETO.md                       ← Visão geral do projeto Unity Content
+├── PROJETO.md                       ← Visão geral do projeto (status de implementação)
 ├── README.md                        ← Introdução ao repositório
 ├── skills-lock.json                 ← Versões das skills instaladas
 │
@@ -28,7 +28,7 @@ Design-ecoframe/
 │
 ├── conteudo/                        ← Output do sistema (criado automaticamente)
 │   └── carrosseis/
-│       └── pvc-vs-aluminio/
+│       └── [tema-do-conteudo]/
 │           └── carousel-text.md
 │
 ├── dados/                           ← Arquivos para análise (CSV, PDF, prints)
@@ -107,7 +107,7 @@ O arquivo mais importante do repositório. É lido pelo Claude em toda conversa 
 - O fluxo principal de conteúdo
 - Regras de comportamento (o que nunca fazer, como aprender com correções)
 
-**Nunca apague este arquivo.** Sem ele, o Claude não sabe que está num workspace de conteúdo da Ecoframe.
+**Nunca apague este arquivo.** Sem ele, o Claude não sabe que está num workspace de conteúdo configurado para a empresa.
 
 ### `skills-lock.json`
 Registra as versões das skills instaladas. Funciona como um `package-lock.json`: garante que você saiba exatamente qual versão de cada skill está rodando. Não edite manualmente.
@@ -116,19 +116,19 @@ Registra as versões das skills instaladas. Funciona como um `package-lock.json`
 
 ## Pasta `_contexto/` — A memória da empresa
 
-Esta pasta é o cérebro do sistema. O Claude lê esses arquivos no início de cada conversa para saber quem é a Ecoframe e como se comportar.
+Esta pasta é o cérebro do sistema. O Claude lê esses arquivos no início de cada conversa para saber quem é a empresa e como se comportar.
 
 ### `_contexto/empresa.md`
 **O que contém:** Descrição completa da empresa — o que faz, quem é o público-alvo, modelo de negócio, posicionamento, objeções frequentes, canais ativos.
 
-**Por que importa:** Sem este arquivo, o Claude não sabe que está trabalhando para uma empresa de esquadrias em PVC voltada para Steel Frame e Drywall. Com ele, qualquer copy gerada menciona os termos certos, o posicionamento correto e os argumentos de venda adequados.
+**Por que importa:** Sem este arquivo, o Claude não sabe para qual empresa está trabalhando nem quais são os produtos e posicionamento. Com ele, qualquer copy gerada menciona os termos certos, o posicionamento correto e os argumentos de venda adequados.
 
 **Quando atualizar:** Sempre que algo mudar na empresa — novos produtos, novo público, mudança de posicionamento, novo canal de vendas.
 
 ### `_contexto/preferencias.md`
 **O que contém:** Tom de voz da marca, palavras recomendadas e proibidas, exemplos de copy no estilo certo e fora de estilo, restrições legais e de compliance.
 
-**Por que importa:** É o filtro de qualidade do texto. Define a diferença entre "esquadrias em PVC de alta performance" (correto) e "janela de PVC barata" (proibido). Também garante que o sistema nunca faça promessas técnicas sem laudo.
+**Por que importa:** É o filtro de qualidade do texto. Define a diferença entre a linguagem correta da marca e a linguagem inadequada. Também garante que o sistema nunca faça promessas técnicas sem laudo.
 
 **Quando atualizar:** Quando a marca evoluir, quando novas restrições de compliance aparecerem, ou quando um tipo de copy for aprovado/reprovado consistentemente.
 
@@ -144,11 +144,11 @@ Esta pasta é o cérebro do sistema. O Claude lê esses arquivos no início de c
 
 **Por que importa:** Antes de criar qualquer conteúdo visual, o Claude pode consultar as fotos reais da empresa no Drive para usar como referência de estilo e produto. Isso evita que as imagens geradas por IA fiquem genéricas.
 
-**Pastas configuradas atualmente:**
+**Exemplo de pastas a configurar:**
 - Identidade Visual (logos, assets da marca)
-- Fotos do Produto (fotos reais de instalações)
-- Catálogo Técnico (documentação da Primeira Linha)
-- Referências Ecophon France (benchmark visual)
+- Fotos do Produto (fotos reais de obras e instalações)
+- Catálogo Técnico (documentação dos produtos)
+- Referências Visuais (benchmark de marcas do setor)
 
 ---
 
@@ -164,15 +164,15 @@ Este é o manual de marca em formato estruturado que o sistema consegue ler e ap
 - Regras do logo
 - `components` — especificações de botões, cards, tags
 - `image_style` — como devem ser as fotos, os backgrounds, os elementos gráficos
-- `layout_templates` — os 7 templates de layout identificados no benchmark (@ecophon_brasil)
+- `layout_templates` — os 7 templates de layout mapeados no benchmark visual da marca
 
 **Variável crítica:** `status: configured`. Quando este campo não está como `configured`, todas as skills de produção visual param e avisam que o DESIGN.md precisa ser configurado. Isso evita que posts sejam gerados com cores improvisadas.
 
-**Cores atuais da Ecoframe:**
-- Azul primário: `#4A61A0`
-- Verde secundário (eco/acento): `#2C6D14`
-- Canvas (fundo): `#F5F5F0`
-- Texto: `#1A1A1A`
+**Cores a configurar (preencher conforme identidade visual da empresa):**
+- Cor primária: `[#XXXXXX]`
+- Cor secundária: `[#XXXXXX]`
+- Canvas (fundo): `[#XXXXXX]`
+- Texto: `[#XXXXXX]`
 
 ---
 
@@ -259,7 +259,7 @@ Escreve a legenda para post estático em 4 tipos: narrativa, reflexão, lançame
 Constrói um prompt estruturado e otimizado para o `gpt-image-1`. Entrega 3 versões (principal, minimalista, impactante) + comando PowerShell pronto para executar.
 
 ### `gerador-de-prompts-para-imagens-de-produto/`
-Versão especializada focada nas 3 estéticas fotográficas da Ecoframe: `architectural_installation`, `dark_lifestyle` e `product_closeup`. Use quando a imagem precisa mostrar o produto Ecoframe.
+Versão especializada focada nos estilos fotográficos configurados em `marca/DESIGN.md`: `architectural_installation`, `dark_lifestyle` e `product_closeup`. Use quando a imagem precisa mostrar o produto da empresa.
 
 **Distribuição**
 

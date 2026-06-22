@@ -5,14 +5,14 @@ description: Recebe tema, nicho e público — entrega 10 ângulos únicos com p
 
 # Gerador de Ângulos de Conteúdo
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de gerar, ler:
-- `_contexto/empresa.md` — ICP (arquitetos, construtores Steel Frame, proprietários alto padrão), produtos e posicionamento
-- `_contexto/preferencias.md` — tom técnico acessível, sem promessas absolutas, sem "barato/econômico"
+- `_contexto/empresa.md` — ICP, produtos/serviços e posicionamento
+- `_contexto/preferencias.md` — tom de voz, palavras proibidas, restrições de compliance
 - `_contexto/estrategia.md` — gaps prioritários a resolver com conteúdo
 
-Aplicar ao contexto da Ecoframe: o "criador" é a marca, o "seguidor" é o ICP.
+O "criador" é a marca, o "seguidor" é o ICP definido em empresa.md.
 
 ---
 
@@ -28,8 +28,8 @@ O maior erro é tratar o tema como o ângulo. "Esquadrias de PVC" não é um ân
 
 **Obrigatório:**
 - `[TEMA]` — o assunto central (ex: isolamento acústico, PVC vs alumínio, Steel Frame e esquadrias)
-- `[NICHO]` — esquadrias em PVC de alta performance para construção a seco
-- `[PÚBLICO]` — quem é a audiência em uma frase (ex: "arquitetos de 30-50 anos que especificam materiais para obras de alto padrão")
+- `[NICHO]` — segmento de mercado da empresa (conforme `_contexto/empresa.md`)
+- `[PÚBLICO]` — quem é a audiência em uma frase (conforme seção ICP em `_contexto/empresa.md`)
 
 Se algum estiver ausente, perguntar antes de gerar.
 
@@ -51,7 +51,7 @@ Antes de entregar: ler os 10 ganchos em sequência. Se dois poderiam pertencer a
 |---|---|
 | Educacional | Ensina um conceito, processo ou dado técnico do zero |
 | Opinião | Toma uma posição sobre algo polêmico ou contraintuitivo no setor |
-| Bastidor | Mostra como a Ecoframe ou o instalador faz na prática |
+| Bastidor | Mostra como a empresa ou o profissional faz na prática |
 | Erro comum | Expõe uma crença falsa ou armadilha que o avatar cai sem perceber |
 | Comparativo | Contrasta duas abordagens, materiais ou sistemas (PVC vs alumínio, etc.) |
 | Resultado real | Mostra transformação com dados, antes/depois ou projeto real |
@@ -62,7 +62,7 @@ Antes de entregar: ler os 10 ganchos em sequência. Se dois poderiam pertencer a
 |---|---|
 | Iniciante | Ainda descobrindo o básico, quer validação antes de especificar |
 | Intermediário | Já conhece o produto, quer sair do platô técnico |
-| Avançado | Já especifica Ecoframe, quer refinar a argumentação com clientes |
+| Avançado | Já usa/especifica o produto, quer refinar a argumentação com clientes |
 
 ### Formatos narrativos
 
@@ -99,5 +99,5 @@ PARA COMEÇAR: mix recomendado para a próxima semana:
 - 1 ângulo de resultado real ou erro comum → tende a ser compartilhado, amplia alcance
 - 1 ângulo educacional → tende a ser salvo, constrói autoridade técnica
 - 1 ângulo de opinião → gera comentários e debate, aumenta engajamento
-- 1 ângulo de bastidor → cria proximidade com quem já conhece a Ecoframe
+- 1 ângulo de bastidor → cria proximidade com quem já conhece a marca
 ```

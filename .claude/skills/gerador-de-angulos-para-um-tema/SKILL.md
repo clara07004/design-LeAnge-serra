@@ -5,14 +5,14 @@ description: Recebe um tema único e gera múltiplos ângulos diferentes para ab
 
 # Gerador de Ângulos para um Tema
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de gerar, ler:
-- `_contexto/empresa.md` — produtos (iTEC, euroTEC, TECplus100, MAXXI), ICP (arquitetos, construtores, proprietários), posicionamento premium técnico
-- `_contexto/preferencias.md` — tom técnico acessível, palavras proibidas, restrições de compliance
+- `_contexto/empresa.md` — produtos/serviços, ICP e posicionamento
+- `_contexto/preferencias.md` — tom de voz, palavras proibidas, restrições de compliance
 - `_contexto/estrategia.md` — foco atual e gaps prioritários
 
-Aplicar ao contexto da Ecoframe: o "criador" é a marca, o "avatar" é o ICP definido em empresa.md.
+O "criador" é a marca, o "avatar" é o ICP definido em empresa.md.
 
 ---
 
@@ -28,8 +28,8 @@ Um tema não é um conteúdo. É uma matéria-prima que pode virar dezenas de pe
 
 **Obrigatório:**
 - `[TEMA]` — o assunto central (ex: isolamento acústico, PVC vs alumínio, instalação em Steel Frame)
-- `[NICHO]` — área da Ecoframe (ex: esquadrias em PVC para construção a seco)
-- `[AVATAR]` — para quem o conteúdo é feito (ex: arquitetos de alto padrão, construtores Steel Frame)
+- `[NICHO]` — segmento de mercado da empresa (conforme `_contexto/empresa.md`)
+- `[AVATAR]` — perfil do cliente-alvo (conforme seção ICP em `_contexto/empresa.md`)
 
 **Opcional:**
 - `[PLATAFORMA]` — afeta quais formatos sugerir para cada ângulo

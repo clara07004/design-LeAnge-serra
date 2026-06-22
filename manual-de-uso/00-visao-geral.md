@@ -2,7 +2,7 @@
 
 ## A ideia central
 
-Este repositório é um **sistema operacional de criação de conteúdo**. Ele transforma o Claude Code num produtor de conteúdo configurado especificamente para a Ecoframe: lê o contexto da empresa, aplica a identidade visual da marca, gera imagens via IA, monta layouts HTML e entrega posts prontos para publicar no Instagram, TikTok e LinkedIn.
+Este repositório é um **sistema operacional de criação de conteúdo**. Ele transforma o Claude Code num produtor de conteúdo configurado para a empresa: lê o contexto do negócio, aplica a identidade visual da marca, gera imagens via IA, monta layouts HTML e entrega posts prontos para publicar no Instagram, TikTok e LinkedIn.
 
 O nome técnico é **CCOS — Claude Code OS**. A analogia é precisa: assim como um sistema operacional orquestra programas e recursos de hardware, o CCOS orquestra skills de IA, APIs externas e arquivos de contexto para produzir conteúdo.
 
@@ -13,7 +13,7 @@ O nome técnico é **CCOS — Claude Code OS**. A analogia é precisa: assim com
 O Claude Code lê arquivos Markdown como se fossem instruções de comportamento. Quando você abre uma conversa neste diretório, o Claude automaticamente lê:
 
 - `CLAUDE.md` — regras gerais de comportamento (o "manual interno" do sistema)
-- `_contexto/empresa.md` — quem é a Ecoframe, o que vende, para quem
+- `_contexto/empresa.md` — quem é a empresa, o que vende, para quem
 - `_contexto/preferencias.md` — como a marca fala, o que evitar
 - `_contexto/estrategia.md` — foco atual, prioridades do período
 - `_contexto/referencias.md` — onde estão as referências visuais no Google Drive
@@ -54,7 +54,7 @@ O sistema tem dois tipos de componentes:
 
 *Imagem:*
 - `/gerador-de-prompts-de-imagem` — prompt otimizado para gpt-image-1
-- `/gerador-de-prompts-para-imagens-de-produto` — prompts para as 3 estéticas de produto da Ecoframe
+- `/gerador-de-prompts-para-imagens-de-produto` — prompts para os estilos fotográficos de produto
 
 *Distribuição:*
 - `/1-conteudo-em-7-formatos` — adapta 1 conteúdo para 7 canais

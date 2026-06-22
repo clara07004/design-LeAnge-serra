@@ -5,14 +5,13 @@ description: Cria o primeiro slide de carrosseis do Instagram — a combinação
 
 # Hooks para Carrossel
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de gerar, ler:
-- `_contexto/empresa.md` — ICP, posicionamento premium técnico, objeções frequentes
-- `_contexto/preferencias.md` — tom técnico acessível, palavras proibidas
+- `_contexto/empresa.md` — ICP, posicionamento e objeções frequentes
+- `_contexto/preferencias.md` — tom de voz e palavras proibidas
 
-O "nicho" da Ecoframe é esquadrias em PVC de alta performance para construção a seco.
-O "avatar" principal é: arquitetos/especificadores, construtores Steel Frame, proprietários de alto padrão.
+O "nicho" e o "avatar" são definidos em `_contexto/empresa.md`.
 
 ---
 

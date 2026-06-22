@@ -5,14 +5,13 @@ description: Gera hooks específicos para Instagram Reels — combinando o prime
 
 # Hooks para Instagram Reels
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de gerar, ler:
-- `_contexto/empresa.md` — ICP e posicionamento da Ecoframe
-- `_contexto/preferencias.md` — tom técnico acessível, sem promessas absolutas
+- `_contexto/empresa.md` — ICP e posicionamento
+- `_contexto/preferencias.md` — tom de voz e restrições de compliance
 
-O "nicho" é esquadrias em PVC de alta performance.
-O "avatar" é: arquitetos/especificadores, construtores Steel Frame, proprietários de alto padrão.
+O "nicho" e o "avatar" são definidos em `_contexto/empresa.md`.
 
 ---
 

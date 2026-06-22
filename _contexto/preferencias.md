@@ -1,73 +1,61 @@
-# Preferências de comunicação — Ecoframe
+# Preferências de comunicação — [Nome da empresa]
 
 ## Idioma
-Português brasileiro, com acentuação correta e vocabulário técnico da construção civil.
+[Ex.: Português brasileiro, com acentuação correta e vocabulário técnico do setor de X.]
 
 ## Tom de voz
-Técnico, elegante, seguro e consultivo.
+[Descreva em 2-3 frases o tom da marca: como ela fala, que impressão passa, o que evita.]
 
-A marca fala como uma empresa que entende de obra, desempenho e arquitetura. Não soa como loja de material de construção nem como marca de luxo artificial.
+[Ex.: "A marca fala como uma empresa que entende de Y. Não soa como loja genérica nem como grife artificial. O território é Z aplicado a W."]
 
 **Sliders:**
-- Formal ↔ Informal: levemente formal
-- Técnico ↔ Coloquial: técnico acessível
-- Ousado ↔ Conservador: seguro, mas com opinião
-- Comercial ↔ Institucional: consultivo
-- Popular ↔ Premium: premium técnico
+- Formal ↔ Informal: [posição — ex.: levemente formal]
+- Técnico ↔ Coloquial: [posição — ex.: técnico acessível]
+- Ousado ↔ Conservador: [posição — ex.: seguro, mas com opinião]
+- Comercial ↔ Institucional: [posição — ex.: consultivo]
+- Popular ↔ Premium: [posição — ex.: premium técnico]
 
 ---
 
 ## Palavras e expressões recomendadas
-- Esquadrias em PVC de alta performance
-- Conforto termoacústico
-- Eficiência energética
-- Vedação
-- Baixa manutenção
-- Durabilidade
-- Acabamento superior
-- Arquitetura contemporânea
-- Steel Frame / Drywall
-- Obra de alto padrão
-- Desempenho técnico
-- Venda consultiva
-- Especificação adequada
-- Valorização do imóvel
+- [Expressão 1 — vocabulário central da marca]
+- [Expressão 2]
+- [Expressão 3]
+- [Expressão 4]
+- [Expressão 5]
+- [...]
 
 ## Palavras e expressões a evitar
-- Barato, econômico, promoção, custo-benefício como argumento central
-- Janela comum, plástico, popular, alternativa barata
-- Luxo absoluto, grife, alta costura
-- Silêncio absoluto (sem base em laudo)
-- Matriz polimérica (muito técnico/frio)
-- Promessas absolutas sem base técnica
+- [Expressão a evitar 1 — e por que: ex. "barato" soa como desqualificação do produto]
+- [Expressão a evitar 2]
+- [Expressão a evitar 3]
+- [Expressão a evitar 4 — promessas absolutas sem base técnica]
 
 ---
 
 ## Copy no estilo certo
-> "Em projetos de alto padrão, esquadrias não são apenas fechamento. Elas influenciam conforto térmico, isolamento acústico, vedação, durabilidade e percepção de acabamento da obra."
+> "[Exemplo de copy dentro do tom aprovado — mostra como a marca fala de verdade]"
 
-> "A Ecoframe desenvolve esquadrias em PVC para projetos que exigem mais do que estética: exigem desempenho, precisão e conforto no uso diário."
+> "[Outro exemplo com vocabulário correto]"
 
-> "Para obras em Steel Frame e Drywall, a escolha da esquadria precisa acompanhar o nível técnico do sistema construtivo."
+> "[Terceiro exemplo — pode ser mais técnico se o produto exigir]"
 
 ## Copy fora de estilo
-> "Janela de PVC com o melhor custo-benefício do mercado."
-> "Troque o alumínio por uma solução mais barata."
-> "Promoção imperdível em esquadrias de PVC."
-> "A esquadria perfeita para qualquer obra."
+> "[Exemplo de copy que não deve ser usado — indica o erro]"
+> "[Outro exemplo inaceitável]"
+> "[Terceiro exemplo — para deixar claro o contraste]"
 
 ---
 
 ## Restrições legais e de compliance
-- Não prometer redução exata de temperatura sem laudo técnico
-- Não prometer bloqueio acústico absoluto — usar "contribui para maior conforto acústico, especialmente quando combinado com especificação adequada de vidro, vedação e instalação"
-- Não afirmar superioridade técnica universal sem contexto
-- Não usar dados de durabilidade, resistência ou eficiência sem fonte técnica
-- Comparativo com alumínio: sempre tom consultivo, nunca agressivo
+- [Restrição 1: o que não pode ser prometido sem laudo, certificação ou dado técnico]
+- [Restrição 2: comparativos — quando e como usar (nunca agressivo)]
+- [Restrição 3: afirmações de superioridade — exigem contexto e fonte]
+- [Restrição 4: dados de durabilidade, eficiência ou resistência — sempre com fonte]
 
 ---
 
 ## Referências visuais do universo de marca
-Arquitetura contemporânea, interiores clean, luz natural, ambientes silenciosos e bem vedados, projetos de Steel Frame, detalhes de esquadrias em contexto de obra de alto padrão.
+[Descreva o universo visual que a marca habita: estilo de fotografia, tipos de ambiente, sensação geral, referências estéticas. Ex.: arquitetura contemporânea, ambientes clean, luz natural, projetos de alto padrão, etc.]
 
-Referência de estilo visual: Ecophon France (ambientes arquitetônicos sofisticados, foco em desempenho e estética limpa).
+Referência de estilo visual: [Marca, perfil ou publicação de referência — e uma linha explicando por que serve como referência de estilo (mesmo público, mesmo posicionamento, mesma categoria, etc.)]

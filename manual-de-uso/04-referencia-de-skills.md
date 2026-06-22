@@ -150,12 +150,12 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Para que serve:** Pega um tema e gera 10 lentes criativas para abordá-lo — cada uma com ângulo diferente.
 
-**Quando usar:** Antes do briefing, quando você tem o assunto mas não sabe como entrar. Ex: "quero falar sobre PVC, mas não sei qual ângulo".
+**Quando usar:** Antes do briefing, quando você tem o assunto mas não sabe como entrar. Ex: "quero falar sobre [produto/tema], mas não sei qual ângulo".
 
-**Input:** o tema. Pode ser amplo ("PVC") ou específico ("durabilidade das esquadrias no litoral").
+**Input:** o tema. Pode ser amplo ("[produto]") ou específico ("[aspecto específico do produto no setor]").
 
 **Output:**
-- 10 ângulos com: título sugerido, gancho, por que funciona para a Ecoframe
+- 10 ângulos com: título sugerido, gancho, por que funciona para a empresa
 - Pronto para levar ao `/briefing-unity`
 
 ---
@@ -179,7 +179,7 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 ### `/banco-de-objecoes-do-avatar`
 **Arquivo:** `.claude/skills/banco-de-objecoes-do-avatar/SKILL.md`
 
-**Para que serve:** Mapeia todas as objeções do ICP antes de especificar, comprar ou recomendar a Ecoframe — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
+**Para que serve:** Mapeia todas as objeções do ICP antes de especificar, comprar ou recomendar o produto — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
 
 **Quando usar:** Para criar conteúdo de meio/fundo de funil. Também quando posts não estão convertendo.
 
@@ -306,7 +306,7 @@ Existem três caminhos para obter imagens para os posts. Use o melhor para cada 
 | Caminho | Quando usar | Resultado |
 |---|---|---|
 | **Fotos reais do Drive** | Quando há foto de instalação ou produto disponível | Melhor — fotos reais de obra |
-| `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` | Imagem de produto em estética específica, ou quando Drive não tem o que precisa | Muito bom — prompt calibrado para Ecoframe |
+| `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` | Imagem de produto em estética específica, ou quando Drive não tem o que precisa | Muito bom — prompt calibrado para o produto |
 | `/gerador-de-prompts-de-imagem` → `/gpt-image2-unity` | Imagem de contexto ou cena genérica | Bom — prompt estruturado mas menos específico |
 
 ---
@@ -314,16 +314,16 @@ Existem três caminhos para obter imagens para os posts. Use o melhor para cada 
 ### `/gerador-de-prompts-para-imagens-de-produto`
 **Arquivo:** `.claude/skills/gerador-de-prompts-para-imagens-de-produto/SKILL.md`
 
-**Para que serve:** Constrói prompts otimizados para as 3 estéticas fotográficas da Ecoframe. Mais preciso que o genérico porque conhece as linhas de produto e os estilos da marca.
+**Para que serve:** Constrói prompts otimizados para os estilos fotográficos configurados em `marca/DESIGN.md`. Mais preciso que o genérico porque conhece as linhas de produto e os estilos da marca.
 
-**Quando usar:** Quando a imagem precisa mostrar o produto Ecoframe — esquadrias instaladas, detalhes técnicos, produto em contexto arquitetônico. Use este antes do genérico sempre que o produto for o foco.
+**Quando usar:** Quando a imagem precisa mostrar o produto da empresa — produto instalado, detalhes técnicos, produto em contexto de uso. Use este antes do genérico sempre que o produto for o foco.
 
-**Input:** linha (`iTEC`, `euroTEC`, `TECplus100` ou `MAXXI`) + estilo desejado
+**Input:** linha/variante do produto + estilo desejado
 
 **Os 3 estilos:**
 - `architectural_installation` — produto instalado em projeto acabado, luz natural, ambiente premium
-- `dark_lifestyle` — pessoa em ação no ambiente (arquiteto em obra, proprietário apreciando)
-- `product_closeup` — macro do perfil PVC, câmaras internas, detalhes de vedação
+- `dark_lifestyle` — pessoa em ação no ambiente (especialista em obra, cliente final apreciando)
+- `product_closeup` — macro do produto com detalhes técnicos específicos
 
 **Output:** prompt principal + variação + comando PowerShell para `/gpt-image2-unity`
 
@@ -522,7 +522,7 @@ GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity 
 | Escrever a legenda do Reel | `/legenda-para-reel` |
 | Escrever a legenda do post estático | `/legenda-para-post-estatico` |
 | Criar um prompt melhor para imagem | `/gerador-de-prompts-de-imagem` |
-| Criar foto do produto Ecoframe | `/gerador-de-prompts-para-imagens-de-produto` |
+| Criar foto do produto da empresa | `/gerador-de-prompts-para-imagens-de-produto` |
 | Distribuir um conteúdo para outros canais | `/1-conteudo-em-7-formatos` |
 | Gerar uma foto avulsa | `/gpt-image2-unity` |
 | Salvar o trabalho no GitHub | `/syncar` |

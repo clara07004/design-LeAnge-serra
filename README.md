@@ -1,10 +1,10 @@
-# Unity Content
+# CCOS — Sistema de Automação de Conteúdo
 
-Sistema de automação do processo de criação de conteúdo para redes sociais do Grupo Unity. Substitui o workflow editorial manual por um fluxo orquestrado de IA — da definição estratégica do tema até a entrega do pacote de conteúdo pronto para publicação.
+Sistema de automação do processo de criação de conteúdo para redes sociais. Substitui o workflow editorial manual por um fluxo orquestrado de IA — da definição estratégica do tema até a entrega do pacote de conteúdo pronto para publicação.
 
 **Objetivo:** Reduzir o tempo entre "temos algo para comunicar" e "post aprovado pronto para publicar", mantendo qualidade editorial e consistência visual de marca.
 
-**Empresa piloto:** Construção a seco (drywall / steel frame).
+**Empresa:** [Preencher após rodar `/setup` — cada empresa opera com seu próprio workspace]
 
 ---
 
@@ -113,7 +113,7 @@ analista-performance  ← V3
 
 | Camada | Tecnologia | Status |
 |---|---|---|
-| Plataforma / OS | CCOS-Unity (Claude Code local) | ✅ Existe |
+| Plataforma / OS | CCOS (Claude Code local) | ✅ Existe |
 | Calendário | `calendario-comercial` skill | ✅ Existe |
 | Geração de carrossel | `carrossel-unity` (HTML → PNG via Playwright) | ✅ Existe |
 | Post card único | `estatico-unity` (foto GPT + HTML → PNG via Playwright) | ✅ Novo |
@@ -166,7 +166,7 @@ Projeto paralelo que alimenta o `briefing-unity` com dados técnicos reais sobre
 
 | Fase | O que entrega |
 |---|---|
-| **MVP** | ✅ Fluxo completo rodando com Ecoframe. Skills de produção: `calendario`, `briefing`, `carrossel`, `estatico-unity` (novo), `roteiro-unity` (novo). Motores: `gpt-image2`, `nanobanana`, `ogilvy`, `schwartz`. Infraestrutura: Node.js + Playwright + Python + openai SDK. Validação em curso: 10 conteúdos. |
+| **MVP** | ✅ Fluxo completo validado. Skills de produção: `calendario`, `briefing`, `carrossel`, `estatico-unity`, `roteiro-unity`. Motores: `gpt-image2`, `nanobanana`, `ogilvy`, `schwartz`. Infraestrutura: Node.js + Playwright + Python + openai SDK. |
 | **V1** | Deploy remoto (n8n Cloud / VPS) + biblioteca técnica |
 | **V2** | Publicação automática + coleta de métricas + registro no Supabase |
 | **V3** | Loop de inteligência + score de conteúdo + sugestão proativa + dashboard |
@@ -195,8 +195,8 @@ cp .env.example .env
 
 ## Multi-empresa
 
-Cada empresa do Grupo Unity opera com seu próprio workspace CCOS independente — repositório separado, contexto isolado, credenciais separadas, histórico independente. Rollout gradual: começa na empresa piloto, valida, replica para as demais sem risco de comprometer o que já funciona.
+Cada empresa opera com seu próprio workspace CCOS independente — repositório separado, contexto isolado, credenciais separadas, histórico independente. Rollout gradual: começa na empresa piloto, valida, replica para as demais sem risco de comprometer o que já funciona.
 
 ---
 
-*Última atualização: 2026-05-05 — `estatico-unity` e `roteiro-unity` criadas. Arquitetura revisada: gpt-image2-unity e copy agents (ogilvy/schwartz) são motores internos, não skills de produção direta. `/setup` reescrito com confirmação obrigatória, coleta de frequência de postagem e regra verbal > documento. `/iniciar` removido (redundante). `calendario-comercial` atualizado para output proporcional à frequência. Empresa piloto: Ecoframe.*
+*Última atualização: 2026-05-05 — `estatico-unity` e `roteiro-unity` criadas. Arquitetura revisada: gpt-image2-unity e copy agents (ogilvy/schwartz) são motores internos, não skills de produção direta. `/setup` reescrito com confirmação obrigatória, coleta de frequência de postagem e regra verbal > documento. `/iniciar` removido (redundante). `calendario-comercial` atualizado para output proporcional à frequência. Template base — replicar por empresa.*

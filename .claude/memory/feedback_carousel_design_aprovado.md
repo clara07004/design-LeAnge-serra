@@ -1,21 +1,19 @@
 ---
 name: feedback-carousel-design-aprovado
-description: Padrões CSS/tipográficos aprovados, catálogo de componentes e mapa de fotos testadas para carrossel Ecoframe.
+description: Padrões CSS/tipográficos aprovados e catálogo de componentes para carrossel — adaptar cores para a empresa configurada.
 metadata:
   type: feedback
 ---
 
-Catálogo de padrões CSS, componentes e fotos **aprovados** para carrossel. Consultar **antes
-de inventar componente novo**. Fonte viva dos snippets completos: os carrosséis de junho 2026
-([dia-02](../../conteudo/carrosseis/junho/dia-02-5-criterios-especificacao/),
-[dia-03](../../conteudo/carrosseis/junho/dia-03-eficiencia-energetica/),
-[dia-04](../../conteudo/carrosseis/junho/dia-04-especificacao-tecnica/)) — o template visual oficial.
+Catálogo de padrões CSS, componentes e estrutura **aprovados** para carrossel. Consultar **antes
+de inventar componente novo**. Ao aplicar, substituir `[COR_PRIMÁRIA]` pela cor primária real
+de `marca/DESIGN.md`, as fontes pelos nomes reais e a tagline pelo texto da empresa.
 
-**Why:** a Ecoframe constrói identidade visual no feed — o público precisa reconhecer um post
-da marca antes de ler o nome. Inventar componente fora do catálogo quebra esse reconhecimento.
+**Why:** a empresa constrói identidade visual no feed — o público precisa reconhecer um post
+da marca antes de ler o nome. Inventar componente fora do catálogo aprovado quebra esse reconhecimento.
 
-**How to apply:** copiar a estrutura de junho, manter rigorosamente header, gradiente, paleta,
-escala e componentes. Inovação visual nesse nível **não** está autorizada.
+**How to apply:** manter rigorosamente header, gradiente, paleta, escala e componentes aprovados.
+Inovação visual nesse nível **não** está autorizada — só no conteúdo (ângulo, narrativa, dado técnico).
 
 ---
 
@@ -32,8 +30,8 @@ body { width:1080px; height:1350px; overflow:hidden; background:#060a18; }
 ```html
 <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
   <img src="../../../../../marca/logos/logo-branco.png" style="height:48px;object-fit:contain;">
-  <span style="width:1.5px;height:22px;background:#4A61A0;margin:0 10px;display:inline-block;"></span>
-  <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:#4A61A0;letter-spacing:0.14em;text-transform:uppercase;">Esquadrias em PVC</span>
+  <span style="width:1.5px;height:22px;background:[COR_PRIMÁRIA];margin:0 10px;display:inline-block;"></span>
+  <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:[COR_PRIMÁRIA];letter-spacing:0.14em;text-transform:uppercase;">[TAGLINE]</span>
 </div>
 ```
 > Logo no header dos slides de junho = `height:48px`. (O DESIGN.md cita "mínimo 80px digital" —
@@ -54,13 +52,13 @@ esquerda → left→right. Nunca overlay sólido cobrindo a imagem.
 
 ```html
 <div style="position:absolute;bottom:-60px;left:-60px;width:280px;height:280px;
-  border-radius:50%;background:rgba(74,97,160,0.18);filter:blur(55px);"></div>
+  border-radius:50%;background:rgba([R_PRIMÁRIA],[G_PRIMÁRIA],[B_PRIMÁRIA],0.18);filter:blur(55px);"></div>
 ```
 
 ## Divider de seção
 
 ```html
-<div style="width:48px;height:3px;background:#4A61A0;border-radius:2px;margin-bottom:24px;"></div>
+<div style="width:48px;height:3px;background:[COR_PRIMÁRIA];border-radius:2px;margin-bottom:24px;"></div>
 ```
 
 ## Headline padrão (slide escuro)
@@ -74,9 +72,9 @@ line-height:1.06; letter-spacing:-0.022em;
 
 ```html
 <div style="display:flex;align-items:flex-start;gap:24px;">
-  <div style="width:48px;height:48px;border-radius:50%;background:rgba(74,97,160,0.25);
-    border:1.5px solid rgba(74,97,160,0.55);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px;">
-    <span style="font-family:'Montserrat';font-size:16px;font-weight:700;color:#4A61A0;">01</span>
+  <div style="width:48px;height:48px;border-radius:50%;background:rgba([R_PRIMÁRIA],[G_PRIMÁRIA],[B_PRIMÁRIA],0.25);
+    border:1.5px solid rgba([R_PRIMÁRIA],[G_PRIMÁRIA],[B_PRIMÁRIA],0.55);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px;">
+    <span style="font-family:'Montserrat';font-size:16px;font-weight:700;color:[COR_PRIMÁRIA];">01</span>
   </div>
   <div style="font-family:'Poppins';font-size:44px;font-weight:400;color:rgba(255,255,255,0.86);line-height:1.40;">Texto do passo.</div>
 </div>
@@ -96,32 +94,34 @@ line-height:1.06; letter-spacing:-0.022em;
 
 | Componente | Descrição | Cor |
 |---|---|---|
-| **Text highlight box** | Retângulo sólido atrás de palavra-chave (nome de linha, spec, prova) | Azul `#4A61A0` (fundo claro) / Branco (fundo azul). Padding 4–8px, quase reto |
-| **Hand-drawn loop** | Oval/loop orgânico circundando sujeito ou produto | Azul `#4A61A0`, traço fino imperfeito (não geométrico) |
+| **Text highlight box** | Retângulo sólido atrás de palavra-chave (nome de linha, spec, prova) | `[COR_PRIMÁRIA]` (fundo claro) / Branco (fundo escuro). Padding 4–8px, quase reto |
+| **Hand-drawn loop** | Oval/loop orgânico circundando sujeito ou produto | `[COR_PRIMÁRIA]`, traço fino imperfeito (não geométrico) |
 | **White bracket frame** | Colchete decorativo aberto nos cantos do headline | Branco puro |
 | **Floating card** | Card branco arredondado flutuante + soft shadow | Radius 16–24px, sombra ambiente suave |
 | **Sound wave lines** | 2–3 linhas curvas paralelas flanqueando elemento (acústica/térmica) | Azul ou branco conforme fundo |
-| **Icon circle** | Círculo azul cheio com ícone de linha branco | Fill azul `#4A61A0`, ícone branco outline |
-| **Accent blob** | Forma orgânica azul aparecendo pelo canto (transição p/ CTA) | Azul `#4A61A0`, só a borda aparece |
+| **Icon circle** | Círculo azul cheio com ícone de linha branco | Fill azul `[COR_PRIMÁRIA]`, ícone branco outline |
+| **Accent blob** | Forma orgânica aparecendo pelo canto (transição p/ CTA) | `[COR_PRIMÁRIA]`, só a borda aparece |
 | **Pill CTA** | Cápsula só com borda (outline), texto pequeno | Branco (fundo escuro) / Azul (fundo claro), radius 9999px |
-| **Spec bar** | Barra base com specs técnicos | `Rw: XX dB \| Ug: X,X W/m²K \| Linha: euroTEC / iTEC / MAXXI` |
+| **Spec bar** | Barra base com specs técnicos reais do produto | `[Spec1: valor] \| [Spec2: valor] \| [Categoria: nome]` |
 
 ---
 
-## Mapa de fotos do Drive já testadas
+## Mapa de fotos do Drive testadas
 
-Pasta "Fotos do Produto": `1yMl_zKBySogepmeM7WTyihTYuXZFuZb6`. Priorizar <300KB.
+Pasta de fotos: ver ID em `_contexto/referencias.md` → "Fotos do Produto". Priorizar <300KB.
 
-| Uso | ID |
+> Preencher este mapa à medida que as fotos forem testadas em carrosseis reais.
+> Manter o padrão: tema → ID do arquivo no Drive.
+
+| Tema/Uso | ID do arquivo no Drive |
 |---|---|
-| Térmica / luz / conforto | `1nltZFpm49n5g9UY9Q6tmh_5SpjZvuQJw` |
-| Especificação / projeto | `1jNxW31bytaFUa4jgfrz_ghbJIAToKz7g` |
-| CTA / alto padrão | `19sCZoDOK3is8HVpEAarQDT2U56PVQMxE` |
-| Fachada residencial | `1o_w6NYZp_qwjYOh_-sGOlvJdfdWTc7XT` |
-| Panoramas externos | `1eCv6-NxvYMawjaS42uNLyEObJ7hAPw3l` |
+| [Tema 1 — ex.: Conforto / luz] | `[ID_FOTO]` |
+| [Tema 2 — ex.: Especificação] | `[ID_FOTO]` |
+| [Tema 3 — ex.: CTA / alto padrão] | `[ID_FOTO]` |
+| [Tema 4 — ex.: Fachada] | `[ID_FOTO]` |
 
-> Esses IDs estão chumbados no agente e aqui — confirmar que ainda apontam para a foto certa
-> antes de baixar (não há auditoria automática). Baixar via MCP Drive e salvar como `img-slideXX.jpg`.
+> Confirmar que os IDs ainda apontam para a foto certa antes de baixar.
+> Baixar via MCP Drive e salvar como `img-slideXX.jpg`.
 
 Relacionados: [[feedback-fonte-mobile]] · [[feedback-logo-path-html]] · [[feedback-proporcoes-imagem]] · [[feedback-design-direcao]]
 </content>

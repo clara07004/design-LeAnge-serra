@@ -1,12 +1,12 @@
-# Unity Content — Claude Code OS
+# CCOS — Sistema de Automação de Conteúdo
 
 ## O que é esse workspace
 
 > **Este projeto é uma base/template.** Não é executado diretamente aqui — projetos reais são replicados a partir deste. Credenciais, contexto (`_contexto/`) e outputs (`conteudo/`) ficam no projeto replicado, não aqui. Nunca tentar testar, executar scripts ou verificar configurações neste workspace.
 
-Sistema de automação do processo de criação de conteúdo para redes sociais do Grupo Unity. Orquestra skills de IA para ir da definição estratégica até a entrega do pacote de conteúdo pronto para publicação.
+Sistema de automação do processo de criação de conteúdo para redes sociais. Orquestra skills de IA para ir da definição estratégica até a entrega do pacote de conteúdo pronto para publicação.
 
-**Empresa:** Ecoframe — Esquadrias em PVC de alta performance (Steel Frame, Drywall, arquitetura contemporânea).
+**Empresa:** [Preencher com o nome e descrição da empresa após rodar `/setup`]
 
 **Estrutura de pastas:**
 - `_contexto/` — memória do sistema (não apagar)
@@ -39,28 +39,23 @@ Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o
 
 ## Conhecimento técnico do produto (consulta obrigatória)
 
-**Antes de gerar calendário, briefing, roteiro, carrossel ou post estático**, ler os arquivos relevantes em `produtos/`. Esse diretório consolida toda a documentação técnica oficial (catálogos, manuais, relatórios PSQ) da Primeira Linha e da Sincol.
+**Antes de gerar calendário, briefing, roteiro, carrossel ou post estático**, ler os arquivos relevantes em `produtos/`. Esse diretório consolida toda a documentação técnica oficial (catálogos, manuais, laudos, fichas técnicas) da empresa.
 
-A Ecoframe é uma marca de **alto padrão** com ticket alto — o conteúdo precisa:
+A empresa tem um posicionamento definido em `_contexto/empresa.md` — o conteúdo precisa:
 
-- **Ser realista e verdadeiro:** nunca inventar dimensões, ensaios, classes de vento ou valores de isolação acústica. Tudo precisa estar lastreado em `produtos/`
-- **Conter especificações técnicas reais:** citar linhas (iTEC / euroTEC / TECplus-100 / MAXXI), perfis (FC-55/75/100/130), normas (NBR 10821, EN 12608, NBR 15.575), valores ensaiados (Rw 32-36 dB, 1820 Pa de vento, soldabilidade 44-47 MPa)
+- **Ser realista e verdadeiro:** nunca inventar dimensões, ensaios, certificações ou valores de desempenho. Tudo precisa estar lastreado em `produtos/`
+- **Conter especificações técnicas reais:** citar linhas, variantes, normas e valores reais documentados nos arquivos de produto
 - **Permitir que o cliente conheça o produto pelo post:** o conteúdo é parte da qualificação do lead, não decoração visual
-- **Manter o posicionamento premium:** vocabulário técnico-arquitetônico, sem foco em preço, sem comparações genéricas sem lastro
+- **Manter o posicionamento:** vocabulário alinhado com `_contexto/preferencias.md`, sem comparações genéricas sem lastro
 
 Arquivos de consulta principais:
 - `produtos/README.md` — índice de todos os tópicos
-- `produtos/visao-geral.md` — características e vantagens do PVC
-- `produtos/tipologias-aplicacoes.md` — janelas/portas com limites dimensionais por linha
-- `produtos/normas-desempenho.md` — NBR + EN + classes de vento por região
-- `produtos/linhas-perfis/linha-{itec,eurotec,tecplus100,maxxi}.md` — uma por linha técnica
-- `produtos/perfis-acessorios-vidros.md` — códigos completos
-- `produtos/instalacao-manutencao/relatorios-tecnicos.md` — resumo PSQ (Rw, Pa, ensaios)
-- `produtos/certificacao-aqua.md` — AQUA/HQE para conteúdo de sustentabilidade
-- `produtos/portas-sincol/` — coleções Sincol (Touch, Sincolors, Impressione, Sinkit, Kit Fogo)
+- `produtos/visao-geral.md` — características e vantagens do produto/serviço
+- `produtos/normas-desempenho.md` — normas técnicas, certificações, laudos, valores ensaiados
 - `produtos/fotos-obras/` — acervo visual real (priorizar sobre IA quando possível)
+- Demais arquivos em `produtos/` conforme indexado no README
 
-**Frases genéricas para revisar:** "qualidade superior", "máxima durabilidade", "tecnologia avançada" sem citar dado técnico = reescrever com número real do PSQ ou da norma.
+**Frases genéricas para revisar:** "qualidade superior", "máxima durabilidade", "tecnologia avançada" sem citar dado técnico = reescrever com número real do laudo ou da norma.
 
 ---
 
@@ -71,14 +66,13 @@ Arquivos de consulta principais:
 - `/syncar` — salva o trabalho no GitHub (commit + push)
 - `/mapear` — entrevista processos repetitivos e cria skills personalizadas
 
-**Skills de conteúdo Unity:**
+**Skills de conteúdo:**
 - `/calendario-comercial` — mapa de oportunidades do período (quando e o quê postar)
 - `/briefing-unity` — briefing completo de um tema: objetivo, mensagem, formato, referências
 - `/carrossel-unity` — produção de carrossel: texto + HTML + PNG via Playwright
 - `/estatico-unity` — produção de post card único: foto IA + HTML + PNG via Playwright
 - `/roteiro-unity` — roteiro de vídeo para Reels/TikTok (orgânico via Ogilvy, tráfego via Schwartz)
 - `/publicar-social-unity` — publica conteúdo aprovado no Instagram, TikTok, LinkedIn
-- `/triagem-youtube-unity` — análise editorial para YouTube
 
 **Skills de pesquisa e ideação:**
 - `/gerador-de-angulos-para-um-tema` — 10 lentes criativas para explorar um tema antes do briefing
@@ -96,12 +90,10 @@ Arquivos de consulta principais:
 
 **Skills de imagem:**
 - `/gerador-de-prompts-de-imagem` — prompt estruturado para gpt-image-1 (usar antes de gerar imagem)
-- `/gerador-de-prompts-para-imagens-de-produto` — prompts para as 3 estéticas de produto da Ecoframe (dark_lifestyle, architectural_installation, product_closeup)
+- `/gerador-de-prompts-para-imagens-de-produto` — prompts para as estéticas de produto da empresa (estilos configurados em `marca/DESIGN.md`)
 
 **Motores (usados internamente pelas skills de produção):**
 - `/gpt-image2-unity` — gera foto de fundo via GPT Image 2 (motor de imagem do carrossel e post estático)
-- `/nanobanana-unity` — fallback de imagem via Gemini (grátis)
-- `/image-gen-unity` — contingência de imagem via FAL API (pago)
 - `/ogilvy-copy` — copy de marca e conteúdo orgânico (motor do roteiro orgânico)
 - `/schwartz-copy` — copy de resposta direta (motor do roteiro de tráfego pago)
 
@@ -172,7 +164,7 @@ A pasta de produção de cada conteúdo é nomeada pela **data de publicação**
 
 > `/hooks-para-carrossel` é skill **auxiliar opcional** — usar só quando o usuário quiser explorar opções de capa antes. Não é etapa do fluxo principal.
 
-**Observação:** quando houver fotos reais de produto disponíveis no Google Drive (`_contexto/referencias.md` → pasta "Fotos do Produto"), priorizá-las em vez de gerar imagem IA. Buscar via MCP Drive (`search_files` na pasta `1yMl_zKBySogepmeM7WTyihTYuXZFuZb6`), baixar com `download_file_content`, extrair via Python e salvar como `img-slideXX.jpg` na pasta do carrossel. Resultado superior ao de qualquer geração IA.
+**Observação:** quando houver fotos reais de produto disponíveis no Google Drive (`_contexto/referencias.md` → pasta "Fotos do Produto"), priorizá-las em vez de gerar imagem IA. Buscar via MCP Drive (`search_files` com o ID da pasta configurado em `_contexto/referencias.md`), baixar com `download_file_content`, extrair via Python e salvar como `img-slideXX.jpg` na pasta do carrossel. Resultado superior ao de qualquer geração IA.
 
 ---
 
@@ -232,7 +224,7 @@ A pasta de produção de cada conteúdo é nomeada pela **data de publicação**
 
 - Antes de executar qualquer tarefa, verificar se existe uma skill relevante em `.claude/skills/`
 - Se encontrar, seguir as instruções da skill
-- Conteúdo da empresa: sempre manter o contexto da Ecoframe — esquadrias em PVC, premium técnico, Steel Frame e Drywall
+- Conteúdo da empresa: sempre manter o contexto definido em `_contexto/empresa.md`
 - Arquivos de credenciais: nunca commitar (estão no .gitignore)
 
 ---

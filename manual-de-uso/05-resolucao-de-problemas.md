@@ -56,7 +56,7 @@ Você: Sim
 - Incluir estilo fotográfico explícito: `professional architectural photography`
 - Especificar iluminação: `natural daylight`, `soft ambient light`
 - Especificar enquadramento: `wide shot`, `close-up detail`, `mid shot`
-- Incluir contexto de produto: `PVC window frames`, `modern apartment`, `steel frame construction`
+- Incluir contexto de produto: descrição do produto, tipo de ambiente, contexto de uso
 
 **Exemplo de prompt ruim:**
 ```
@@ -65,7 +65,7 @@ window in a house that shows the quality and the premium feeling of the brand
 
 **Exemplo de prompt bom:**
 ```
-modern Brazilian apartment interior, large PVC window frames installed, natural daylight flooding in, contemporary minimal decor, warm wood tones, professional architectural photography, wide shot, no text overlay, no watermarks
+modern apartment interior, [produto] installed, natural daylight flooding in, contemporary minimal decor, warm wood tones, professional architectural photography, wide shot, no text overlay, no watermarks
 ```
 
 ---
@@ -110,7 +110,7 @@ npx.cmd playwright install chromium
 
 **Exemplo correto:**
 ```powershell
-npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///C:/Users/clara/Documents/Design-ecoframe/conteudo/carrosseis/tema/instagram/slide-01.html" "C:/Users/clara/Documents/Design-ecoframe/conteudo/carrosseis/tema/instagram/slide-01.png"
+npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///C:/Users/[usuario]/Documents/Design-template/conteudo/carrosseis/tema/instagram/slide-01.html" "C:/Users/[usuario]/Documents/Design-template/conteudo/carrosseis/tema/instagram/slide-01.png"
 ```
 
 ---
@@ -140,7 +140,7 @@ npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///C:/
 
 ---
 
-### O Claude não sabe que está trabalhando para a Ecoframe
+### O Claude não sabe para qual empresa está trabalhando
 
 **Causa:** `CLAUDE.md` ou os arquivos de `_contexto/` estão faltando ou vazios.
 
@@ -179,7 +179,7 @@ O nome da pasta deve ser exatamente igual ao nome do comando (sem a barra). Por 
 
 ---
 
-## O conteúdo gerado não está no estilo da Ecoframe
+## O conteúdo gerado não está no estilo da marca
 
 ### O texto soa muito genérico
 
@@ -206,7 +206,7 @@ O nome da pasta deve ser exatamente igual ao nome do comando (sem a barra). Por 
 
 **Elementos que rebaixam:**
 - `house`, `home` (muito genérico — use `contemporary residence` ou `modern apartment`)
-- `construction site` sem qualificação (use `premium construction site, Steel Frame, organized workspace`)
+- `construction site` sem qualificação (use `premium construction site, high-end finishes, organized workspace`)
 
 ---
 

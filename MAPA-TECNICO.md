@@ -7,7 +7,7 @@
 
 **O que:** Sistema semi-automático de criação de conteúdo para redes sociais, que substitui o processo manual atual por um fluxo orquestrado de coleta de contexto → geração de briefing com IA → aprovação humana → produção visual → publicação.
 
-**Para quem:** Equipe de marketing de empresas do grupo (início pela empresa de construção a seco), com replicabilidade para outras marcas do grupo.
+**Para quem:** Equipe de marketing de empresas de qualquer setor, com replicabilidade para múltiplas marcas do grupo.
 
 **Objetivo prático:** Reduzir o tempo entre "temos algo pra comunicar" e "post aprovado pronto pra publicar", mantendo a qualidade editorial e a consistência visual de marca.
 
@@ -15,7 +15,7 @@
 
 ## Tradução para Solução
 
-**Tipo:** Automação de workflow editorial com IA generativa, rodando no Claude Code (CCOS-Unity como plataforma base).
+**Tipo:** Automação de workflow editorial com IA generativa, rodando no Claude Code (CCOS como plataforma base).
 
 **Como funciona em alto nível:**
 1. Skill `calendario-comercial` monta o plano do mês com janelas de oportunidade, datas sazonais e cultura pop
@@ -38,16 +38,16 @@
 
 | Peça | Repositório | O que faz | Status |
 |---|---|---|---|
-| Plataforma/OS | `dobralabs/ccos-unity` | Orquestra skills no Claude Code, contexto persistente de marca, auto-sync GitHub | ✅ Pronto |
+| Plataforma/OS | `[seu-usuario-github]/ccos` | Orquestra skills no Claude Code, contexto persistente de marca, auto-sync GitHub | ✅ Pronto |
 | Calendário estratégico | `calendario-comercial` skill | Define QUANDO e POR QUÊ — janelas comerciais, cultura pop, sazonalidade | ✅ Pronto |
-| Geração de carrossel | `duduesh/carrossel-unity` | Texto + HTML + PNG via Playwright, 3 estilos, Instagram/TikTok; integra gpt-image2-unity para imagens fotográficas nos slides de capa e impacto (máx 3/carrossel) | ✅ Pronto |
-| Copy de marca | `duduesh/ogilvy-copy` | Framework Ogilvy — copy de longo prazo, construção de identidade | ✅ Pronto |
-| Copy de vendas | `duduesh/schwartz-copy` | Framework Schwartz — copy de conversão, 6 lead types, por nível de consciência | ✅ Pronto |
-| Geração de imagem (default) | `duduesh/gpt-image2-unity` | gpt-image-1 via OpenAI API (key em credentials/openai_key.txt); ~$0,02–$0,10/imagem quality:high; latência 60-180s | ✅ Instalada |
-| Geração de imagem (fallback) | `duduesh/nanobanana-unity` | Google Gemini, grátis, rápido — entra quando quota do ChatGPT estiver no limite | ✅ Pronto |
-| Geração de imagem (contingência) | `duduesh/image-gen-unity` | GPT Image 2 via FAL API — pago por uso: ~$0,06–$0,22/imagem; carrossel de 10 cards = até $2,20 | ✅ Pronto |
-| Publicação social | `duduesh/publicar-social-unity` | Instagram, TikTok, LinkedIn via Post for Me ou Meta Graph API | ✅ Pronto |
-| Triagem YouTube | `duduesh/triagem-youtube-unity` | Análise editorial de temas — score, SEO, títulos otimizados (DataForSEO) | ✅ Pronto |
+| Geração de carrossel | `[seu-usuario-github]/carrossel-unity` | Texto + HTML + PNG via Playwright, 3 estilos, Instagram/TikTok; integra gpt-image2-unity para imagens fotográficas nos slides de capa e impacto (máx 3/carrossel) | ✅ Pronto |
+| Copy de marca | `[seu-usuario-github]/ogilvy-copy` | Framework Ogilvy — copy de longo prazo, construção de identidade | ✅ Pronto |
+| Copy de vendas | `[seu-usuario-github]/schwartz-copy` | Framework Schwartz — copy de conversão, 6 lead types, por nível de consciência | ✅ Pronto |
+| Geração de imagem (default) | `[seu-usuario-github]/gpt-image2-unity` | gpt-image-1 via OpenAI API (key em credentials/openai_key.txt); ~$0,02–$0,10/imagem quality:high; latência 60-180s | ✅ Instalada |
+| Geração de imagem (fallback) | `[seu-usuario-github]/nanobanana-unity` | Google Gemini, grátis, rápido — entra quando quota do ChatGPT estiver no limite | ✅ Pronto |
+| Geração de imagem (contingência) | `[seu-usuario-github]/image-gen-unity` | GPT Image 2 via FAL API — pago por uso: ~$0,06–$0,22/imagem; carrossel de 10 cards = até $2,20 | ✅ Pronto |
+| Publicação social | `[seu-usuario-github]/publicar-social-unity` | Instagram, TikTok, LinkedIn via Post for Me ou Meta Graph API | ✅ Pronto |
+| Triagem YouTube | `[seu-usuario-github]/triagem-youtube-unity` | Análise editorial de temas — score, SEO, títulos otimizados (DataForSEO) | ✅ Pronto |
 
 **Atualização 2026-05-05:** `estatico-unity` e `roteiro-unity` criadas. `gpt-image2-unity`, `ogilvy-copy` e `schwartz-copy` reclassificados como motores internos (não são acionados diretamente no fluxo de produção — são chamados por outras skills). `/setup` reescrito com checkpoint de confirmação obrigatório, pergunta de manual da marca e coleta de frequência por plataforma. `/iniciar` removido. `calendario-comercial` atualizado para ler contexto e gerar output proporcional à frequência configurada.
 
@@ -128,7 +128,7 @@
 
 | Camada | Tecnologia | Status |
 |---|---|---|
-| Plataforma/OS | **CCOS-Unity** (Claude Code local) | ✅ Existe |
+| Plataforma/OS | **CCOS** (Claude Code local) | ✅ Existe |
 | Calendário/contexto externo | **calendario-comercial** skill | ✅ Existe |
 | Geração de carrossel | **carrossel-unity** (HTML → PNG via Playwright, 3 estilos; imagens via gpt-image2-unity integrado) | ✅ Existe |
 | Copy de marca | **ogilvy-copy** skill | ✅ Existe |
@@ -156,7 +156,7 @@
 | Publicação via API, coleta de métricas, registro em banco | Python (V2+) |
 
 **Evitar:**
-- n8n no MVP — CCOS-Unity já orquestra tudo no Claude Code
+- n8n no MVP — CCOS já orquestra tudo no Claude Code
 - Canva API no MVP — acesso restrito (programa de parceiros); carrossel-unity entrega o mesmo resultado
 
 **Hierarquia de geração de imagem:**
@@ -174,7 +174,7 @@
 
 ## Integração com a Biblioteca Técnica
 
-**Projeto:** `C:\Users\gabri\OneDrive\Desktop\Unity - Projetos\Biblioteca de conteúdos`
+**Projeto:** `[PATH_LOCAL_DO_PROJETO]`
 
 **Arquitetura:** RAG de 4 camadas — Google Drive (arquivos originais) → Google Sheets (metadados/catálogo) → Supabase pgvector (embeddings de Resumo_IA) → REST API (consumo agnóstico por IA).
 
@@ -217,7 +217,7 @@
 - Mitigação: operador fornece dados técnicos relevantes no input do briefing manualmente por ora
 
 **CCOS — perfil empresa, não agência**
-- O CCOS-Unity foi construído com cabeça de agência (clientes, contunity, propostas, cobrança)
+- O CCOS foi construído com cabeça de agência (clientes, contunity, propostas, cobrança)
 - Usar o template `claude-md-empresa.md` como base do setup
 - Remover skills irrelevantes: proposta comercial, gestão de clientes, cobrança
 - Multi-empresa: cada marca do grupo = workspace CCOS independente (repo separado, contexto isolado)
@@ -255,14 +255,14 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 |---|---|---|---|
 | 1 | `calendario-comercial` | Local (`_modelo-cliente`) | ✅ Instalada |
 | ✅ | `briefing-unity` | Criada neste projeto | ✅ Instalada |
-| 2a | `schwartz-copy` | github.com/duduesh/schwartz-copy | ✅ Instalada |
-| 2b | `ogilvy-copy` | github.com/duduesh/ogilvy-copy | ✅ Instalada |
-| 3a | `carrossel-unity` | github.com/duduesh/carrossel-ratos | ✅ Instalada |
-| 3b | `gpt-image2-unity` | github.com/duduesh/gpt-image2-ratos | ✅ Instalada |
-| 3c | `nanobanana-unity` | github.com/duduesh/nanobanana-ratos | 🔜 Fallback |
-| 3d | `image-gen-unity` | github.com/duduesh/image-gen-ratos | 🔜 Contingência |
-| 4 | `publicar-social-unity` | github.com/duduesh/publicar-social-ratos | 🔜 Quando chegar na publicação |
-| V1 | `triagem-youtube-unity` | github.com/duduesh/triagem-youtube-ratos | 🔜 V1 |
+| 2a | `schwartz-copy` | github.com/[seu-usuario-github]/schwartz-copy | ✅ Instalada |
+| 2b | `ogilvy-copy` | github.com/[seu-usuario-github]/ogilvy-copy | ✅ Instalada |
+| 3a | `carrossel-unity` | github.com/[seu-usuario-github]/carrossel | ✅ Instalada |
+| 3b | `gpt-image2-unity` | github.com/[seu-usuario-github]/gpt-image2 | ✅ Instalada |
+| 3c | `nanobanana-unity` | github.com/[seu-usuario-github]/nanobanana | 🔜 Fallback |
+| 3d | `image-gen-unity` | github.com/[seu-usuario-github]/image-gen | 🔜 Contingência |
+| 4 | `publicar-social-unity` | github.com/[seu-usuario-github]/publicar-social | 🔜 Quando chegar na publicação |
+| V1 | `triagem-youtube-unity` | github.com/[seu-usuario-github]/triagem-youtube | 🔜 V1 |
 
 > Atualizar status conforme cada skill for instalada.
 
@@ -271,7 +271,7 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 ## Plano em Fases
 
 ### MVP — Orquestrar as peças que já existem
-**Roda no CCOS-Unity (Claude Code local). Construção mínima.**
+**Roda no CCOS (Claude Code local). Construção mínima.**
 
 **O que construir:**
 - Skill `briefing-unity`: recebe output do `calendario-comercial` + contexto da marca (CCOS) → gera briefing completo
@@ -322,14 +322,14 @@ Skills instaladas por ordem de fluxo — instalar o que o próximo passo precisa
 | Skill | Repo | Input | Output |
 |---|---|---|---|
 | `calendario-comercial` | interno | mês, empresa, produtos | janelas comerciais, tema, timing |
-| `carrossel-unity` | duduesh/carrossel-unity | tema, estilo | PNGs 1080×1350 (Instagram) ou 1080×1920 (TikTok); imagens fotográficas geradas via gpt-image2-unity na capa e slides de impacto |
-| `ogilvy-copy` | duduesh/ogilvy-copy | briefing de marca | copy de longo prazo, headlines, manifestos |
-| `schwartz-copy` | duduesh/schwartz-copy | produto, audience, consciousness level | copy de conversão, 6 lead types |
-| `gpt-image2-unity` | duduesh/gpt-image2-unity | prompt em inglês, aspect ratio (square/portrait/landscape) | imagem PNG via gpt-image-1 (OpenAI API key; openai SDK 2.33.0; ~$0,02–$0,10/img) |
-| `nanobanana-unity` | duduesh/nanobanana-unity | prompt em inglês, aspect ratio | imagem PNG via Gemini (grátis, fallback) |
-| `image-gen-unity` | duduesh/image-gen-unity | prompt, qualidade, aspect ratio, ref. opcional | imagem PNG via GPT Image 2 (FAL API, contingência paga) |
-| `publicar-social-unity` | duduesh/publicar-social-unity | imagem/texto, plataformas, data/hora | URLs dos posts publicados + IDs |
-| `triagem-youtube-unity` | duduesh/triagem-youtube-unity | lista de temas | score, títulos, keywords, tier ranking |
+| `carrossel-unity` | [seu-usuario-github]/carrossel-unity | tema, estilo | PNGs 1080×1350 (Instagram) ou 1080×1920 (TikTok); imagens fotográficas geradas via gpt-image2-unity na capa e slides de impacto |
+| `ogilvy-copy` | [seu-usuario-github]/ogilvy-copy | briefing de marca | copy de longo prazo, headlines, manifestos |
+| `schwartz-copy` | [seu-usuario-github]/schwartz-copy | produto, audience, consciousness level | copy de conversão, 6 lead types |
+| `gpt-image2-unity` | [seu-usuario-github]/gpt-image2-unity | prompt em inglês, aspect ratio (square/portrait/landscape) | imagem PNG via gpt-image-1 (OpenAI API key; openai SDK 2.33.0; ~$0,02–$0,10/img) |
+| `nanobanana-unity` | [seu-usuario-github]/nanobanana-unity | prompt em inglês, aspect ratio | imagem PNG via Gemini (grátis, fallback) |
+| `image-gen-unity` | [seu-usuario-github]/image-gen-unity | prompt, qualidade, aspect ratio, ref. opcional | imagem PNG via GPT Image 2 (FAL API, contingência paga) |
+| `publicar-social-unity` | [seu-usuario-github]/publicar-social-unity | imagem/texto, plataformas, data/hora | URLs dos posts publicados + IDs |
+| `triagem-youtube-unity` | [seu-usuario-github]/triagem-youtube-unity | lista de temas | score, títulos, keywords, tier ranking |
 
 ### A construir
 
@@ -346,4 +346,4 @@ analista-performance  ← V3
 ---
 
 *Mapa gerado em sessão de arquitetura — 2026-05-02.*
-*Atualizado em 2026-05-05: `estatico-unity` e `roteiro-unity` criadas e integradas ao fluxo. Arquitetura de motores definida: gpt-image2-unity é chamado internamente por carrossel-unity e estatico-unity; ogilvy-copy e schwartz-copy são motores do roteiro-unity. `/setup` reescrito. `/iniciar` removido. Empresa piloto atualizada: Ecoframe.*
+*Atualizado em 2026-05-05: `estatico-unity` e `roteiro-unity` criadas e integradas ao fluxo. Arquitetura de motores definida: gpt-image2-unity é chamado internamente por carrossel-unity e estatico-unity; ogilvy-copy e schwartz-copy são motores do roteiro-unity. `/setup` reescrito. `/iniciar` removido.*

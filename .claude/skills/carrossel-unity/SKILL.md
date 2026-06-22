@@ -91,7 +91,7 @@ O usuário fornece:
 - Frases curtas e picotadas ficam com cara de IA — evitar
 - Manter o curiosity gap entre slides, mas dentro de cada slide o texto deve fluir
 - Seguir `_contexto/preferencias.md` (sem travessões, etc)
-- Contexto: construção a seco (drywall/steel frame) — público técnico mas acessível
+- Contexto: usar o perfil de público definido em `_contexto/empresa.md` (setor, linguagem técnica vs. acessível)
 - **Um ponto por slide.** Quando o texto estiver em excesso, cortar o parágrafo final — nunca reduzir o tamanho da fonte para encaixar
 
 6. Salvar o texto em `conteudo/carrosseis/[periodo]/[dia]/carousel-text.md`
@@ -195,8 +195,7 @@ raiz do projeto. O path do logo é **sempre** com 5 `../`:
 
 Contagem: `instagram/` → dia → periodo → carrosseis → conteudo → raiz (onde está `marca/`).
 **4 níveis (`../../../../`) aponta para `conteudo/marca/`, que não existe → logo quebra no Playwright.**
-Logo branco em slide escuro; `logo-cor.png` em fundo claro. Header padrão completo (logo +
-separador azul + tagline "ESQUADRIAS EM PVC") em `.claude/memory/feedback_carousel_design_aprovado.md`.
+Logo branco em slide escuro; `logo-cor.png` em fundo claro. Header padrão completo em `.claude/memory/feedback_carousel_design_aprovado.md`.
 
 **Elementos proibidos nos slides:**
 - Sem labels de seção ("VIDA ÚTIL", "MATERIAIS")
@@ -285,7 +284,7 @@ conteudo/carrosseis/[periodo]/[dia]/
 - Sempre mostrar slide 1 antes de renderizar os demais
 - Se o usuário pedir ajuste no visual, editar o HTML e re-renderizar apenas o slide alterado
 - Sem travessões (—) no texto por padrão, a menos que `preferencias.md` indique o contrário
-- Nunca prometer prazos ou preços nos slides (restrição da empresa piloto)
+- Nunca prometer prazos ou preços nos slides (verificar restrições de compliance em `_contexto/preferencias.md`)
 - Não usar referências a obras com EPI incorreto
 - Tamanhos de fonte nunca abaixo dos valores de `typography` no DESIGN.md — o conteúdo é visto no feed mobile
 - Quando texto em excesso: cortar parágrafo final, nunca reduzir fonte para encaixar

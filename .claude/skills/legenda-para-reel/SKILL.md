@@ -5,7 +5,7 @@ description: Escreve a legenda de um Reel do Instagram — a primeira linha que 
 
 # Legenda para Reel
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de escrever, confirmar que tem em contexto:
 - O assunto e argumento central do Reel

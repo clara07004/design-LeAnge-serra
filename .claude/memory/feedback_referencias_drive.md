@@ -1,21 +1,19 @@
 ---
 name: feedback-referencias-drive
-description: Pastas do Google Drive com material de referência visual e técnico da Ecoframe.
+description: Pastas do Google Drive com material de referência visual e técnico da empresa — IDs em _contexto/referencias.md.
 metadata:
   type: reference
 ---
 
 Pastas do Drive a consultar antes de criar conteúdo visual (via MCP Google Drive,
-`search_files` com `parentId`). Detalhe completo em `_contexto/referencias.md`.
+`search_files` com `parentId`). IDs completos e descrições em `_contexto/referencias.md`.
 
-| Pasta | ID | Uso |
+| Pasta | Onde encontrar o ID | Uso |
 |---|---|---|
-| **Fotos do Produto** | `1yMl_zKBySogepmeM7WTyihTYuXZFuZb6` | Prioridade absoluta — fotos reais de obra. Baixar e salvar como `img-slideXX.jpg` |
-| **Catálogo Técnico** | `19dBEQLjpSNZiGVrumPi891fcj_fUcekQ` | Catálogos, manual, laudos PSQ |
-| **Identidade Visual** | `1SQnjs_fX7KzzGlch9B4KB1SO2xcm3C6y` | Logos, assets, Manual de Marca |
-| **Ref. estilo Ecophon France** | `1alyGkuiSZAzhpfE6s1QKNEduzYi1V073` | Referência de estilo visual (não de produto) |
+| **Fotos do Produto** | `_contexto/referencias.md` → "Fotos do Produto" | Prioridade absoluta — fotos reais. Baixar e salvar como `img-slideXX.jpg` |
+| **Catálogo Técnico** | `_contexto/referencias.md` → "Catálogo Técnico" | Documentação técnica, fichas, laudos |
+| **Identidade Visual** | `_contexto/referencias.md` → "Identidade Visual" | Logos, assets, Manual de Marca |
+| **Referência visual** | `_contexto/referencias.md` → "Referências de Estilo Visual" | Referência de estilo (não de produto) |
 
 Foto real do Drive tem **prioridade sobre IA** — autenticidade que IA não reproduz. Priorizar
-imagens <300KB para caber no contexto. Referência editorial: `@ecophon_brasil` (mesmo
-ecossistema construtivo, mesmo público premium). Ver [[feedback-carousel-design-aprovado]].
-</content>
+imagens <300KB para caber no contexto. Ver [[feedback-carousel-design-aprovado]].

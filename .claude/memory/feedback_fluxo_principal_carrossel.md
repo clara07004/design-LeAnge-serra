@@ -7,7 +7,7 @@ metadata:
 
 Fluxo confirmado de carrossel: gerar e aprovar as imagens **antes** de entrar no `/carrossel-unity`.
 
-**Why:** a Clara prefere controle granular — aprovar cada foto antes da montagem. O fluxo
+**Why:** o usuário prefere controle granular — aprovar cada foto antes da montagem. O fluxo
 rápido (geração de imagem dentro do `/carrossel-unity`) tira esse controle.
 
 **How to apply:**
@@ -24,7 +24,7 @@ rápido (geração de imagem dentro do `/carrossel-unity`) tira esse controle.
 /legenda-para-carrossel
 ```
 
-**Não propor o fluxo rápido por padrão.** Só usar se a Clara pedir explicitamente.
+**Não propor o fluxo rápido por padrão.**
 
 **Fluxos alternativos válidos:**
 - Post estático: `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` → `/estatico-unity` → `/legenda-para-post-estatico`
@@ -33,5 +33,5 @@ rápido (geração de imagem dentro do `/carrossel-unity`) tira esse controle.
 - Repurposing: `/1-conteudo-em-7-formatos` após conteúdo aprovado
 
 **Aprovação humana obrigatória em cada etapa.** Nunca avançar de fase, nunca salvar `_aprovado.md`,
-nunca disparar `gerar-imagem.py` ou skill de produção sem comando explícito da Clara.
+nunca disparar `gerar-imagem.py` ou skill de produção sem comando explícito do usuário. Só usar o fluxo rápido se o usuário pedir explicitamente.
 </content>

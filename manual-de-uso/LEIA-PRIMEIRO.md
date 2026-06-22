@@ -1,4 +1,4 @@
-# Manual de Uso — Ecoframe Content OS
+# Manual de Uso — CCOS (Claude Code OS)
 
 Documentação completa do sistema de produção de conteúdo.
 

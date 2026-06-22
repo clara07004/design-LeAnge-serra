@@ -5,12 +5,12 @@ description: Escreve a legenda de um carrossel do Instagram — a primeira linha
 
 # Legenda para Carrossel
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de escrever, confirmar que tem em contexto:
 - O tema e o objetivo do carrossel
-- O avatar (arquiteto / construtor / proprietário)
-- `_contexto/preferencias.md` — tom técnico acessível, sem promessas absolutas
+- O avatar (conforme seção ICP em `_contexto/empresa.md`)
+- `_contexto/preferencias.md` — tom de voz e restrições de compliance
 
 A legenda funciona como pré-frame: prepara o leitor para o que vem nos slides e aumenta a taxa de swipe-through.
 

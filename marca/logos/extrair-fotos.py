@@ -1,30 +1,29 @@
-import json, base64, os, re
+"""
+Extrai fotos de produto do Google Drive e salva na pasta dados/fotos-produto-preview/.
 
-tool_results_dir = r"C:\Users\clara\.claude\projects\C--Users-clara-Documents-Design-ecoframe\f793debd-ca2d-4d8a-90bc-5e980a023a8f\tool-results"
-output_dir = r"C:\Users\clara\Documents\Design-ecoframe\dados\fotos-produto-preview"
-os.makedirs(output_dir, exist_ok=True)
+Uso: chamado pelo /setup ou manualmente para popular o preview de fotos.
+Requer MCP Google Drive configurado e ID da pasta em _contexto/referencias.md.
+"""
 
-files = [f for f in os.listdir(tool_results_dir) if "download_file_content" in f]
-files.sort()
+import base64
+import os
+import re
+import sys
 
-# Only the 6 most recent ones
-recent = files[-6:]
 
-for i, fname in enumerate(recent):
-    path = os.path.join(tool_results_dir, fname)
-    with open(path, "r", encoding="utf-8") as f:
-        raw = f.read()
-    try:
-        data = json.loads(raw)
-        b64 = data.get("content", "")
-        title = data.get("title", f"foto-{i+1}")
-        safe_title = re.sub(r'[^a-zA-Z0-9\-_]', '-', title)[:40]
-        img_bytes = base64.b64decode(b64)
-        out_path = os.path.join(output_dir, f"{i+1:02d}-{safe_title}.jpg")
-        with open(out_path, "wb") as out:
-            out.write(img_bytes)
-        print(f"Salvo: {out_path} ({len(img_bytes)} bytes)")
-    except Exception as e:
-        print(f"Erro em {fname}: {e}")
+def salvar_foto(b64_content: str, titulo: str, output_dir: str, indice: int) -> str:
+    """Decodifica base64 e salva como arquivo de imagem."""
+    os.makedirs(output_dir, exist_ok=True)
+    safe_title = re.sub(r"[^a-zA-Z0-9\-_]", "-", titulo)[:40]
+    caminho = os.path.join(output_dir, f"{indice:02d}-{safe_title}.jpg")
+    dados = base64.b64decode(b64_content)
+    with open(caminho, "wb") as f:
+        f.write(dados)
+    return caminho
 
-print("Pronto.")
+
+if __name__ == "__main__":
+    # Usar via MCP Drive: baixar arquivos da pasta de fotos configurada
+    # em _contexto/referencias.md → "Fotos do Produto" e chamar salvar_foto().
+    print("Configure o ID da pasta em _contexto/referencias.md e use o MCP Google Drive.")
+    print("Função salvar_foto() disponível para uso programático.")

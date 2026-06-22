@@ -5,12 +5,12 @@ description: Escreve a legenda de um post estático do Instagram — imagem úni
 
 # Legenda para Post Estático
 
-## Contexto Ecoframe
+## Contexto da empresa
 
 Antes de escrever, confirmar que tem em contexto:
 - O que a imagem mostra e o que o post comunica
-- O avatar (arquiteto / construtor / proprietário)
-- `_contexto/preferencias.md` — tom técnico acessível, sem promessas absolutas
+- O avatar (conforme seção ICP em `_contexto/empresa.md`)
+- `_contexto/preferencias.md` — tom de voz e restrições de compliance
 
 **Contexto algorítmico:** posts estáticos têm menor alcance orgânico no Instagram do que Reels e carrosseis. A legenda precisa puxar ainda mais peso em comentários e compartilhamentos — os sinais que o algoritmo usa para redistribuir posts estáticos.
 

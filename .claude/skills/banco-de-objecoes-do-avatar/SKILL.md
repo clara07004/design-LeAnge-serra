@@ -1,46 +1,43 @@
 ---
 name: banco-de-objecoes-do-avatar
-description: Mapeia todas as objeções que o ICP da Ecoframe tem antes de especificar, comprar ou recomendar — organizadas por tipo (valor, tempo, confiança, relevância, urgência) e com respostas em formato de conteúdo para cada uma. Cria um banco que alimenta o /briefing-unity, o /carrossel-de-quebra-de-objecao e qualquer conteúdo de meio de funil. Dispara quando: "quais as objeções do meu avatar", "como responder objeções no conteúdo", "banco de objeções", "o que impede meu cliente de especificar PVC".
+description: Mapeia todas as objeções que o ICP tem antes de contratar, comprar ou recomendar — organizadas por tipo (valor, tempo, confiança, relevância, urgência) e com respostas em formato de conteúdo para cada uma. Cria um banco que alimenta o /briefing-unity, o /carrossel-de-quebra-de-objecao e qualquer conteúdo de meio de funil. Dispara quando: "quais as objeções do meu avatar", "como responder objeções no conteúdo", "banco de objeções", "o que impede meu cliente de comprar".
 ---
 
-# Banco de Objeções do Avatar — Ecoframe
+# Banco de Objeções do Avatar
 
 ## Contexto
 
 Antes de mapear, ler:
-- `_contexto/empresa.md` → seção "Objeções frequentes e contra-argumentos" (ponto de partida)
+- `_contexto/empresa.md` → seção "Objeções frequentes e contra-argumentos" (ponto de partida) e seção ICP (avatares)
 - `_contexto/estrategia.md` → gaps prioritários a resolver com conteúdo
 - `_contexto/preferencias.md` → restrições de compliance (não prometer superioridade universal sem contexto)
 
-**Os três avatares da Ecoframe:**
-1. Arquitetos e especificadores
-2. Construtores e empresas de Steel Frame / Drywall
-3. Proprietários de imóveis de alto padrão
+**Avatares da empresa:** conforme seção ICP em `_contexto/empresa.md`.
 
-Gerar o banco focado no avatar informado, ou criar seções separadas para os três.
+Gerar o banco focado no avatar informado, ou criar seções separadas para cada perfil.
 
 ---
 
 ## Os 6 Tipos de Objeção
 
 ### Tipo 1 — Valor / Preço
-"É mais caro que alumínio", "não sei se o custo vale"
-Raiz real: o avatar não vê suficiente valor para justificar a escolha agora — ainda mede por preço de material, não por valor total (durabilidade, manutenção zero, conforto, valorização da obra).
+"[ex.: é mais caro que a alternativa padrão]", "não sei se o custo justifica"
+Raiz real: o avatar não vê suficiente valor para justificar a escolha agora — ainda mede por preço de entrada, não por valor total (durabilidade, manutenção, conforto, resultado final).
 
-### Tipo 2 — Material / Percepção
-"PVC parece plástico / barato", "meus clientes preferem alumínio"
-Raiz real: associação do PVC com produto popular de baixa qualidade — não conhece a diferença entre PVC popular e uPVC de alto desempenho.
+### Tipo 2 — Produto / Percepção
+"[ex.: produto parece de qualidade inferior à alternativa conhecida]", "meus clientes preferem o que já conhecem"
+Raiz real: associação do produto com a versão popular de menor desempenho — não conhece a diferença entre a versão de entrada e a versão de alto desempenho.
 
 ### Tipo 3 — Confiança técnica
-"Não sei se aguenta intempéries no Brasil", "PVC amarela com o tempo?"
-Raiz real: falta de prova técnica visível — laudos, certificações, casos documentados no clima brasileiro.
+"[ex.: não sei se funciona nas condições do meu mercado]", "[ex.: dúvida sobre durabilidade a longo prazo]"
+Raiz real: falta de prova técnica visível — laudos, certificações, casos documentados no contexto do cliente.
 
 ### Tipo 4 — Confiança em si mesmo
 "Minha obra não é o perfil ideal", "meus clientes são conservadores"
 Raiz real: o avatar acha que a solução é para outros perfis de obra/cliente — não vê o fit com seu contexto específico.
 
 ### Tipo 5 — Relevância
-"Funciona para Steel Frame mas não para alvenaria / não para o meu nicho"
+"[ex.: funciona para esse sistema/nicho mas não para o meu tipo de projeto]"
 Raiz real: o conteúdo ou a oferta não está falando com o avatar no contexto exato onde ele atua.
 
 ### Tipo 6 — Urgência / Prioridade
