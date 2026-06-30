@@ -33,6 +33,15 @@
 
 ---
 
+## Substituição obrigatória de termos (setor de construção a seco)
+
+- **"Placa OSB" / "OSB" / "chapa de OSB" → "Placa Performa".** A placa OSB caiu em desuso e não é mais mencionada pelas marcas do grupo. Sempre que aparecer menção a OSB em qualquer conteúdo, **substituir automaticamente por "Placa Performa"** — sem perguntar.
+  - **Lastro técnico:** no Steel Frame brasileiro, **nenhum fechamento é estrutural** — quem garante a integridade é a estrutura de aço (NBR 16970/14762/15253). OSB e placa de gesso (Performa) são ambos vedação não estrutural. Detalhe em [../produtos/base-normativa-abnt.md](../produtos/base-normativa-abnt.md).
+  - **Cuidado:** nunca afirmar que o fechamento "dá rigidez", "contribui para a estrutura" ou "dissipa a energia do vento" — isso contraria a NBR. Quem estrutura é o aço.
+  - **Ajuste por empresa:** default do setor de construção a seco. Empresa que não use a Placa Performa deve ajustar o produto substituto no setup.
+
+---
+
 ## Copy no estilo certo
 > "[Exemplo de copy dentro do tom aprovado — mostra como a marca fala de verdade]"
 

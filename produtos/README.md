@@ -16,6 +16,7 @@
 - **[visao-geral.md](visao-geral.md)** — o que é o produto/serviço, vantagens, materiais constituintes, posicionamento no mercado
 - **[categorias-variantes.md](categorias-variantes.md)** — categorias, variantes, modelos ou linhas disponíveis com dimensões e especificações
 - **[normas-desempenho.md](normas-desempenho.md)** — certificações, normas técnicas, ensaios de desempenho, laudos, classes de performance
+- **[base-normativa-abnt.md](base-normativa-abnt.md)** — (setor construção a seco) leitura direta das 10 normas ABNT + **conceito central**: integridade estrutural é da estrutura de aço; fechamento (drywall/OSB) é vedação não estrutural
 - **[especificacoes-tecnicas.md](especificacoes-tecnicas.md)** — dimensões, materiais, composição, código de cada variante/SKU
 
 ### Linhas ou categorias (se houver mais de uma)

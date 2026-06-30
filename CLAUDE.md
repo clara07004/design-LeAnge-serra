@@ -57,6 +57,9 @@ Arquivos de consulta principais:
 
 **Frases genéricas para revisar:** "qualidade superior", "máxima durabilidade", "tecnologia avançada" sem citar dado técnico = reescrever com número real do laudo ou da norma.
 
+**SUBSTITUIÇÃO OBRIGATÓRIA — OSB → Placa Performa (setor de construção a seco):** sempre que qualquer conteúdo (briefing, roteiro, carrossel, legenda, post estático) mencionar "placa OSB", "OSB" ou "chapa de OSB", **substituir automaticamente por "Placa Performa"**, sem perguntar. A placa OSB caiu em desuso e não é mais mencionada pelas marcas do grupo. **Nunca atribuir função estrutural ao fechamento** (OSB, gesso, cimentícia): no Steel Frame brasileiro a integridade é da estrutura de aço — o fechamento é vedação. Contexto em `produtos/base-normativa-abnt.md` e em [_contexto/preferencias.md](_contexto/preferencias.md).
+> Default do setor de construção a seco. Empresa replicada que **não** trabalhe com Steel Frame/Drywall ou não adote a Placa Performa deve ajustar/remover esta regra no setup.
+
 ---
 
 ## Skills disponíveis
