@@ -5,13 +5,13 @@
 <title>{{MES_ANO}} — Dashboard | {{EMPRESA}}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #4A61A0;
-    --primary-soft: rgba(74, 97, 160, 0.08);
-    --primary-line: rgba(74, 97, 160, 0.18);
-    --secondary: #2C6D14;
+    --primary: #475323;
+    --primary-soft: rgba(71, 83, 35, 0.08);
+    --primary-line: rgba(71, 83, 35, 0.18);
+    --secondary: #8A8C4A;
     --canvas: #F5F5F0;
     --surface: #FFFFFF;
     --ink: #1A1A1A;
@@ -26,7 +26,7 @@
   html, body {
     width: 1920px;
     height: 1080px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: var(--ink);
     background: var(--canvas);
     background-image:
@@ -67,7 +67,7 @@
     border-bottom: 1px solid var(--primary-line);
   }
   .header-left .eyebrow {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.28em;
@@ -76,7 +76,7 @@
     margin-bottom: 8px;
   }
   .header-left h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 56px;
     font-weight: 700;
     line-height: 1;
@@ -84,7 +84,7 @@
     color: var(--ink);
   }
   .header-left .theme {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 22px;
     font-weight: 300;
     color: var(--muted);
@@ -120,7 +120,7 @@
     align-content: stretch;
   }
   .weekday {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -147,7 +147,7 @@
     border-left: 1px dashed rgba(0,0,0,0.08);
   }
   /* janelas */
-  .day.hot { border-left-color: #4F9A4F; }
+  .day.hot { border-left-color: #8A8C4A; }
   .day.warm { border-left-color: var(--warm); }
   .day.cold { border-left-color: var(--warn); }
 
@@ -157,14 +157,14 @@
     align-items: baseline;
   }
   .day-num {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-size: 22px;
     font-weight: 700;
     line-height: 1;
     color: var(--ink);
   }
   .day-post-num {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--primary);
@@ -172,7 +172,7 @@
   }
   .day-tag {
     display: inline-block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -183,16 +183,16 @@
   }
   .tag-edu { background: var(--primary-soft); color: var(--primary); }
   .tag-vnd { background: var(--primary); color: #fff; }
-  .tag-inst { background: rgba(44, 109, 20, 0.12); color: var(--secondary); }
+  .tag-inst { background: rgba(138, 140, 74, 0.12); color: var(--secondary); }
 
   .day-format {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.04em;
   }
   .day-theme {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 10.5px;
     line-height: 1.35;
     color: var(--ink);
@@ -219,7 +219,7 @@
   }
   .badge.peak { background: #FFF4D6; border-color: var(--warm); }
   .badge.warn { background: #FBE9E7; border-color: var(--warn); }
-  .badge.done { background: #E5F2E5; border-color: #4F9A4F; color: #2C6D14; font-weight: 700; padding: 2px 5px; }
+  .badge.done { background: #EEF0DC; border-color: #8A8C4A; color: #475323; font-weight: 700; padding: 2px 5px; }
   .badge.wip { background: #FFF4D6; border-color: var(--warm); font-weight: 700; padding: 2px 5px; }
 
   /* SIDEBAR */
@@ -236,7 +236,7 @@
     padding: 20px 22px;
   }
   .card h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -279,7 +279,7 @@
   .stat-row:last-child { border-bottom: none; }
   .stat-row .label { color: var(--muted); letter-spacing: 0.05em; }
   .stat-row .value {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 700;
     color: var(--ink);
   }
@@ -292,7 +292,7 @@
   }
   .list-item:last-child { border-bottom: none; }
   .list-item .date {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     font-weight: 700;
     color: var(--primary);
     font-size: 12px;
@@ -318,7 +318,7 @@
     height: 16px;
     border-radius: 2px;
   }
-  .win.hot .swatch { background: #4F9A4F; }
+  .win.hot .swatch { background: #8A8C4A; }
   .win.warm .swatch { background: var(--warm); }
   .win.cold .swatch { background: var(--warn); }
 

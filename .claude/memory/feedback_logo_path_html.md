@@ -40,5 +40,4 @@ Contagem: `instagram/` → dia → mês → carrosseis → conteudo → raiz (on
 **Divergência com o DESIGN.md:** ele diz "logo mínimo 80px digital" — provavelmente referente à
 versão vertical principal da marca em outros contextos, não à altura no header dos slides
 (onde a prática é 48px). A Clara decide se reconcilia o número no DESIGN.md.
-Ver [[feedback-carousel-design-aprovado]].
 </content>

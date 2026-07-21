@@ -148,18 +148,18 @@ Antes de montar qualquer calendário, execute pesquisas web sobre:
 ```
 web_search("trending topics X Twitter Brasil [mês] [ano]")
 web_search("X twitter [setor do cliente] tendência debate [mês] [ano]")
-web_search("trending X brasil hoje arquitetura construção reforma")
+web_search("trending X brasil hoje turismo pet friendly viagem com pets")
 ```
 
 **O que buscar:**
-- Trending topics relacionados ao setor (construção, arquitetura, imóveis, reforma, sustentabilidade)
+- Trending topics relacionados ao setor (turismo pet friendly, viagem com animais, destinos que aceitam pets, hospedagem)
 - Debates e polêmicas que podem virar pauta nos próximos dias em outros canais
 - Memes ou narrativas que estão ganhando força e podem ser aproveitados (ou evitados)
 - Lançamentos e anúncios viralizando antes de chegar ao Instagram
 
 **Por que importa:** O X é o termômetro cultural mais rápido — debates que começam lá chegam ao Instagram e TikTok 24–72h depois. Identificar uma narrativa no X antes de viralizar permite criar conteúdo com timing perfeito. Também revela o que o mercado está discutindo fora das métricas de engajamento do Instagram.
 
-**Atenção:** Nem todo trending topic do X tem tração no Instagram — filtre pelo ICP. Um debate técnico do setor no X pode ser ouro para a empresa mesmo com poucos retweets.
+**Atenção:** Nem todo trending topic do X tem tração no Instagram — filtre pelo ICP. Um debate específico do setor no X pode ser ouro para a empresa mesmo com poucos retweets.
 
 ### 📅 Calendário Comportamental Brasileiro
 ```
@@ -389,29 +389,29 @@ web_search("X twitter [setor do cliente] debate tendência [mês] [ano]")
 
 ## 6. EXEMPLOS PRÁTICOS
 
-### Exemplo 1: Empresa de Construção Civil
+### Exemplo 1: Pousada Pet Friendly (LeAnge)
 
 **Contexto fixo:**
-- Produtos: Drywall, Steel Frame, Forros
-- ICP: Construtores, engenheiros, arquitetos
-- Tom: Direto, operacional, números concretos
+- Experiência: hospedagem pet lover, all inclusive — LeAnge Serra (Miguel Pereira)
+- ICP: tutores que tratam o pet como família e viajam com ele
+- Tom: acolhedor, afetivo, sensorial — sem perder a informação concreta
 
-**Research Junho 2026:**
-- Copa América: Brasil joga dias 10, 15, 20
-- Lollapalooza: 20-22 de junho
-- Lançamento Casa Dragão (HBO): 15 de junho
-- Eleições municipais: campanha começa
+**Research Julho 2026:**
+- Férias escolares de julho (alta temporada de viagem em família)
+- Dia do Amigo: 20 de julho
+- Inverno na Serra: clima de lareira, ofurô, cachoeira
+- Alta procura por destinos que aceitam pets sem restrição
 
 **Calendário gerado:**
 
-| Semana | Ação | Produto | Janela | Motivo |
+| Semana | Ação | Tema | Janela | Motivo |
 |--------|------|---------|--------|--------|
-| S1 (01-07) | Aquecimento | Drywall | 🟢 Quente | Pré-Copa, atenção disponível |
-| S2 (08-14) | EVITAR | - | 🔴 Fria | Brasil joga Copa (10, 15) |
-| S3 (15-21) | Conteúdo leve | Institucional | 🔴 Fria | Lolla + Casa Dragão |
-| S4 (22-30) | Lançamento | Steel Frame | 🟢 Quente | Pós-eventos, atenção retorna |
+| S1 (01-07) | Aquecimento | Serra no inverno | 🟢 Quente | Férias, planejamento de viagem |
+| S2 (08-14) | Conversão | All inclusive + pet solto | 🟢 Quente | Decisão de reserva de férias |
+| S3 (15-21) | Institucional | Dia do Amigo (20) | 🟢 Quente | Pet como família, emocional |
+| S4 (22-31) | Prova | Depoimentos + acervo real | 🟡 Morna | Reforço de credibilidade |
 
-**Tema narrativo:** "Construa seu Espaço Vencedor" (aproveitando clima Copa sem forçar)
+**Tema narrativo:** "Férias de verdade são as que o seu melhor amigo também aproveita"
 
 ---
 
@@ -471,7 +471,7 @@ Todo calendário fechado entrega **três arquivos** dentro de `conteudo/calendar
 
 ### 8.1 `calendario-detalhado.md` — o post a post
 
-Gerado **junto com a aprovação do calendário**, é o desdobramento dia a dia que vai alimentar os `/briefing-unity` posteriores. Estrutura:
+Gerado **junto com a aprovação do calendário**, é o desdobramento dia a dia que vai alimentar os `/briefing-leange` posteriores. Estrutura:
 
 ```markdown
 # Calendário Detalhado — [Mês/Ano] | [Empresa]
@@ -509,7 +509,7 @@ Gerado **junto com a aprovação do calendário**, é o desdobramento dia a dia 
 
 Regras:
 - **Dias de postagem: terça a domingo (Ter–Dom).** Não escalar posts para segunda-feira.
-- **Sábado e domingo:** marcar com 🕐 na coluna Status — esses posts precisam ser agendados via `/publicar-social-unity --agendar`, não publicados manualmente.
+- **Sábado e domingo:** marcar com 🕐 na coluna Status — esses posts precisam ser agendados via `/publicar-social-leange --agendar`, não publicados manualmente.
 - Numerar todos os posts sequencialmente (01, 02, …)
 - Marcar com ⚠️ os dias com apagão e detalhar o limite de horário
 - Marcar com 🏆 os posts de pico de conversão e os hooks da data sazonal
@@ -541,7 +541,7 @@ XX% Educacional / XX% Venda / XX% Institucional | Frequência: Xx/semana | X pos
 - [janelas ou ângulos rejeitados]
 
 ## Próximos passos
-Rodar /briefing-unity para cada dia do calendário antes de produzir qualquer asset.
+Rodar /briefing-leange para cada dia do calendário antes de produzir qualquer asset.
 ```
 
 ### 8.3 `dashboard.html` (+ `dashboard.png`) — a visão de mês inteiro

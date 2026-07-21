@@ -13,12 +13,12 @@ Foco em [atributos principais: ex. qualidade, prazo, inovação, conforto, etc.]
 
 ## Público-alvo (ICP)
 
-### 1. [Perfil 1 — ex.: Profissional técnico / Especificador]
+### 1. [Perfil 1 — ex.: Tutor de pet exigente / Viajante com pet]
 [Descreva o contexto: quem é, em que momento entra em contato, como decide.]
 - Objetivos: [o que busca alcançar ao comprar ou contratar]
 - Medos: [o que teme ao contratar ou ao errar a escolha]
 
-### 2. [Perfil 2 — ex.: Empresa parceira / Distribuidor / Construtor]
+### 2. [Perfil 2 — ex.: Tutor de primeira viagem com pet / Casal sem filhos com pets]
 [Idem]
 - Objetivos: [...]
 - Medos: [...]
@@ -36,7 +36,7 @@ Foco em [atributos principais: ex. qualidade, prazo, inovação, conforto, etc.]
 ---
 
 ## Posicionamento
-**[Rótulo de posicionamento — ex.: Premium técnico / Custo-benefício / Especialista em nicho X / Referência regional em Y].**
+**[Rótulo de posicionamento — ex.: Acolhedor premium / Custo-benefício / Especialista em nicho X / Referência regional em Y].**
 
 [Uma ou duas frases que descrevem o espaço de mercado que a empresa ocupa e o que a diferencia dos concorrentes diretos.]
 
@@ -57,7 +57,7 @@ Foco em [atributos principais: ex. qualidade, prazo, inovação, conforto, etc.]
 ---
 
 ## Canais ativos
-- [Canal 1] ([foco: ex. conteúdo técnico/visual])
+- [Canal 1] ([foco: ex. conteúdo visual])
 - [Canal 2] ([foco: ex. geração de demanda paga])
 - [Canal 3] ([foco: ex. relacionamento e conversão])
 - [Canal 4] ([foco: ex. site institucional / landing pages])

@@ -4,7 +4,7 @@
 
 Skills são chamadas com `/nome-da-skill` no início da mensagem. O Claude lê o arquivo `SKILL.md` correspondente em `.claude/skills/[nome]/` e segue as instruções.
 
-Você também pode descrever o que quer em linguagem natural — o Claude identifica a skill relevante automaticamente. Por exemplo, "faz um carrossel sobre isolamento acústico" aciona `/carrossel-unity` sem você precisar digitar o comando.
+Você também pode descrever o que quer em linguagem natural — o Claude identifica a skill relevante automaticamente. Por exemplo, "faz um carrossel sobre viajar com pets" aciona `/carrossel-leange` sem você precisar digitar o comando.
 
 ---
 
@@ -33,8 +33,8 @@ Você também pode descrever o que quer em linguagem natural — o Claude identi
 
 ---
 
-### `/briefing-unity`
-**Arquivo:** `.claude/skills/briefing-unity/briefing-unity.md`
+### `/briefing-leange`
+**Arquivo:** `.claude/skills/briefing-leange/briefing-leange.md`
 
 **Para que serve:** Gera o briefing completo de um post específico — gancho, copy, formato, orientações visuais, hashtags. É a ponte entre o calendário estratégico e a produção do asset.
 
@@ -57,8 +57,8 @@ Você também pode descrever o que quer em linguagem natural — o Claude identi
 
 ---
 
-### `/carrossel-unity`
-**Arquivo:** `.claude/skills/carrossel-unity/SKILL.md`
+### `/carrossel-leange`
+**Arquivo:** `.claude/skills/carrossel-leange/SKILL.md`
 
 **Para que serve:** Produz um carrossel completo — do texto ao PNG renderizado, pronto para publicar.
 
@@ -67,10 +67,10 @@ Você também pode descrever o que quer em linguagem natural — o Claude identi
 **Dois modos de uso:**
 
 **Fluxo rápido** — tudo em um:
-`/carrossel-unity` cuida de texto + prompt + imagem IA + HTML + PNG internamente. Use quando não precisa de controle manual sobre as imagens.
+`/carrossel-leange` cuida de texto + prompt + imagem IA + HTML + PNG internamente. Use quando não precisa de controle manual sobre as imagens.
 
 **Fluxo enriquecido** — imagem aprovada antes:
-Use `/gerador-de-prompts-para-imagens-de-produto` ou `/gerador-de-prompts-de-imagem` → gere e aprove a imagem via `/gpt-image2-unity` → só então chame `/carrossel-unity`, que monta o HTML usando a imagem já gerada.
+Use `/gerador-de-prompts-para-imagens-da-pousada` ou `/gerador-de-prompts-de-imagem` → gere e aprove a imagem via `/gpt-image2-leange` → só então chame `/carrossel-leange`, que monta o HTML usando a imagem já gerada.
 
 > Quando houver fotos reais disponíveis no Google Drive (`_contexto/referencias.md` → pasta "Fotos do Produto"), usá-las tem prioridade sobre geração IA — resultado superior e sem custo de API.
 
@@ -101,8 +101,8 @@ conteudo/carrosseis/[periodo]/[dia-tema]/instagram/
 
 ---
 
-### `/estatico-unity`
-**Arquivo:** `.claude/skills/estatico-unity/SKILL.md`
+### `/estatico-leange`
+**Arquivo:** `.claude/skills/estatico-leange/SKILL.md`
 
 **Para que serve:** Produz um post estático (card único) — foto de fundo gerada por IA + copy + identidade visual, tudo montado em HTML e renderizado em PNG.
 
@@ -128,8 +128,8 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 ---
 
-### `/roteiro-unity`
-**Arquivo:** `.claude/skills/roteiro-unity/SKILL.md`
+### `/roteiro-leange`
+**Arquivo:** `.claude/skills/roteiro-leange/SKILL.md`
 
 **Para que serve:** Produz roteiros de vídeo para Instagram Reels e TikTok.
 
@@ -156,7 +156,7 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Output:**
 - 10 ângulos com: título sugerido, gancho, por que funciona para a empresa
-- Pronto para levar ao `/briefing-unity`
+- Pronto para levar ao `/briefing-leange`
 
 ---
 
@@ -165,7 +165,7 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Para que serve:** Versão mais estruturada — usa uma matriz perspectivas × audiência × formatos narrativos para gerar ângulos com recorte de público.
 
-**Quando usar:** Quando quer segmentar por avatar (arquiteto vs construtor vs proprietário) ou quando o tema é mais complexo.
+**Quando usar:** Quando quer recortar por perspectiva e nível de consciência da persona LeAnge (ver `_contexto/persona.md`) ou quando o tema é mais complexo.
 
 **Input:** tema + avatar (opcional)
 
@@ -179,11 +179,11 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 ### `/banco-de-objecoes-do-avatar`
 **Arquivo:** `.claude/skills/banco-de-objecoes-do-avatar/SKILL.md`
 
-**Para que serve:** Mapeia todas as objeções do ICP antes de especificar, comprar ou recomendar o produto — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
+**Para que serve:** Mapeia todas as objeções do ICP antes de reservar, comprar ou recomendar o produto — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
 
 **Quando usar:** Para criar conteúdo de meio/fundo de funil. Também quando posts não estão convertendo.
 
-**Input:** avatar — `arquiteto`, `construtor` ou `proprietário`
+**Input:** a persona LeAnge (ver `_contexto/persona.md`)
 
 **Output:**
 - 6 tipos de objeção (valor, percepção, confiança técnica, confiança em si mesmo, relevância, urgência)
@@ -202,14 +202,14 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Para que serve:** Gera 5 opções de capa para o carrossel — headline, subtítulo, direção visual e tipo de gancho para cada uma.
 
-**Quando usar:** Após o briefing aprovado, antes do `/carrossel-unity`.
+**Quando usar:** Após o briefing aprovado, antes do `/carrossel-leange`.
 
 **Input:** tema ou briefing aprovado (no contexto da conversa)
 
 **Output:**
 - 5 opções de capa com: headline, subtítulo opcional, direção visual, tipo de gancho (promessa, dor, número, polêmica, identificação, antes/depois, dado)
 
-**Resultado esperado:** você escolhe 1 capa e leva para o `/carrossel-unity`
+**Resultado esperado:** você escolhe 1 capa e leva para o `/carrossel-leange`
 
 ---
 
@@ -218,14 +218,14 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Para que serve:** Gera 7 opções de hook para Reel — combinando o que aparece no primeiro frame com a frase de abertura.
 
-**Quando usar:** Após o briefing aprovado, antes do `/roteiro-unity`.
+**Quando usar:** Após o briefing aprovado, antes do `/roteiro-leange`.
 
 **Input:** tema ou briefing aprovado
 
 **Output:**
 - 7 hooks com: primeiro frame (visual), frase de abertura (narração), tipo de gancho (salvável, compartilhável, promessa, contraste, identificação, micro-tutorial, polarizador)
 
-**Resultado esperado:** você escolhe 1 hook e leva para o `/roteiro-unity`
+**Resultado esperado:** você escolhe 1 hook e leva para o `/roteiro-leange`
 
 ---
 
@@ -240,7 +240,7 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Input:**
 - A objeção exata (como o avatar formula)
-- Avatar (`arquiteto`, `construtor` ou `proprietário`)
+- Avatar: a persona LeAnge (ver `_contexto/persona.md`)
 - Caso real de cliente (opcional, mas aumenta a prova)
 
 **Output:**
@@ -249,7 +249,7 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
   - Slides 4–7: reframe em camadas
   - Slides 8–9: prova com caso concreto
 - Legenda completa do post
-- Handoff direto para o `/carrossel-unity` produzir o visual
+- Handoff direto para o `/carrossel-leange` produzir o visual
 
 ---
 
@@ -305,27 +305,27 @@ Existem três caminhos para obter imagens para os posts. Use o melhor para cada 
 
 | Caminho | Quando usar | Resultado |
 |---|---|---|
-| **Fotos reais do Drive** | Quando há foto de instalação ou produto disponível | Melhor — fotos reais de obra |
-| `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` | Imagem de produto em estética específica, ou quando Drive não tem o que precisa | Muito bom — prompt calibrado para o produto |
-| `/gerador-de-prompts-de-imagem` → `/gpt-image2-unity` | Imagem de contexto ou cena genérica | Bom — prompt estruturado mas menos específico |
+| **Fotos reais do Drive** | Quando há foto da unidade ou do pet disponível | Melhor — fotos reais das unidades |
+| `/gerador-de-prompts-para-imagens-da-pousada` → `/gpt-image2-leange` | Imagem de produto em estética específica, ou quando Drive não tem o que precisa | Muito bom — prompt calibrado para o produto |
+| `/gerador-de-prompts-de-imagem` → `/gpt-image2-leange` | Imagem de contexto ou cena genérica | Bom — prompt estruturado mas menos específico |
 
 ---
 
-### `/gerador-de-prompts-para-imagens-de-produto`
-**Arquivo:** `.claude/skills/gerador-de-prompts-para-imagens-de-produto/SKILL.md`
+### `/gerador-de-prompts-para-imagens-da-pousada`
+**Arquivo:** `.claude/skills/gerador-de-prompts-para-imagens-da-pousada/SKILL.md`
 
-**Para que serve:** Constrói prompts otimizados para os estilos fotográficos configurados em `marca/DESIGN.md`. Mais preciso que o genérico porque conhece as linhas de produto e os estilos da marca.
+**Para que serve:** Constrói prompts otimizados para os estilos fotográficos configurados em `marca/DESIGN.md`. Mais preciso que o genérico porque conhece as unidades e experiências e os estilos da marca.
 
-**Quando usar:** Quando a imagem precisa mostrar o produto da empresa — produto instalado, detalhes técnicos, produto em contexto de uso. Use este antes do genérico sempre que o produto for o foco.
+**Quando usar:** Quando a imagem precisa mostrar o produto da empresa — pet aproveitando os espaços da pousada, detalhes das suítes, ambiente em contexto de uso. Use este antes do genérico sempre que o produto for o foco.
 
-**Input:** linha/variante do produto + estilo desejado
+**Input:** unidade/experiência + estilo desejado
 
 **Os 3 estilos:**
-- `architectural_installation` — produto instalado em projeto acabado, luz natural, ambiente premium
-- `dark_lifestyle` — pessoa em ação no ambiente (especialista em obra, cliente final apreciando)
-- `product_closeup` — macro do produto com detalhes técnicos específicos
+- `architectural_installation` — pet aproveitando os espaços da pousada, luz natural, ambiente premium
+- `dark_lifestyle` — pessoa em ação no ambiente (tutor com o pet na pousada, cliente final apreciando)
+- `product_closeup` — macro de detalhes da pousada (amenidades, texturas, conforto)
 
-**Output:** prompt principal + variação + comando PowerShell para `/gpt-image2-unity`
+**Output:** prompt principal + variação + comando PowerShell para `/gpt-image2-leange`
 
 ---
 
@@ -334,7 +334,7 @@ Existem três caminhos para obter imagens para os posts. Use o melhor para cada 
 
 **Para que serve:** Constrói um prompt estruturado e otimizado para `gpt-image-1` para qualquer tipo de cena — não específico de produto.
 
-**Quando usar:** Quando a imagem é de contexto (cena arquitetônica, ambiente, atmosfera) e não precisa mostrar o produto diretamente. Segunda opção quando o `/gerador-de-prompts-para-imagens-de-produto` não se aplica.
+**Quando usar:** Quando a imagem é de contexto (cena de ambiente, atmosfera, paisagem) e não precisa mostrar o produto diretamente. Segunda opção quando o `/gerador-de-prompts-para-imagens-da-pousada` não se aplica.
 
 **Input:** uso da imagem + o que deve aparecer + estética + proporção
 
@@ -342,7 +342,7 @@ Existem três caminhos para obter imagens para os posts. Use o melhor para cada 
 - Prompt principal completo e otimizado
 - Variação A (mais minimalista)
 - Variação B (mais impactante)
-- Comando PowerShell pronto para `/gpt-image2-unity`
+- Comando PowerShell pronto para `/gpt-image2-leange`
 
 ---
 
@@ -370,9 +370,9 @@ Existem três caminhos para obter imagens para os posts. Use o melhor para cada 
 
 ## Motores (usados internamente pelas skills)
 
-### `/gpt-image2-unity`
-**Arquivo:** `.claude/skills/gpt-image2-unity/SKILL.md`
-**Script:** `.claude/skills/gpt-image2-unity/gerar-imagem.py`
+### `/gpt-image2-leange`
+**Arquivo:** `.claude/skills/gpt-image2-leange/SKILL.md`
+**Script:** `.claude/skills/gpt-image2-leange/gerar-imagem.py`
 
 **Para que serve:** Gera imagens usando o modelo `gpt-image-1` da OpenAI.
 
@@ -397,16 +397,16 @@ python "gerar-imagem.py" "PROMPT_EM_INGLÊS" "CAMINHO_DE_SAÍDA.png" "ASPECT_RAT
 
 **Cadeia de fallback:**
 ```
-GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity (FAL API, pago)
+GPT Image 2 (OpenAI) → nanobanana-leange (Gemini, grátis) → image-gen-leange (FAL API, pago)
 ```
 
 **Custo aproximado:** $0,02–$0,10 por imagem (quality: high)
 
 **Regras de prompt:**
 - Sempre em inglês
-- Incluir estilo fotográfico: `professional photography`, `architectural photography`
+- Incluir estilo fotográfico: `professional photography`, `lifestyle photography`
 - Incluir: `no text overlay`, `no watermarks`, `no people` (a menos que o briefing peça)
-- Nunca: obras com EPI incorreto, texto embutido na imagem, ilustrações genéricas
+- Nunca: texto embutido na imagem, ilustrações genéricas
 
 ---
 
@@ -422,7 +422,7 @@ GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity 
 - Copy que vende sem parecer que está vendendo
 - Foco no benefício real, não no produto em si
 
-**Usado por:** `/roteiro-unity` (modo orgânico), `/briefing-unity`
+**Usado por:** `/roteiro-leange` (modo orgânico), `/briefing-leange`
 
 ---
 
@@ -437,7 +437,7 @@ GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity 
 - Headlines que capturam a atenção no estado certo
 - Copy que move o leitor pelo funil de decisão
 
-**Usado por:** `/roteiro-unity` (modo tráfego pago), `/briefing-unity` (para conversão)
+**Usado por:** `/roteiro-leange` (modo tráfego pago), `/briefing-leange` (para conversão)
 
 ---
 
@@ -490,15 +490,15 @@ GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity 
 
 | Formato | Skill principal | Imagem (em ordem de preferência) | Motor de copy |
 |---|---|---|---|
-| Carrossel (rápido) | `/carrossel-unity` | Drive → geração interna automática | Direto na skill |
-| Carrossel (enriquecido) | `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` → `/carrossel-unity` | Drive → prompt enriquecido → GPT | Direto na skill |
-| Carrossel de objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-unity` | Drive → GPT automático | Direto na skill |
-| Post estático | `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` → `/estatico-unity` | Prompt enriquecido → GPT | Direto na skill |
-| Reel/TikTok orgânico | `/roteiro-unity` | — | `ogilvy-copy` |
-| Reel/TikTok pago | `/roteiro-unity` | — | `schwartz-copy` |
-| Imagem avulsa | `/gpt-image2-unity` | GPT direto | — |
+| Carrossel (rápido) | `/carrossel-leange` | Drive → geração interna automática | Direto na skill |
+| Carrossel (enriquecido) | `/gerador-de-prompts-para-imagens-da-pousada` → `/gpt-image2-leange` → `/carrossel-leange` | Drive → prompt enriquecido → GPT | Direto na skill |
+| Carrossel de objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-leange` | Drive → GPT automático | Direto na skill |
+| Post estático | `/gerador-de-prompts-para-imagens-da-pousada` → `/gpt-image2-leange` → `/estatico-leange` | Prompt enriquecido → GPT | Direto na skill |
+| Reel/TikTok orgânico | `/roteiro-leange` | — | `ogilvy-copy` |
+| Reel/TikTok pago | `/roteiro-leange` | — | `schwartz-copy` |
+| Imagem avulsa | `/gpt-image2-leange` | GPT direto | — |
 | Calendário | `/calendario-comercial` | — | — |
-| Briefing | `/briefing-unity` | — | `ogilvy-copy` ou `schwartz-copy` |
+| Briefing | `/briefing-leange` | — | `ogilvy-copy` ou `schwartz-copy` |
 
 ---
 
@@ -510,20 +510,20 @@ GPT Image 2 (OpenAI) → nanobanana-unity (Gemini, grátis) → image-gen-unity 
 | Quero ângulos segmentados por audiência | `/gerador-de-angulos-de-conteudo` |
 | Quero entender o que trava meu cliente | `/banco-de-objecoes-do-avatar` |
 | Mapear o mês estrategicamente | `/calendario-comercial` |
-| Definir o que um post vai comunicar | `/briefing-unity` |
+| Definir o que um post vai comunicar | `/briefing-leange` |
 | Escolher a melhor capa para o carrossel | `/hooks-para-carrossel` |
 | Escolher o melhor hook para o Reel | `/hooks-para-instagram-reels` |
-| Produzir um carrossel educativo | `/carrossel-unity` |
-| Produzir um carrossel que converte objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-unity` |
-| Impacto visual rápido no feed | `/estatico-unity` |
-| Conteúdo em vídeo (orgânico) | `/roteiro-unity` |
-| Anúncio em vídeo (tráfego pago) | `/roteiro-unity` |
+| Produzir um carrossel educativo | `/carrossel-leange` |
+| Produzir um carrossel que converte objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-leange` |
+| Impacto visual rápido no feed | `/estatico-leange` |
+| Conteúdo em vídeo (orgânico) | `/roteiro-leange` |
+| Anúncio em vídeo (tráfego pago) | `/roteiro-leange` |
 | Escrever a legenda do carrossel | `/legenda-para-carrossel` |
 | Escrever a legenda do Reel | `/legenda-para-reel` |
 | Escrever a legenda do post estático | `/legenda-para-post-estatico` |
 | Criar um prompt melhor para imagem | `/gerador-de-prompts-de-imagem` |
-| Criar foto do produto da empresa | `/gerador-de-prompts-para-imagens-de-produto` |
+| Criar foto do produto da empresa | `/gerador-de-prompts-para-imagens-da-pousada` |
 | Distribuir um conteúdo para outros canais | `/1-conteudo-em-7-formatos` |
-| Gerar uma foto avulsa | `/gpt-image2-unity` |
+| Gerar uma foto avulsa | `/gpt-image2-leange` |
 | Salvar o trabalho no GitHub | `/syncar` |
 | Criar uma nova skill personalizada | `/mapear` |

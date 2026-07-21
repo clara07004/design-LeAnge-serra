@@ -1,6 +1,6 @@
 ---
 name: hooks-para-carrossel
-description: Cria o primeiro slide de carrosseis do Instagram — a combinação de headline e direção visual que força o swipe e maximiza salvamentos. Usado DENTRO do /carrossel-unity na Fase 1 para gerar 5 opções de capa antes de produzir os slides. Também pode ser chamado isoladamente para melhorar uma capa existente. Dispara quando: "preciso de uma capa para meu carrossel", "primeiro slide não tá bom", "como fazer capa que prende", "quero opções de primeiro slide".
+description: Cria o primeiro slide de carrosseis do Instagram — a combinação de headline e direção visual que força o swipe e maximiza salvamentos. Usado DENTRO do /carrossel-leange na Fase 1 para gerar 5 opções de capa antes de produzir os slides. Também pode ser chamado isoladamente para melhorar uma capa existente. Dispara quando: "preciso de uma capa para meu carrossel", "primeiro slide não tá bom", "como fazer capa que prende", "quero opções de primeiro slide".
 ---
 
 # Hooks para Carrossel
@@ -32,7 +32,7 @@ A capa tem dois trabalhos simultâneos:
 - `[OBJETIVO]` — educar, vender, construir autoridade, gerar salvamentos
 
 **Opcional:**
-- `[AVATAR]` — qual dos três perfis (arquiteto / construtor / proprietário)
+- `[AVATAR]` — a persona da LeAnge (persona **única**: tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)
 - `[TOM]` — mais direto, mais conversacional, mais provocador
 - `[NÚMERO DE SLIDES]` — calibra a promessa da capa
 
@@ -45,7 +45,7 @@ A capa tem dois trabalhos simultâneos:
 - Deve funcionar como uma promessa ou uma tensão
 - Evitar ponto final — ponto final fecha, o carrossel precisa abrir
 
-**Subheadline (opcional)** — 1 linha de contexto ou especificação
+**Subheadline (opcional)** — 1 linha de contexto ou detalhe
 - Máximo 15 palavras
 
 **Indicador de carrossel** — sinalização visual de que tem mais conteúdo
@@ -56,38 +56,38 @@ A capa tem dois trabalhos simultâneos:
 
 ### 1. Promessa de resultado específico
 O slide promete uma transformação concreta.
-- "Como especificar esquadrias que eliminam reclamações pós-obra"
-- "3 mudanças que elevam o conforto acústico sem aumentar o custo"
+- "Como planejar a primeira viagem com seu cão sem estresse"
+- "3 detalhes que transformam uma hospedagem comum em experiência pet lover"
 
 ### 2. Dor nomeada com precisão
 A capa nomeia exatamente o que o avatar sente.
-- "Por que sua esquadria de alumínio não resolve o problema do ruído"
-- "O motivo pelo qual obras de Steel Frame perdem em isolamento térmico"
+- "Por que 'aceita pet' não é a mesma coisa que 'feito para o seu pet'"
+- "O motivo pelo qual seu cão fica ansioso quando você viaja sem ele"
 
 ### 3. Número + conteúdo acionável
 Lista com número específico — cria expectativa de conteúdo completo.
-- "5 erros que comprometem o desempenho termoacústico da obra"
-- "3 critérios que arquitetos de alto padrão usam para especificar esquadrias"
+- "5 coisas para checar antes de escolher uma pousada pet friendly"
+- "3 critérios que separam uma pousada pet friendly de uma pet lover"
 
 ### 4. Afirmação polêmica ou contraintuitiva
 Vai contra o que a maioria acredita.
-- "PVC não é uma alternativa ao alumínio. É uma categoria diferente."
-- "A janela mais cara pode ser a mais cara de manter"
+- "Pet friendly não é o mesmo que pet lover. É outra categoria."
+- "Deixar o pet solto não é bagunça — é liberdade com segurança"
 
 ### 5. Pergunta de identificação
 Uma pergunta que o avatar responde "sim" mentalmente.
-- "Você especifica alumínio por desempenho ou por hábito?"
-- "Seu cliente sabe o que está perdendo sem vedação de alto padrão?"
+- "Você viaja e deixa seu pet, ou viaja com ele?"
+- "Seu cão pode entrar no restaurante e na piscina onde você se hospeda?"
 
 ### 6. Antes/depois em uma linha
 Mostra a transformação de forma compacta.
-- "Antes: obra com ruído externo constante. Depois: isolamento acústico real."
-- "De esquadria padrão para sistema de alto desempenho. O que muda →"
+- "Antes: pet preso no quarto. Depois: solto no restaurante, na piscina e nas cachoeiras."
+- "De 'aceita pet com restrições' para 'sem limite de porte, raça ou quantidade'. O que muda →"
 
 ### 7. Dado surpreendente
 Um número que recontextualiza o problema.
-- "Uma esquadria mal vedada pode aumentar em 30% o gasto de ar-condicionado"
-- "87% das infiltrações em Steel Frame têm origem nas esquadrias"
+- "Somos a única pousada onde o pet frequenta todos os espaços — sem exceção"
+- "Sem limite de porte, raça ou quantidade: o conceito que nos torna únicos"
 
 ---
 
@@ -96,7 +96,7 @@ Um número que recontextualiza o problema.
 ```
 TEMA: [tema]
 OBJETIVO: [objetivo]
-AVATAR: [arquiteto / construtor / proprietário]
+AVATAR: [persona LeAnge — ver `_contexto/persona.md`]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

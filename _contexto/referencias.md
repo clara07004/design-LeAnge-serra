@@ -20,22 +20,22 @@ Contém: [listar arquivos presentes: ex. logo em PNG, versões de cor, manual de
 ---
 
 ## Fotos do Produto / Material Visual
-**Descrição:** [Descreva o tipo de material: fotos reais de instalações, produtos, obras, ambientes, eventos, etc.]
+**Descrição:** [Descreva o tipo de material: fotos reais das unidades, pets hospedados, suítes, espaços, gastronomia, natureza, etc.]
 **Link:** [URL]
 **ID da pasta:** `[ID_DA_PASTA_FOTOS]`
 
 ---
 
-## Catálogo Técnico / Material de Produto
-**Descrição:** [Documentação técnica do produto/serviço: catálogos, fichas técnicas, manuais, laudos, relatórios de ensaio]
+## Material da Pousada / Informações
+**Descrição:** [Material informativo da pousada: apresentação das unidades, informações da pousada, políticas, avaliações de hóspedes, depoimentos]
 **Link:** [URL]
 **ID da pasta:** `[ID_DA_PASTA_CATALOGO]`
 
 Arquivos disponíveis:
-- [Arquivo 1 — ex.: Catálogo Comercial]
-- [Arquivo 2 — ex.: Ficha Técnica]
-- [Arquivo 3 — ex.: Manual de Instalação / Uso]
-- [Arquivo 4 — ex.: Laudos e relatórios técnicos]
+- [Arquivo 1 — ex.: Apresentação das unidades]
+- [Arquivo 2 — ex.: Informações da Pousada]
+- [Arquivo 3 — ex.: Guia do hóspede / Políticas]
+- [Arquivo 4 — ex.: Depoimentos e avaliações de hóspedes]
 - [...]
 
 ---
@@ -50,7 +50,7 @@ Arquivos disponíveis:
 ## Referência Editorial — @[perfil] (Instagram)
 **Perfil:** [@perfil](https://www.instagram.com/perfil/) — [número de posts e seguidores]
 **Marca:** [nome da marca de referência] — [breve descrição do produto/serviço deles]
-**Por que é referência:** [justificativa — ex.: mesmo ecossistema, mesmo público-alvo (arquitetos, construtores, especificadores), mesmo posicionamento técnico-premium]
+**Por que é referência:** [justificativa — ex.: mesmo ecossistema, mesmo público-alvo (tutores de pet, viajantes com animais), mesmo posicionamento acolhedor-premium]
 
 ### Formatos de conteúdo
 
@@ -102,7 +102,7 @@ Arquivos disponíveis:
 
 **Fotografia:**
 - Covers: [estilo — ex.: fotos escuras, moody, pessoas em ação]
-- Solução: [estilo — ex.: fotos arquitetônicas clean, produto instalado, luz natural]
+- Solução: [estilo — ex.: pet aproveitando os espaços da pousada, ambiente acolhedor, luz natural]
 - Detalhe: [estilo — ex.: close-up da textura/estrutura do produto]
 
 **Elementos gráficos recorrentes:**
@@ -120,4 +120,4 @@ Arquivos disponíveis:
 6. [Template 6 — ex.: Solução produto]
 7. [Template 7 — ex.: CTA acento]
 
-**Spec bar em produtos:** `[Spec 1: valor] | [Spec 2: valor] | [Linha/categoria: nome]`
+**Info bar em posts:** `[Info 1: valor] | [Info 2: valor] | [Unidade: nome]`

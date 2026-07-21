@@ -37,28 +37,31 @@ Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o
 
 ---
 
-## Conhecimento técnico do produto (consulta obrigatória)
+## Conhecimento da pousada (consulta obrigatória)
 
-**Antes de gerar calendário, briefing, roteiro, carrossel ou post estático**, ler os arquivos relevantes em `produtos/`. Esse diretório consolida toda a documentação técnica oficial (catálogos, manuais, laudos, fichas técnicas) da empresa.
+**Antes de gerar calendário, briefing, roteiro, carrossel ou post estático**, ler os arquivos relevantes em `pousada/`. Esse diretório consolida toda a documentação oficial da LeAnge (unidades, suítes, gastronomia, regras de hospedagem, política de pets, experiência).
 
-A empresa tem um posicionamento definido em `_contexto/empresa.md` — o conteúdo precisa:
+A LeAnge tem um posicionamento definido em `_contexto/empresa.md` — o conteúdo precisa:
 
-- **Ser realista e verdadeiro:** nunca inventar dimensões, ensaios, certificações ou valores de desempenho. Tudo precisa estar lastreado em `produtos/`
-- **Conter especificações técnicas reais:** citar linhas, variantes, normas e valores reais documentados nos arquivos de produto
-- **Permitir que o cliente conheça o produto pelo post:** o conteúdo é parte da qualificação do lead, não decoração visual
-- **Manter o posicionamento:** vocabulário alinhado com `_contexto/preferencias.md`, sem comparações genéricas sem lastro
+- **Ser realista e verdadeiro:** nunca inventar capacidades, valores, comodidades ou regras. Tudo precisa estar lastreado em `pousada/`
+- **Conter informação real da pousada:** citar suítes, espaços, serviços e políticas exatamente como documentados
+- **Permitir que o hóspede conheça a experiência pelo post:** o conteúdo é parte da qualificação do lead, não decoração visual
+- **Manter o posicionamento:** vocabulário alinhado com `_contexto/preferencias.md`, sem promessas genéricas sem lastro
 
 Arquivos de consulta principais:
-- `produtos/README.md` — índice de todos os tópicos
-- `produtos/visao-geral.md` — características e vantagens do produto/serviço
-- `produtos/normas-desempenho.md` — normas técnicas, certificações, laudos, valores ensaiados
-- `produtos/fotos-obras/` — acervo visual real (priorizar sobre IA quando possível)
-- Demais arquivos em `produtos/` conforme indexado no README
+- `pousada/README.md` — índice de todos os tópicos
+- `marca/identidade-visual.md` — grafia da marca, paleta, tipografia, logos
+- `pousada/fotos-unidades/` — acervo visual real das unidades (priorizar sobre IA quando possível)
+- `fotos serra/` — biblioteca de 608 fotos reais catalogadas. **Antes de gerar qualquer imagem, PERGUNTAR à Paola se ela quer uma foto da biblioteca ou uma foto própria (fora do acervo)** — ver regra obrigatória na Etapa 2. Se ela escolher a biblioteca, achar a foto com o buscador: `python "fotos serra/buscar-fotos.py" <palavras> --json --limit 8` (retorna caminho do arquivo + descrição, ranqueado; busca sem acento). Sem termos = estatísticas. Catálogo completo: `fotos serra/catalogo-imagens.csv`.
+- Demais arquivos em `pousada/` conforme indexado no README
 
-**Frases genéricas para revisar:** "qualidade superior", "máxima durabilidade", "tecnologia avançada" sem citar dado técnico = reescrever com número real do laudo ou da norma.
+**Frases genéricas para revisar:** "qualidade superior", "experiência única", "conforto incomparável" sem lastro concreto = reescrever com o diferencial real documentado (ex.: sem limite de porte/raça, pet solto no restaurante e piscina, all inclusive com restrições alimentares atendidas).
 
-**SUBSTITUIÇÃO OBRIGATÓRIA — OSB → Placa Performa (setor de construção a seco):** sempre que qualquer conteúdo (briefing, roteiro, carrossel, legenda, post estático) mencionar "placa OSB", "OSB" ou "chapa de OSB", **substituir automaticamente por "Placa Performa"**, sem perguntar. A placa OSB caiu em desuso e não é mais mencionada pelas marcas do grupo. **Nunca atribuir função estrutural ao fechamento** (OSB, gesso, cimentícia): no Steel Frame brasileiro a integridade é da estrutura de aço — o fechamento é vedação. Contexto em `produtos/base-normativa-abnt.md` e em [_contexto/preferencias.md](_contexto/preferencias.md).
-> Default do setor de construção a seco. Empresa replicada que **não** trabalhe com Steel Frame/Drywall ou não adote a Placa Performa deve ajustar/remover esta regra no setup.
+**Grafia obrigatória da marca:** sempre `LeAnge` (L e A maiúsculos, sem espaço, sem hífen). Nunca "Le Ange", "LE ANGE", "leange". Detalhe em [marca/identidade-visual.md](marca/identidade-visual.md).
+
+**REGRA DE ESCOPO — SOMENTE LeAnge Serra:** o grupo tem duas unidades (Serra, em Miguel Pereira, e Mar, em Búzios), mas **este repositório é focado exclusivamente na LeAnge Serra**. Se qualquer documento, mensagem ou fonte trouxer menção ou informação sobre a **LeAnge Mar**, você deve **ignorar** — **JAMAIS** documentar informação da Mar e **JAMAIS misturar** dados das duas pousadas. Todo conteúdo, dado, comodidade, regra e visual documentado aqui é da Serra.
+
+**REGRA DE COPY — preços/valores NUNCA entram no criativo:** preços, diárias, valores, descontos, taxas, percentuais de reembolso/cancelamento e condições comerciais (late check-out, early check-in, cortesias, brindes) **NUNCA** aparecem em copy, legenda, roteiro ou peça — **exceto** quando a Paola pedir explicitamente uma condição/valor específico para um criativo. Detalhe em [_contexto/preferencias.md](_contexto/preferencias.md).
 
 ---
 
@@ -71,11 +74,11 @@ Arquivos de consulta principais:
 
 **Skills de conteúdo:**
 - `/calendario-comercial` — mapa de oportunidades do período (quando e o quê postar)
-- `/briefing-unity` — briefing completo de um tema: objetivo, mensagem, formato, referências
-- `/carrossel-unity` — produção de carrossel: texto + HTML + PNG via Playwright
-- `/estatico-unity` — produção de post card único: foto IA + HTML + PNG via Playwright
-- `/roteiro-unity` — roteiro de vídeo para Reels/TikTok (orgânico via Ogilvy, tráfego via Schwartz)
-- `/publicar-social-unity` — publica conteúdo aprovado no Instagram, TikTok, LinkedIn
+- `/briefing-leange` — briefing completo de um tema: objetivo, mensagem, formato, referências
+- `/carrossel-leange` — produção de carrossel: texto + HTML + PNG via Playwright
+- `/estatico-leange` — produção de post card único: foto IA + HTML + PNG via Playwright
+- `/roteiro-leange` — roteiro de vídeo para Reels/TikTok (orgânico via Ogilvy, tráfego via Schwartz)
+- `/publicar-social-leange` — publica conteúdo aprovado no Instagram, TikTok, LinkedIn
 
 **Skills de pesquisa e ideação:**
 - `/gerador-de-angulos-para-um-tema` — 10 lentes criativas para explorar um tema antes do briefing
@@ -83,7 +86,7 @@ Arquivos de consulta principais:
 - `/banco-de-objecoes-do-avatar` — mapeia 6 tipos de objeção por ICP com resposta em conteúdo
 
 **Skills de copy e distribuição:**
-- `/hooks-para-carrossel` — 5 opções de capa para carrossel com direção visual (usar antes do /carrossel-unity)
+- `/hooks-para-carrossel` — 5 opções de capa para carrossel com direção visual (usar antes do /carrossel-leange)
 - `/hooks-para-instagram-reels` — 7 tipos de hook combinados (primeiro frame + frase de abertura)
 - `/legenda-para-carrossel` — legenda orientada a save com CTA específico
 - `/legenda-para-reel` — legenda que complementa o vídeo sem repetir o script
@@ -93,10 +96,10 @@ Arquivos de consulta principais:
 
 **Skills de imagem:**
 - `/gerador-de-prompts-de-imagem` — prompt estruturado para gpt-image-1 (usar antes de gerar imagem)
-- `/gerador-de-prompts-para-imagens-de-produto` — prompts para as estéticas de produto da empresa (estilos configurados em `marca/DESIGN.md`)
+- `/gerador-de-prompts-para-imagens-da-pousada` — prompts para as estéticas de produto da empresa (estilos configurados em `marca/DESIGN.md`)
 
 **Motores (usados internamente pelas skills de produção):**
-- `/gpt-image2-unity` — gera foto de fundo via GPT Image 2 (motor de imagem do carrossel e post estático)
+- `/gpt-image2-leange` — gera foto de fundo via GPT Image 2 (motor de imagem do carrossel e post estático)
 - `/ogilvy-copy` — copy de marca e conteúdo orgânico (motor do roteiro orgânico)
 - `/schwartz-copy` — copy de resposta direta (motor do roteiro de tráfego pago)
 
@@ -113,7 +116,7 @@ Arquivos de consulta principais:
     ↓ [escolhe ângulo]
 /calendario-comercial              ← quando e o quê postar
     ↓ [aprova calendário]
-/briefing-unity                    ← define objetivo, mensagem e formato
+/briefing-leange                    ← define objetivo, mensagem e formato
     ↓ [aprova briefing]
 ```
 
@@ -121,7 +124,7 @@ Arquivos de consulta principais:
 
 Toda vez que rodar `/calendario-comercial` para um mês (ou qualquer período fechado), gerar dentro de `conteudo/calendarios/[periodo]/`:
 
-1. **`calendario-detalhado.md`** — post a post, numerado, com tema/formato/janela/status (alimenta os `/briefing-unity` posteriores)
+1. **`calendario-detalhado.md`** — post a post, numerado, com tema/formato/janela/status (alimenta os `/briefing-leange` posteriores)
 2. **`_aprovado.md`** — memória da aprovação: tema narrativo, mix, apagões, picos, ajustes feitos, o que evitar
 3. **`dashboard.html`** — grid visual do mês inteiro, derivado direto do `calendario-detalhado.md`, usando o template `templates/dashboard-calendario.html` (identidade visual da marca, canvas 1920×1080)
 
@@ -137,30 +140,39 @@ A skill `/calendario-comercial` já tem a especificação completa na seção "8
 
 Quando o conteúdo de um dia estiver marcado no calendário como **Reel, post estático, vídeo ou qualquer formato que NÃO seja carrossel**, SEMPRE perguntar ao usuário qual o formato do conteúdo antes de gerar qualquer coisa (hook, roteiro, briefing, prompt, imagem, HTML). Não assumir o formato do calendário automaticamente — ele é sugestão, a decisão final é do usuário. Quando o formato for **carrossel**, seguir direto o fluxo sem perguntar.
 
+**REGRA OBRIGATÓRIA — Origem da imagem: perguntar ANTES de gerar**
+
+Sempre que uma peça precisar de imagem/foto (carrossel, post estático, capa, slide, story), **antes de gerar qualquer imagem por IA, perguntar à Paola qual a origem da foto:**
+
+1. **Foto da biblioteca** (`fotos serra/`) — buscar com `python "fotos serra/buscar-fotos.py" <palavras> --json --limit 8`, apresentar as opções ranqueadas e usar a que ela escolher.
+2. **Foto própria dela** (fora da biblioteca) — aguardar ela enviar/apontar o arquivo.
+
+Só partir para geração por IA (`/gpt-image2-leange` etc.) se a Paola disser explicitamente que não quer foto real (nem da biblioteca, nem própria). Priorizar sempre foto real — nunca gerar imagem por IA sem antes fazer essa pergunta.
+
 **REGRA OBRIGATÓRIA — Nomenclatura da pasta de produção pela DATA DE PUBLICAÇÃO**
 
-A pasta de produção de cada conteúdo é nomeada pela **data de publicação** no formato `dia-DD-tema-curto` (ex.: conteúdo que publica em 17/07 → `dia-17-linhas-pvc-vao`). **Nunca usar o número do post do calendário** — em meses com domingos sem post ou apagões, o número do post deixa de coincidir com o dia do mês (ex.: Post 15 publica em 17/07). O `DD` é sempre o dia em que o conteúdo vai ao ar.
+A pasta de produção de cada conteúdo é nomeada pela **data de publicação** no formato `dia-DD-tema-curto` (ex.: conteúdo que publica em 17/07 → `dia-17-serra-inverno-lareira`). **Nunca usar o número do post do calendário** — em meses com domingos sem post ou apagões, o número do post deixa de coincidir com o dia do mês (ex.: Post 15 publica em 17/07). O `DD` é sempre o dia em que o conteúdo vai ao ar.
 
 #### Carrossel
 
-**FLUXO PRINCIPAL ★ — usar SEMPRE este, a menos que o usuário peça explicitamente outro.** Quando o calendário já existe, começa no `/briefing-unity` (não nos hooks):
+**FLUXO PRINCIPAL ★ — usar SEMPRE este, a menos que o usuário peça explicitamente outro.** Quando o calendário já existe, começa no `/briefing-leange` (não nos hooks):
 ```
-/briefing-unity                  ← ponto de partida (calendário já aprovado)
+/briefing-leange                  ← ponto de partida (calendário já aprovado)
     ↓ [aprova briefing]
 /gerador-de-prompts-de-imagem    ← FLUXO PRINCIPAL ★ — prompts da capa + de cada slide
     ↓ [aprova os prompts]
-/gpt-image2-unity                ← gera todas as imagens (capa + slides)
+/gpt-image2-leange                ← gera todas as imagens (capa + slides)
     ↓ [aprova as imagens]
-/carrossel-unity                 ← monta os HTMLs + renderiza PNG
+/carrossel-leange                 ← monta os HTMLs + renderiza PNG
     ↓ [aprova]
 /legenda-para-carrossel
     ↓ [aprova o conteúdo final]
-/publicar-social-unity           ← publicação
+/publicar-social-leange           ← publicação
 ```
 
-**Fluxo rápido (alternativa) — só quando o usuário pedir, ou para algo pontual sem controle granular de imagem:** `/carrossel-unity` cuida de tudo internamente (texto + prompt + imagem IA + HTML + PNG):
+**Fluxo rápido (alternativa) — só quando o usuário pedir, ou para algo pontual sem controle granular de imagem:** `/carrossel-leange` cuida de tudo internamente (texto + prompt + imagem IA + HTML + PNG):
 ```
-/carrossel-unity        ← texto + geração de imagem + HTML + PNG (tudo em um)
+/carrossel-leange        ← texto + geração de imagem + HTML + PNG (tudo em um)
     ↓
 /legenda-para-carrossel
 ```
@@ -174,11 +186,11 @@ A pasta de produção de cada conteúdo é nomeada pela **data de publicação**
 #### Post estático
 
 ```
-/gerador-de-prompts-para-imagens-de-produto   ← ou /gerador-de-prompts-de-imagem
+/gerador-de-prompts-para-imagens-da-pousada   ← ou /gerador-de-prompts-de-imagem
     ↓ [aprova prompt]
-/gpt-image2-unity                             ← gera foto de fundo
+/gpt-image2-leange                             ← gera foto de fundo
     ↓ [aprova imagem]
-/estatico-unity                               ← monta HTML + renderiza PNG
+/estatico-leange                               ← monta HTML + renderiza PNG
     ↓
 /legenda-para-post-estatico
 ```
@@ -190,7 +202,7 @@ A pasta de produção de cada conteúdo é nomeada pela **data de publicação**
 ```
 /hooks-para-instagram-reels   ← hook do primeiro frame + frase de abertura
     ↓ [escolhe hook]
-/roteiro-unity                ← roteiro completo (motor: ogilvy-copy ou schwartz-copy)
+/roteiro-leange                ← roteiro completo (motor: ogilvy-copy ou schwartz-copy)
     ↓
 /legenda-para-reel
 ```
@@ -202,7 +214,7 @@ A pasta de produção de cada conteúdo é nomeada pela **data de publicação**
 ```
 /1-conteudo-em-7-formatos   ← transforma o conteúdo aprovado em 7 formatos diferentes
     ↓
-/publicar-social-unity       ← publica no Instagram, TikTok, LinkedIn
+/publicar-social-leange       ← publica no Instagram, TikTok, LinkedIn
 ```
 
 ---
@@ -214,7 +226,7 @@ A pasta de produção de cada conteúdo é nomeada pela **data de publicação**
     ↓ [escolhe objeção]
 /carrossel-de-quebra-de-objecao   ← carrossel em 3 movimentos: nomeação → reframe → prova
     ↓
-/carrossel-unity  +  /legenda-para-carrossel
+/carrossel-leange  +  /legenda-para-carrossel
 ```
 
 ---

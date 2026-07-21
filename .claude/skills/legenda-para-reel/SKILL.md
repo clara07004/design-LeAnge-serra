@@ -1,6 +1,6 @@
 ---
 name: legenda-para-reel
-description: Escreve a legenda de um Reel do Instagram — a primeira linha que aparece antes do play, o corpo que complementa o vídeo sem repetir, e o CTA final. Chamado no final do /roteiro-unity antes de entregar o pacote completo. Dispara quando: "escreve a legenda do meu Reel", "caption para Reel", "legenda para vídeo do Instagram".
+description: Escreve a legenda de um Reel do Instagram — a primeira linha que aparece antes do play, o corpo que complementa o vídeo sem repetir, e o CTA final. Chamado no final do /roteiro-leange antes de entregar o pacote completo. Dispara quando: "escreve a legenda do meu Reel", "caption para Reel", "legenda para vídeo do Instagram".
 ---
 
 # Legenda para Reel
@@ -9,8 +9,8 @@ description: Escreve a legenda de um Reel do Instagram — a primeira linha que 
 
 Antes de escrever, confirmar que tem em contexto:
 - O assunto e argumento central do Reel
-- O avatar (arquiteto / construtor / proprietário)
-- `_contexto/preferencias.md` — tom técnico acessível, sem promessas absolutas
+- O avatar (persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`))
+- `_contexto/preferencias.md` — tom acolhedor e acessível, sem promessas absolutas
 
 A legenda do Reel tem dois momentos de leitura:
 1. **Antes de assistir** — a primeira linha decide se a pessoa dá play
@@ -22,12 +22,12 @@ A legenda do Reel tem dois momentos de leitura:
 
 **Obrigatório:**
 - `[O QUE O REEL ENTREGA]` — o assunto, o argumento central ou o insight do vídeo
-- `[AVATAR]` — arquiteto / construtor / proprietário
+- `[AVATAR]` — persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)
 - `[CTA]` — o que quer que a pessoa faça após assistir
 
 **Opcional:**
 - `[ROTEIRO OU RESUMO DO VÍDEO]` — para a legenda complementar sem repetir
-- `[TOM]` — direto / técnico / provocador / revelador
+- `[TOM]` — direto / informativo / provocador / revelador
 - `[HASHTAGS]` — se quiser incluir
 
 ---
@@ -41,17 +41,17 @@ Aparece antes do "ver mais". Precisa funcionar sozinha como motivo para assistir
 - Opções eficazes:
   - A afirmação central do vídeo em uma frase
   - Uma pergunta que o vídeo responde
-  - Um dado técnico que ancora o conteúdo
+  - Um dado concreto da pousada que ancora o conteúdo
   - Uma afirmação que só faz sentido depois de assistir
 
 ### Corpo — o complemento
-2-5 parágrafos curtos. Não resume o vídeo — adiciona contexto, exemplo ou dado técnico que o vídeo não teve espaço para entregar.
+2-5 parágrafos curtos. Não resume o vídeo — adiciona contexto, exemplo ou detalhe da experiência que o vídeo não teve espaço para entregar.
 
 ### CTA — único e específico
 Um único CTA no final — congruente com o objetivo do Reel.
-- Educativo técnico → salvar, comentar com opinião técnica, enviar para colega
-- Autoridade → seguir para mais conteúdo técnico
-- Conversão → link na bio + instrução exata ("acesse o link na bio para solicitar orçamento")
+- Educativo → salvar, comentar com sua opinião, enviar para um amigo tutor
+- Autoridade → seguir para mais conteúdo da pousada
+- Conversão → link na bio + instrução exata ("acesse o link na bio para consultar disponibilidade")
 
 ---
 
@@ -59,7 +59,7 @@ Um único CTA no final — congruente com o objetivo do Reel.
 
 ```
 REEL: [resumo do que o vídeo entrega]
-AVATAR: [arquiteto / construtor / proprietário]
+AVATAR: [persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)]
 CTA: [ação desejada]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -68,7 +68,7 @@ LEGENDA:
 
 [PRIMEIRA LINHA — hook antes do "ver mais"]
 
-[Parágrafo 1 — complemento ou contexto técnico]
+[Parágrafo 1 — complemento ou contexto adicional]
 
 [Parágrafo 2 — dado adicional ou exemplo real]
 
@@ -99,7 +99,7 @@ VARIAÇÃO DE PRIMEIRA LINHA:
 - Repetir o roteiro do vídeo — a legenda complementa, não duplica
 - Mais de um CTA
 - "Link na bio" sem instrução do que fazer lá
-- Promessas absolutas de desempenho sem base técnica (ver `_contexto/preferencias.md`)
+- Promessas absolutas sem base real (ver `_contexto/preferencias.md`)
 - Ultrapassar 900 caracteres sem necessidade real
 
 ---
@@ -108,4 +108,4 @@ VARIAÇÃO DE PRIMEIRA LINHA:
 
 Após aprovação, salvar a legenda como **`_legenda.md`** (sempre com underscore) na pasta do
 conteúdo: `conteudo/roteiros/[periodo]/[dia-tema]/_legenda.md`, sob a seção "LEGENDA APROVADA".
-É esse arquivo que o `/publicar-social-unity` lê na hora de publicar.
+É esse arquivo que o `/publicar-social-leange` lê na hora de publicar.

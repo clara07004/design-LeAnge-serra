@@ -27,7 +27,7 @@
 3. Se necessário, adicione créditos (mínimo $5)
 
 **Solução — prompt bloqueado:**
-Ajuste o prompt removendo termos que possam ser interpretados como problemáticos. Prompts de construção civil raramente são bloqueados — se acontecer, simplifique a descrição da cena.
+Ajuste o prompt removendo termos que possam ser interpretados como problemáticos. Prompts de pousada raramente são bloqueados — se acontecer, simplifique a descrição da cena.
 
 **Solução — API instável:**
 Aguarde alguns minutos e tente novamente. Ou acione o fallback:
@@ -53,19 +53,19 @@ Você: Sim
 
 **Como melhorar o prompt:**
 - Descrever a cena principal nos primeiros 15 palavras
-- Incluir estilo fotográfico explícito: `professional architectural photography`
+- Incluir estilo fotográfico explícito: `professional lifestyle photography`
 - Especificar iluminação: `natural daylight`, `soft ambient light`
 - Especificar enquadramento: `wide shot`, `close-up detail`, `mid shot`
 - Incluir contexto de produto: descrição do produto, tipo de ambiente, contexto de uso
 
 **Exemplo de prompt ruim:**
 ```
-window in a house that shows the quality and the premium feeling of the brand
+a pousada room that shows the quality and the premium feeling of the brand
 ```
 
 **Exemplo de prompt bom:**
 ```
-modern apartment interior, [produto] installed, natural daylight flooding in, contemporary minimal decor, warm wood tones, professional architectural photography, wide shot, no text overlay, no watermarks
+cozy pousada suite interior, [produto] in the scene, natural daylight flooding in, contemporary minimal decor, warm wood tones, professional lifestyle photography, wide shot, no text overlay, no watermarks
 ```
 
 ---
@@ -110,7 +110,7 @@ npx.cmd playwright install chromium
 
 **Exemplo correto:**
 ```powershell
-npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///C:/Users/[usuario]/Documents/Design-template/conteudo/carrosseis/tema/instagram/slide-01.html" "C:/Users/[usuario]/Documents/Design-template/conteudo/carrosseis/tema/instagram/slide-01.png"
+npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///C:/Users/[usuario]/Documents/Design-LeAnge-Serra/conteudo/carrosseis/tema/instagram/slide-01.html" "C:/Users/[usuario]/Documents/Design-LeAnge-Serra/conteudo/carrosseis/tema/instagram/slide-01.png"
 ```
 
 ---
@@ -160,7 +160,7 @@ npx.cmd playwright screenshot --viewport-size=1080,1350 --full-page "file:///C:/
 .claude/skills/nome-da-skill/SKILL.md
 ```
 
-O nome da pasta deve ser exatamente igual ao nome do comando (sem a barra). Por exemplo, `/carrossel-unity` → `.claude/skills/carrossel-unity/SKILL.md`.
+O nome da pasta deve ser exatamente igual ao nome do comando (sem a barra). Por exemplo, `/carrossel-leange` → `.claude/skills/carrossel-leange/SKILL.md`.
 
 ---
 
@@ -195,18 +195,18 @@ O nome da pasta deve ser exatamente igual ao nome do comando (sem a barra). Por 
 
 ### A imagem não condiz com o nível premium da marca
 
-**Causa:** o prompt não especificou o contexto arquitetônico correto.
+**Causa:** o prompt não especificou o contexto correto da cena.
 
 **Elementos que elevam a qualidade da imagem:**
-- `contemporary architecture` — contexto arquitetônico
-- `high-end residential` — nível de acabamento
+- `cozy pousada interior` — contexto da cena
+- `high-end pet-friendly retreat` — nível de acabamento
 - `natural light, diffuse` — iluminação premium
 - `clean minimal interior` — estética da marca
-- `professional architectural photography` — estilo fotográfico
+- `professional lifestyle photography` — estilo fotográfico
 
 **Elementos que rebaixam:**
-- `house`, `home` (muito genérico — use `contemporary residence` ou `modern apartment`)
-- `construction site` sem qualificação (use `premium construction site, high-end finishes, organized workspace`)
+- `house`, `home` (muito genérico — use `cozy pousada suite` ou `pet-friendly retreat`)
+- `pousada` sem qualificação (use `cozy boutique pousada, high-end finishes, warm inviting spaces`)
 
 ---
 
@@ -222,11 +222,11 @@ Um carrossel de 10 slides com 3 imagens (capa + 2 slides de impacto) custa aprox
 
 ### O Claude pode publicar automaticamente no Instagram?
 
-Sim, com `/publicar-social-unity` e o token da Meta configurado. O processo ainda requer aprovação humana do conteúdo antes de publicar — o sistema não publica nada sem confirmação explícita.
+Sim, com `/publicar-social-leange` e o token da Meta configurado. O processo ainda requer aprovação humana do conteúdo antes de publicar — o sistema não publica nada sem confirmação explícita.
 
 ### Posso recriar um post com variações?
 
-Sim. Cada execução aprovada salva um arquivo `_aprovado.md` com o prompt exato usado. Na próxima execução do mesmo tema, o Claude lê esse histórico e parte do mesmo prompt como base, facilitando variações. Você pode pedir: "Cria uma variação do post de isolamento acústico com outra cena de ambiente."
+Sim. Cada execução aprovada salva um arquivo `_aprovado.md` com o prompt exato usado. Na próxima execução do mesmo tema, o Claude lê esse histórico e parte do mesmo prompt como base, facilitando variações. Você pode pedir: "Cria uma variação do post sobre viajar com pet com outra cena de ambiente."
 
 ### O que acontece se eu fechar a conversa no meio do processo?
 

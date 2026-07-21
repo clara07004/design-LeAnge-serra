@@ -24,5 +24,5 @@ assunto não estiver centrado.
 
 **Render:** `--viewport-size=1080,1350` **sem** `--full-page` → PNG exatamente 1080×1350. Validar
 com `validar-dimensao.py`. Nunca esticar (`object-fit:fill`) nem deixar barra vazia.
-Ver [[feedback-carousel-design-aprovado]] e [[feedback-fonte-mobile]].
+Ver [[feedback-fonte-mobile]].
 </content>

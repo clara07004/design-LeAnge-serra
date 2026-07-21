@@ -1,6 +1,6 @@
 ---
 name: carrossel-de-quebra-de-objecao
-description: Cria a estrutura de um carrossel que nomeia e desmonta uma objeção específica do ICP — slide a slide, com o leitor no próprio ritmo. Diferente do /carrossel-unity (educativo/autoridade): este é focado em conversão e fundo de funil. Use após o /banco-de-objecoes-do-avatar para criar conteúdo para cada objeção mapeada. Dispara quando: "carrossel sobre [produto] vs [alternativa]", "como responder objeções em carrossel", "carrossel para quem está na dúvida", "conteúdo de fundo de funil".
+description: Cria a estrutura de um carrossel que nomeia e desmonta uma objeção específica do ICP — slide a slide, com o leitor no próprio ritmo. Diferente do /carrossel-leange (educativo/autoridade): este é focado em conversão e fundo de funil. Use após o /banco-de-objecoes-do-avatar para criar conteúdo para cada objeção mapeada. Dispara quando: "carrossel sobre [produto] vs [alternativa]", "como responder objeções em carrossel", "carrossel para quem está na dúvida", "conteúdo de fundo de funil".
 ---
 
 # Carrossel de Quebra de Objeção
@@ -10,12 +10,12 @@ description: Cria a estrutura de um carrossel que nomeia e desmonta uma objeçã
 Antes de executar, ler:
 - `_contexto/empresa.md` → objeções frequentes e contra-argumentos já mapeados
 - `_contexto/preferencias.md` → restrições: comparativos com a concorrência sempre consultivos, nunca agressivos; sem promessas absolutas
-- `marca/DESIGN.md` → identidade visual para o /carrossel-unity usar depois
+- `marca/DESIGN.md` → identidade visual para o /carrossel-leange usar depois
 
 **Fluxo recomendado:**
 1. `/banco-de-objecoes-do-avatar` → mapeia todas as objeções
 2. `/carrossel-de-quebra-de-objecao` → estrutura o carrossel para a objeção escolhida
-3. `/carrossel-unity` → produz o carrossel visual com HTML + PNG
+3. `/carrossel-leange` → produz o carrossel visual com HTML + PNG
 
 ---
 
@@ -30,13 +30,13 @@ O carrossel de quebra de objeção aproveita o que o vídeo não pode: o leitor 
 ## Coleta de Informações
 
 **Obrigatório:**
-- `[A OBJEÇÃO]` — a resistência específica do avatar (ex: "PVC amarela com o tempo", "é mais caro que alumínio", "meus clientes preferem alumínio")
-- `[AVATAR]` — arquiteto / construtor / proprietário
+- `[A OBJEÇÃO]` — a resistência específica do avatar (ex: "pousada pet lover é mais cara", "meu pet vai estressar viajando", "prefiro deixar o pet em casa")
+- `[AVATAR]` — persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)
 
 **Opcional:**
-- `[PROVA]` — caso real de cliente ou projeto que tinha essa objeção
+- `[PROVA]` — caso real de cliente ou hóspede que tinha essa objeção
 - `[O REFRAME]` — a perspectiva que desmonta a objeção
-- `[CTA]` — a ação após o carrossel (padrão: solicitar orçamento consultivo)
+- `[CTA]` — a ação após o carrossel (padrão: consultar disponibilidade / falar com a pousada)
 - `[NÚMERO DE SLIDES]` — padrão 8-10
 
 ---
@@ -66,19 +66,19 @@ Cada slide é uma camada do argumento:
 **Slide 1 — Cover: a objeção nomeada**
 O título é a objeção do avatar — não uma pergunta retórica.
 - "[A objeção exata como o avatar a formula]"
-- Exemplo: "PVC é mais caro. Faz sentido pensar assim."
+- Exemplo: "Pousada pet lover é mais cara. Faz sentido pensar assim."
 
 **Slide 2 — Validação**
-"Faz sentido pensar que [objeção]. Se eu estivesse especificando por preço, pensaria o mesmo."
+"Faz sentido pensar que [objeção]. Se eu estivesse escolhendo só por preço, pensaria o mesmo."
 
 **Slide 3 — O diagnóstico**
 Por que essa objeção existe — não como falha do avatar, mas como consequência do mercado.
 
 **Slides 4-5 — O reframe**
-- Objeção de preço → custo de entrada vs. custo total (manutenção, durabilidade, resultado)
-- Objeção de percepção → versão popular vs. versão de alto desempenho do produto
-- Objeção de confiança → laudos técnicos, certificações, casos documentados
-- Objeção de relevância → contexto específico do projeto do cliente e por que o produto é a escolha técnica mais coerente
+- Objeção de preço → custo da diária vs. valor total (o que está incluído, a experiência completa, a tranquilidade de viajar com o pet)
+- Objeção de percepção → hospedagem comum vs. a experiência pet lover de alto padrão
+- Objeção de confiança → avaliações de hóspedes, depoimentos, fotos reais de pets, casos documentados
+- Objeção de relevância → contexto específico da viagem do tutor e por que a pousada é a escolha mais coerente para ele e o pet
 
 **Slide 6 — O custo da objeção não resolvida**
 O que continua acontecendo enquanto o avatar não toma a decisão.
@@ -89,7 +89,7 @@ Alguém que tinha a mesma objeção — com perfil, situação, a decisão que t
 
 **Slide final — CTA com baixo atrito**
 Não pressiona — convida o próximo passo natural.
-"[ex.: Tem um projeto como esse? Me chama para conversar.]" ou "Link na bio para falar com um especialista."
+"[ex.: Está planejando uma viagem com seu pet? Me chama para conversar.]" ou "Link na bio para falar com nossa equipe."
 
 ---
 
@@ -97,7 +97,7 @@ Não pressiona — convida o próximo passo natural.
 
 ```
 A OBJEÇÃO: "[como o avatar formula essa resistência]"
-AVATAR: [arquiteto / construtor / proprietário]
+AVATAR: [persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -117,7 +117,7 @@ SLIDE 4 — O REFRAME (CAMADA 1)
 "[A primeira mudança de perspectiva]"
 
 SLIDE 5 — O REFRAME (CAMADA 2)
-"[Aprofundamento do reframe — o argumento central com base técnica]"
+"[Aprofundamento do reframe — o argumento central com base real]"
 
 SLIDE 6 — O CUSTO DA OBJEÇÃO
 "[O que continua acontecendo enquanto a decisão não é tomada]"
@@ -139,5 +139,5 @@ LEGENDA:
 [CTA: convite consultivo de baixo atrito]
 
 PRÓXIMO PASSO:
-Chamar /carrossel-unity com essa estrutura para produzir o visual.
+Chamar /carrossel-leange com essa estrutura para produzir o visual.
 ```

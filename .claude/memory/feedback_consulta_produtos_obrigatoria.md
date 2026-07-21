@@ -1,24 +1,16 @@
 ---
 name: feedback-consulta-produtos-obrigatoria
-description: Toda promessa de desempenho precisa de dado técnico real de produtos/, nunca genérico.
+description: Toda afirmação sobre a pousada precisa de informação real de pousada/, nunca genérica.
 metadata:
   type: feedback
 ---
 
-Antes de gerar briefing, roteiro, carrossel ou post, consultar `produtos/`. Toda promessa de
-desempenho precisa nomear **qual** desempenho com **valor real** documentado.
+Antes de gerar briefing, roteiro, carrossel ou post, consultar `pousada/` (e `marca/identidade-visual.md`). Toda afirmação sobre a experiência precisa nomear **o quê** com **informação real** documentada.
 
-**Why:** marca com posicionamento técnico, ticket alto, ICP exigente. Dado inventado com cara de
-confiança é o pior erro com essa marca. "Qualidade superior", "tecnologia avançada", "máxima
-durabilidade" sem número = decoração, não qualificação de lead.
+**Why:** a LeAnge se posiciona como a pousada mais pet lover do Brasil — o conteúdo é parte da qualificação do lead. Inventar capacidade, regra ou comodidade com cara de confiança é o pior erro com essa marca. "Experiência única", "conforto incomparável", "o melhor refúgio" sem lastro = decoração, não informação.
 
-**How to apply:** se um slide promete "alto desempenho", nomear qual propriedade (ex.: resistência
-ao vento, isolação acústica, estanqueidade) com o valor real do laudo técnico. Reescrever frase
-genérica com dado real de `produtos/normas-desempenho.md` ou `produtos/instalacao-manutencao/relatorios-tecnicos.md`.
+**How to apply:** se um post promete "all inclusive", nomear o que inclui (todas as refeições, restrições alimentares atendidas). Se fala em diferencial pet, citar o real (sem limite de porte/raça/quantidade; pet solto no restaurante e piscina). Reescrever frase genérica com informação real de `pousada/`.
 
-**Dados técnicos confirmados:** consultar diretamente os arquivos em `produtos/` — os valores
-reais estão documentados lá por linha/variante. Não reproduzir dados de memória; verificar
-sempre a fonte documental.
+**Nunca inventar:** número de suítes, comodidades, regras de hospedagem (idade mínima 13 anos, fêmeas não podem estar no cio, pet precisa ser socializado ou fica na guia, não trabalham com Day Use), valores ou capacidades. Verificar sempre a fonte documental em `pousada/` — não reproduzir de memória.
 
-**Normas:** consultar `produtos/normas-desempenho.md` para as normas aplicáveis ao produto
-desta empresa. Nunca inventar dimensão, ensaio ou certificação. Ver [[feedback-carousel-design-aprovado]].
+**Escopo Serra:** este repositório documenta exclusivamente a LeAnge Serra (Miguel Pereira). Ver regra de escopo em `CLAUDE.md`.

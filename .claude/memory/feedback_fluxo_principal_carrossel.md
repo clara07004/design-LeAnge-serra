@@ -5,21 +5,21 @@ metadata:
   type: feedback
 ---
 
-Fluxo confirmado de carrossel: gerar e aprovar as imagens **antes** de entrar no `/carrossel-unity`.
+Fluxo confirmado de carrossel: gerar e aprovar as imagens **antes** de entrar no `/carrossel-leange`.
 
 **Why:** o usuário prefere controle granular — aprovar cada foto antes da montagem. O fluxo
-rápido (geração de imagem dentro do `/carrossel-unity`) tira esse controle.
+rápido (geração de imagem dentro do `/carrossel-leange`) tira esse controle.
 
 **How to apply:**
 
 ```
-/briefing-unity
+/briefing-leange
     ↓ [aprovado]
 /gerador-de-prompts-de-imagem   ← prompts para capa + todos os slides com foto
     ↓ [prompts aprovados]
-/gpt-image2-unity               ← gera todas as imagens ANTES do carrossel-unity
+/gpt-image2-leange               ← gera todas as imagens ANTES do carrossel-leange
     ↓ [imagens aprovadas]
-/carrossel-unity                ← recebe imagens prontas, monta HTMLs + renderiza
+/carrossel-leange                ← recebe imagens prontas, monta HTMLs + renderiza
     ↓ [slides aprovados]
 /legenda-para-carrossel
 ```
@@ -27,9 +27,9 @@ rápido (geração de imagem dentro do `/carrossel-unity`) tira esse controle.
 **Não propor o fluxo rápido por padrão.**
 
 **Fluxos alternativos válidos:**
-- Post estático: `/gerador-de-prompts-para-imagens-de-produto` → `/gpt-image2-unity` → `/estatico-unity` → `/legenda-para-post-estatico`
-- Vídeo: `/hooks-para-instagram-reels` → `/roteiro-unity` → `/legenda-para-reel`
-- Fundo de funil: `/banco-de-objecoes-do-avatar` → `/carrossel-de-quebra-de-objecao` → `/carrossel-unity` → `/legenda-para-carrossel`
+- Post estático: `/gerador-de-prompts-para-imagens-da-pousada` → `/gpt-image2-leange` → `/estatico-leange` → `/legenda-para-post-estatico`
+- Vídeo: `/hooks-para-instagram-reels` → `/roteiro-leange` → `/legenda-para-reel`
+- Fundo de funil: `/banco-de-objecoes-do-avatar` → `/carrossel-de-quebra-de-objecao` → `/carrossel-leange` → `/legenda-para-carrossel`
 - Repurposing: `/1-conteudo-em-7-formatos` após conteúdo aprovado
 
 **Aprovação humana obrigatória em cada etapa.** Nunca avançar de fase, nunca salvar `_aprovado.md`,

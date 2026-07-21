@@ -8,10 +8,10 @@
 
 ## Gaps prioritários a resolver com conteúdo
 
-1. **[Gap 1 — ex.: Percepção de produto como commodity]** → [como o conteúdo endereça: ex. mostrar diferenciais técnicos e aplicações premium]
+1. **[Gap 1 — ex.: Percepção de pousada como hospedagem comum]** → [como o conteúdo endereça: ex. mostrar diferenciais comprovados e a experiência pet lover premium]
 2. **[Gap 2 — ex.: Falta de clareza sobre o diferencial vs. concorrente]** → [ex. comparativos objetivos e consultivos]
-3. **[Gap 3 — ex.: Ausência de prova social / cases documentados]** → [ex. galeria de obras, depoimentos, antes/depois]
-4. **[Gap 4 — ex.: Falta de prova técnica visível]** → [ex. laudos, fichas técnicas, certificações]
+3. **[Gap 3 — ex.: Ausência de prova social / cases documentados]** → [ex. depoimentos de hóspedes, fotos reais de pets na pousada, avaliações]
+4. **[Gap 4 — ex.: Falta de prova social visível]** → [ex. avaliações de hóspedes, depoimentos, fotos reais de pets]
 
 ---
 
@@ -24,13 +24,13 @@
 [Que tipo de conteúdo ajuda o lead a avaliar. Ex.: comparativos, aplicações específicas, explicações sobre diferenciadores.]
 
 **Prova**
-[Que tipo de conteúdo gera credibilidade. Ex.: cases reais, depoimentos com nome e contexto, fichas técnicas, detalhes de entrega.]
+[Que tipo de conteúdo gera credibilidade. Ex.: cases reais, depoimentos com nome e contexto, informações da pousada, detalhes da experiência.]
 
 **Conversão**
 [CTA e formato para conversão. Ex.: CTA para orçamento via formulário ou WhatsApp.]
 
 **Nutrição**
-[Como nutrir leads que ainda não converteram. Ex.: follow-up com conteúdos técnicos, argumentos de valor, cases que reduzem objeções.]
+[Como nutrir leads que ainda não converteram. Ex.: follow-up com conteúdos que qualificam o lead, argumentos de valor, cases que reduzem objeções.]
 
 ---
 

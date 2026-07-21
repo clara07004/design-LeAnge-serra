@@ -38,7 +38,7 @@ Antes de adaptar, confirmar que tem em contexto:
 **Formato:**
 ```
 [HOOK — frase de abertura, máx 2 segundos]
-[DESENVOLVIMENTO — 3 a 4 pontos diretos sobre o tema técnico]
+[DESENVOLVIMENTO — 3 a 4 pontos diretos sobre o tema]
 [VIRADA — o insight que prende até o fim]
 [CTA falado — natural, consultivo, sem soar mecânico]
 ```
@@ -55,10 +55,10 @@ Antes de adaptar, confirmar que tem em contexto:
 
 **Estrutura:**
 ```
-Slide 1 (capa): headline técnica de impacto — promessa ou dor nomeada
-Slide 2: contexto ou por que isso importa para o projeto
-Slides 3–5: desenvolvimento — 1 ponto técnico por slide
-Slide 6: virada ou dado técnico principal
+Slide 1 (capa): headline de impacto — promessa ou dor nomeada
+Slide 2: contexto ou por que isso importa para quem viaja com pet
+Slides 3–5: desenvolvimento — 1 ponto por slide
+Slide 6: virada ou dado principal
 Slide 7: CTA — salva, comenta ou ação específica
 ```
 
@@ -67,7 +67,7 @@ Slide 7: CTA — salva, comenta ou ação específica
 ### 3. Post Estático + Legenda
 
 **O que entrego:**
-- Conceito visual (o que colocar na imagem — frase técnica, dado, elemento visual)
+- Conceito visual (o que colocar na imagem — frase de impacto, dado, elemento visual)
 - Legenda de 150–300 chars com hook + valor + CTA
 
 ---
@@ -78,12 +78,12 @@ Slide 7: CTA — salva, comenta ou ação específica
 
 **O que entrego:**
 - Texto de cada card (máx 3 linhas)
-- Sugestão de interação para 1 card (enquete, pergunta técnica, quiz)
+- Sugestão de interação para 1 card (enquete, pergunta, quiz)
 
 **Estrutura:**
 ```
-Card 1: hook técnico — afirmação ou pergunta que gera curiosidade
-Card 2: contexto — por que isso importa para [arquiteto/construtor/proprietário]
+Card 1: hook — afirmação ou pergunta que gera curiosidade
+Card 2: contexto — por que isso importa para a persona LeAnge (tutora que trata o pet como filho; ver `_contexto/persona.md`)
 Card 3–4: desenvolvimento — 1 ponto por card
 Card 5: conclusão + CTA (link, DM, salva post do feed)
 ```
@@ -100,7 +100,7 @@ Card 5: conclusão + CTA (link, DM, salva post do feed)
 
 ### 6. Post LinkedIn (200–400 palavras)
 
-**Por que essa estrutura:** No LinkedIn, comentários são o sinal principal de alcance. Tom mais técnico-profissional.
+**Por que essa estrutura:** No LinkedIn, comentários são o sinal principal de alcance. Tom mais profissional.
 
 **O que entrego:**
 - Post completo para o perfil da empresa ou do fundador/porta-voz
@@ -108,9 +108,9 @@ Card 5: conclusão + CTA (link, DM, salva post do feed)
 
 **Estrutura:**
 ```
-Linha 1 (antes do "ver mais"): dado técnico, resultado ou afirmação forte sobre desempenho
-Parágrafo 1: o problema ou oportunidade de projeto
-Parágrafos 2–3: desenvolvimento com especificidade técnica
+Linha 1 (antes do "ver mais"): dado concreto, resultado ou afirmação forte sobre a experiência
+Parágrafo 1: o problema ou oportunidade da viagem com pet
+Parágrafos 2–3: desenvolvimento com especificidade
 Parágrafo final: insight ou conclusão consultiva
 CTA: pergunta que convida comentário profissional
 ```
@@ -119,7 +119,7 @@ CTA: pergunta que convida comentário profissional
 
 ### 7. E-mail / Newsletter (300–500 palavras)
 
-**Quando usar:** nutrição de leads de arquitetos/construtores, follow-up de orçamento, material técnico.
+**Quando usar:** nutrição de leads de tutores/viajantes com pet, follow-up de reserva, material informativo.
 
 **O que entrego:**
 - Linha de assunto + 2 alternativas para teste A/B
@@ -136,6 +136,6 @@ CTA: pergunta que convida comentário profissional
 4. Eu entrego os conteúdos completos, um por um
 
 Se quiser produzir o visual de qualquer formato, acionar em seguida:
-- Carrossel → `/carrossel-unity`
-- Post estático → `/estatico-unity`
-- Reel → `/roteiro-unity`
+- Carrossel → `/carrossel-leange`
+- Post estático → `/estatico-leange`
+- Reel → `/roteiro-leange`

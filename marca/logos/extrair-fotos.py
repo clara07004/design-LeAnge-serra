@@ -1,5 +1,5 @@
 """
-Extrai fotos de produto do Google Drive e salva na pasta dados/fotos-produto-preview/.
+Extrai fotos de produto do Google Drive e salva na pasta dados/fotos-preview/.
 
 Uso: chamado pelo /setup ou manualmente para popular o preview de fotos.
 Requer MCP Google Drive configurado e ID da pasta em _contexto/referencias.md.

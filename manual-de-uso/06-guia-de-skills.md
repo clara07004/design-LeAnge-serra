@@ -16,7 +16,7 @@
 **Opção 2 — Linguagem natural:**
 Descreva o que quer. O Claude identifica a skill certa automaticamente.
 - "quero ideias de conteúdo sobre [tema]" → aciona `/gerador-de-angulos-para-um-tema`
-- "faz um carrossel sobre desempenho térmico" → aciona `/carrossel-unity`
+- "faz um carrossel sobre pousada que aceita pet" → aciona `/carrossel-leange`
 - "quais as objeções do [avatar] sobre [produto]?" → aciona `/banco-de-objecoes-do-avatar`
 
 **Regra geral:** se existir uma skill para o que você quer, o Claude usa ela. Se não existir, executa normalmente e pergunta se quer criar uma skill para a próxima vez.
@@ -46,14 +46,14 @@ Exemplo: `/gerador-de-angulos-para-um-tema [tema]`
 - 10 ângulos prontos para usar como ponto de partida do briefing
 - Cada ângulo com: título do post sugerido, gancho, por que funciona para a empresa
 
-**Resultado esperado:** você escolhe 1 dos 10 ângulos e leva para o `/briefing-unity`.
+**Resultado esperado:** você escolhe 1 dos 10 ângulos e leva para o `/briefing-leange`.
 
 ---
 
 #### `/gerador-de-angulos-de-conteudo`
 **O que faz:** Abordagem mais estruturada que o anterior — usa uma matriz de perspectivas × audiência × formatos narrativos para gerar ângulos mais sofisticados.
 
-**Quando usar:** Quando quer ângulos com mais profundidade estratégica, ou quando o tema é mais complexo e precisa de recorte de audiência (arquiteto vs construtor vs proprietário).
+**Quando usar:** Quando quer ângulos com mais profundidade estratégica, ou quando o tema é mais complexo e precisa de recorte por perspectiva/nível de consciência da persona LeAnge (ver `_contexto/persona.md`).
 
 **Como invocar:**
 ```
@@ -69,13 +69,13 @@ Exemplo: `/gerador-de-angulos-para-um-tema [tema]`
 ---
 
 #### `/banco-de-objecoes-do-avatar`
-**O que faz:** Mapeia todas as objeções que o ICP tem antes de especificar, comprar ou recomendar o produto — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
+**O que faz:** Mapeia todas as objeções que o ICP tem antes de reservar, comprar ou recomendar o produto — organizadas em 6 tipos, com resposta em formato de conteúdo para cada uma.
 
 **Quando usar:** Quando quer criar conteúdo de meio/fundo de funil, ou quando percebe que os posts não estão convertendo e quer entender o que trava o cliente.
 
 **Como invocar:**
 ```
-/banco-de-objecoes-do-avatar [avatar: arquiteto / construtor / proprietário]
+/banco-de-objecoes-do-avatar [avatar: persona LeAnge — ver _contexto/persona.md]
 ```
 
 **O que entrega:**
@@ -111,14 +111,14 @@ Exemplo: `/calendario-comercial junho 2025`
 
 ---
 
-#### `/briefing-unity`
+#### `/briefing-leange`
 **O que faz:** Gera o briefing completo de um post — mensagem central, gancho, copy, formato recomendado, orientações visuais, hashtags.
 
 **Quando usar:** Para cada post que vai produzir. Pode vir depois do calendário ou de um ângulo aprovado.
 
 **Como invocar:**
 ```
-/briefing-unity [tema ou ângulo escolhido]
+/briefing-leange [tema ou ângulo escolhido]
 ```
 
 **O que entrega:**
@@ -150,7 +150,7 @@ Exemplo: `/calendario-comercial junho 2025`
 **O que entrega:**
 - 5 opções de capa com: headline, subtítulo opcional, direção visual (o que colocar na imagem), tipo de gancho (promessa, dor, número, polêmica, identificação, antes/depois, dado)
 
-**Resultado esperado:** você escolhe 1 capa e leva para o `/carrossel-unity`.
+**Resultado esperado:** você escolhe 1 capa e leva para o `/carrossel-leange`.
 
 ---
 
@@ -167,7 +167,7 @@ Exemplo: `/calendario-comercial junho 2025`
 **O que entrega:**
 - 7 hooks com: primeiro frame (o que o espectador vê antes de dar play), frase de abertura, tipo de gancho (salvável, compartilhável, promessa, contraste, identificação, micro-tutorial, polarizador)
 
-**Resultado esperado:** você escolhe 1 hook e leva para o `/roteiro-unity`.
+**Resultado esperado:** você escolhe 1 hook e leva para o `/roteiro-leange`.
 
 ---
 
@@ -175,14 +175,14 @@ Exemplo: `/calendario-comercial junho 2025`
 
 ---
 
-#### `/carrossel-unity`
+#### `/carrossel-leange`
 **O que faz:** Produz o carrossel completo — do texto ao PNG renderizado, pronto para publicar.
 
 **Quando usar:** Quando o briefing define formato "carrossel".
 
 **Como invocar:**
 ```
-/carrossel-unity
+/carrossel-leange
 ```
 (Com o briefing e o hook já aprovados no contexto da conversa.)
 
@@ -215,7 +215,7 @@ Exemplo: `/carrossel-de-quebra-de-objecao "[objeção específica]" [avatar]`
 
 **O que precisa fornecer:**
 - A objeção exata (como o avatar formula)
-- O avatar (arquiteto / construtor / proprietário)
+- O avatar: a persona LeAnge (ver `_contexto/persona.md`)
 - Opcional: caso real de cliente que tinha essa objeção
 
 **O que entrega:**
@@ -224,18 +224,18 @@ Exemplo: `/carrossel-de-quebra-de-objecao "[objeção específica]" [avatar]`
   - Slides 4–7: reframe em camadas
   - Slides 8–9: prova com caso concreto
 - Legenda completa para o post
-- Handoff para o `/carrossel-unity` produzir o visual
+- Handoff para o `/carrossel-leange` produzir o visual
 
 ---
 
-#### `/estatico-unity`
+#### `/estatico-leange`
 **O que faz:** Produz um post estático (card único) — foto de fundo gerada por IA + copy + identidade visual.
 
 **Quando usar:** Quando o briefing define formato "imagem" ou você quer alto impacto visual com texto mínimo.
 
 **Como invocar:**
 ```
-/estatico-unity
+/estatico-leange
 ```
 (Com o briefing aprovado no contexto.)
 
@@ -253,14 +253,14 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 ---
 
-#### `/roteiro-unity`
+#### `/roteiro-leange`
 **O que faz:** Produz roteiros de vídeo para Instagram Reels e TikTok.
 
 **Quando usar:** Quando o briefing define formato "vídeo".
 
 **Como invocar:**
 ```
-/roteiro-unity [orgânico / tráfego pago]
+/roteiro-leange [orgânico / tráfego pago]
 ```
 
 **Dois modos:**
@@ -341,20 +341,20 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 ---
 
-#### `/gerador-de-prompts-para-imagens-de-produto`
+#### `/gerador-de-prompts-para-imagens-da-pousada`
 **O que faz:** Versão especializada do gerador de prompts, focada nos estilos fotográficos configurados em `marca/DESIGN.md`.
 
-**Quando usar:** Quando a imagem precisa mostrar o produto da empresa — produto instalado, detalhes técnicos, produto em contexto de uso.
+**Quando usar:** Quando a imagem precisa mostrar o produto da empresa — pet aproveitando os espaços da pousada, detalhes das suítes, ambiente em contexto de uso.
 
 **Como invocar:**
 ```
-/gerador-de-prompts-para-imagens-de-produto [linha/variante] [estilo: architectural_installation / dark_lifestyle / product_closeup]
+/gerador-de-prompts-para-imagens-da-pousada [unidade/experiência] [estilo: architectural_installation / dark_lifestyle / product_closeup]
 ```
 
 **Os 3 estilos:**
-- `architectural_installation` — produto instalado em projeto acabado, luz natural, ambiente premium
-- `dark_lifestyle` — pessoa em ação no ambiente (arquiteto em obra, proprietário apreciando)
-- `product_closeup` — macro do produto com detalhes técnicos específicos
+- `architectural_installation` — pet aproveitando os espaços da pousada, luz natural, ambiente premium
+- `dark_lifestyle` — pessoa em ação no ambiente (tutor com o pet na pousada, hóspede apreciando)
+- `product_closeup` — macro de detalhes da pousada (amenidades, texturas, conforto)
 
 **O que entrega:** prompts para os 3 estilos + comando PowerShell pronto
 
@@ -408,13 +408,13 @@ Entrevista você sobre um processo repetitivo e cria uma skill nova.
 Passo 1: /gerador-de-angulos-para-um-tema [tema]
          → escolhe 1 dos 10 ângulos
 
-Passo 2: /briefing-unity [ângulo escolhido]
+Passo 2: /briefing-leange [ângulo escolhido]
          → aprova o briefing [A]
 
 Passo 3: /hooks-para-carrossel
          → escolhe 1 das 5 capas
 
-Passo 4: /carrossel-unity
+Passo 4: /carrossel-leange
          → aprova textos → aprova imagens → aprova slides renderizados
 
 Passo 5: /legenda-para-carrossel
@@ -439,7 +439,7 @@ Passo 1: /banco-de-objecoes-do-avatar [avatar]
 Passo 2: /carrossel-de-quebra-de-objecao [objeção escolhida] [avatar]
          → estrutura do carrossel aprovada
 
-Passo 3: /carrossel-unity
+Passo 3: /carrossel-leange
          → produz o visual com a estrutura do passo 2
 
 Passo 4: /legenda-para-carrossel
@@ -453,13 +453,13 @@ Passo 4: /legenda-para-carrossel
 ### Fluxo 3 — Post estático
 
 ```
-Passo 1: /briefing-unity [tema]
+Passo 1: /briefing-leange [tema]
          → define mensagem central e orientação visual
 
-Passo 2: /gerador-de-prompts-de-imagem  ou  /gerador-de-prompts-para-imagens-de-produto
+Passo 2: /gerador-de-prompts-de-imagem  ou  /gerador-de-prompts-para-imagens-da-pousada
          → prompt otimizado para a foto de fundo
 
-Passo 3: /estatico-unity
+Passo 3: /estatico-leange
          → gera foto → monta HTML → renderiza PNG
 
 Passo 4: /legenda-para-post-estatico [tipo]
@@ -476,13 +476,13 @@ Passo 4: /legenda-para-post-estatico [tipo]
 Passo 1: /gerador-de-angulos-para-um-tema [tema]
          → escolhe ângulo com potencial para vídeo curto
 
-Passo 2: /briefing-unity [ângulo]
+Passo 2: /briefing-leange [ângulo]
          → aprovar formato "vídeo orgânico"
 
 Passo 3: /hooks-para-instagram-reels
          → escolhe hook (primeiro frame + frase de abertura)
 
-Passo 4: /roteiro-unity orgânico
+Passo 4: /roteiro-leange orgânico
          → roteiro completo com cenas, narração, orientações de edição
 
 Passo 5: /legenda-para-reel
@@ -500,7 +500,7 @@ Passo 1: /calendario-comercial [mês] [ano]
          → aprova o calendário com janelas 🟢🟡🔴
 
 Passo 2: Para cada janela verde do calendário:
-         → /briefing-unity [tema da janela]
+         → /briefing-leange [tema da janela]
          → escolhe o formato (carrossel, estático ou reel)
          → segue o fluxo correspondente (1, 3 ou 4 acima)
 
@@ -534,18 +534,18 @@ Resultado: 7 adaptações prontas — Reel, Carrossel, Stories, Thread, LinkedIn
 | Quero ângulos segmentados por audiência | `/gerador-de-angulos-de-conteudo` |
 | Quero entender o que trava meu cliente | `/banco-de-objecoes-do-avatar` |
 | Quero planejar o mês inteiro | `/calendario-comercial` |
-| Quero definir a mensagem de um post | `/briefing-unity` |
+| Quero definir a mensagem de um post | `/briefing-leange` |
 | Quero 5 opções de capa para carrossel | `/hooks-para-carrossel` |
 | Quero opções de abertura para Reel | `/hooks-para-instagram-reels` |
-| Quero produzir um carrossel educativo | `/carrossel-unity` |
-| Quero um carrossel que converte objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-unity` |
-| Quero um post visual impactante | `/estatico-unity` |
-| Quero um roteiro de Reel | `/roteiro-unity` |
+| Quero produzir um carrossel educativo | `/carrossel-leange` |
+| Quero um carrossel que converte objeção | `/carrossel-de-quebra-de-objecao` → `/carrossel-leange` |
+| Quero um post visual impactante | `/estatico-leange` |
+| Quero um roteiro de Reel | `/roteiro-leange` |
 | Quero a legenda do carrossel | `/legenda-para-carrossel` |
 | Quero a legenda do Reel | `/legenda-para-reel` |
 | Quero a legenda do post estático | `/legenda-para-post-estatico` |
 | Quero um prompt melhor para imagem | `/gerador-de-prompts-de-imagem` |
-| Quero foto do produto da empresa | `/gerador-de-prompts-para-imagens-de-produto` |
+| Quero foto do produto da empresa | `/gerador-de-prompts-para-imagens-da-pousada` |
 | Quero distribuir o conteúdo em outros canais | `/1-conteudo-em-7-formatos` |
 | Quero salvar o trabalho no GitHub | `/syncar` |
 | Quero criar uma skill para um processo meu | `/mapear` |

@@ -50,14 +50,14 @@ Como usar e quando usar cada uma das 19 skills — com fluxos sequenciais comple
         ↓ escolhe 1
 2. /calendario-comercial              →  mapa estratégico do mês
         ↓ aprova
-3. /briefing-unity                    →  briefing do post específico
+3. /briefing-leange                    →  briefing do post específico
         ↓ aprova
 4. /hooks-para-carrossel              →  5 opções de capa (se for carrossel)
    /hooks-para-instagram-reels        →  7 opções de hook (se for reel)
         ↓ escolhe 1
-5. /carrossel-unity                   →  carrossel completo (slides + imagens + PNGs)
-   /estatico-unity                    →  post estático (foto IA + layout + PNG)
-   /roteiro-unity                     →  roteiro de vídeo
+5. /carrossel-leange                   →  carrossel completo (slides + imagens + PNGs)
+   /estatico-leange                    →  post estático (foto IA + layout + PNG)
+   /roteiro-leange                     →  roteiro de vídeo
         ↓ aprova
 6. /legenda-para-carrossel            →  legenda final
    /legenda-para-reel
@@ -65,7 +65,7 @@ Como usar e quando usar cada uma das 19 skills — com fluxos sequenciais comple
         ↓ opcional
    /1-conteudo-em-7-formatos          →  distribui para outros canais
         ↓
-   /publicar-social-unity             →  publica no Instagram/TikTok/LinkedIn
+   /publicar-social-leange             →  publica no Instagram/TikTok/LinkedIn
 ```
 
 **Aprovação humana obrigatória em cada etapa — nada avança sem sua confirmação.**

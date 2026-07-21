@@ -3,12 +3,9 @@
 ## Mapa completo de pastas
 
 ```
-Design-template/
+Design-LeAnge/
 │
 ├── CLAUDE.md                        ← Regras do sistema (lido automaticamente)
-├── MAPA-TECNICO.md                  ← Documentação técnica do projeto
-├── PROJETO.md                       ← Visão geral do projeto (status de implementação)
-├── README.md                        ← Introdução ao repositório
 ├── skills-lock.json                 ← Versões das skills instaladas
 │
 ├── _contexto/                       ← Memória da empresa (não apagar)
@@ -18,7 +15,12 @@ Design-template/
 │   └── referencias.md
 │
 ├── marca/
-│   └── DESIGN.md                    ← Identidade visual completa
+│   ├── DESIGN.md                    ← Identidade visual completa
+│   └── identidade-visual.md         ← Grafia, paleta, tipografia, logos
+│
+├── pousada/                         ← Base de conhecimento (unidades, suítes, gastronomia, regras)
+│   ├── README.md
+│   └── fotos-unidades/
 │
 ├── credentials/                     ← API keys (nunca commitadas)
 │   ├── openai_key.txt
@@ -52,19 +54,19 @@ Design-template/
 │       ├── calendario-comercial/
 │       │   ├── SKILL.md
 │       │   └── Agent_Template.md
-│       ├── briefing-unity/
-│       │   └── briefing-unity.md
+│       ├── briefing-leange/
+│       │   └── briefing-leange.md
 │       ├── hooks-para-carrossel/
 │       │   └── SKILL.md
 │       ├── hooks-para-instagram-reels/
 │       │   └── SKILL.md
-│       ├── carrossel-unity/
+│       ├── carrossel-leange/
 │       │   └── SKILL.md
 │       ├── carrossel-de-quebra-de-objecao/
 │       │   └── SKILL.md
-│       ├── estatico-unity/
+│       ├── estatico-leange/
 │       │   └── SKILL.md
-│       ├── roteiro-unity/
+│       ├── roteiro-leange/
 │       │   └── SKILL.md
 │       ├── legenda-para-carrossel/
 │       │   └── SKILL.md
@@ -74,11 +76,11 @@ Design-template/
 │       │   └── SKILL.md
 │       ├── gerador-de-prompts-de-imagem/
 │       │   └── SKILL.md
-│       ├── gerador-de-prompts-para-imagens-de-produto/
+│       ├── gerador-de-prompts-para-imagens-da-pousada/
 │       │   └── SKILL.md
 │       ├── 1-conteudo-em-7-formatos/
 │       │   └── SKILL.md
-│       ├── gpt-image2-unity/           ← motor
+│       ├── gpt-image2-leange/           ← motor
 │       │   ├── SKILL.md
 │       │   └── gerar-imagem.py         ← Script Python da geração de imagem
 │       ├── ogilvy-copy/                ← motor
@@ -128,7 +130,7 @@ Esta pasta é o cérebro do sistema. O Claude lê esses arquivos no início de c
 ### `_contexto/preferencias.md`
 **O que contém:** Tom de voz da marca, palavras recomendadas e proibidas, exemplos de copy no estilo certo e fora de estilo, restrições legais e de compliance.
 
-**Por que importa:** É o filtro de qualidade do texto. Define a diferença entre a linguagem correta da marca e a linguagem inadequada. Também garante que o sistema nunca faça promessas técnicas sem laudo.
+**Por que importa:** É o filtro de qualidade do texto. Define a diferença entre a linguagem correta da marca e a linguagem inadequada. Também garante que o sistema nunca faça promessas sem lastro em avaliações reais de hóspedes.
 
 **Quando atualizar:** Quando a marca evoluir, quando novas restrições de compliance aparecerem, ou quando um tipo de copy for aprovado/reprovado consistentemente.
 
@@ -140,14 +142,14 @@ Esta pasta é o cérebro do sistema. O Claude lê esses arquivos no início de c
 **Quando atualizar:** A cada trimestre, ou quando a estratégia mudar.
 
 ### `_contexto/referencias.md`
-**O que contém:** Links e IDs das pastas do Google Drive com material de referência — logos, fotos de produtos, catálogos técnicos, referências de estilo visual.
+**O que contém:** Links e IDs das pastas do Google Drive com material de referência — logos, fotos das unidades, material da pousada, referências de estilo visual.
 
 **Por que importa:** Antes de criar qualquer conteúdo visual, o Claude pode consultar as fotos reais da empresa no Drive para usar como referência de estilo e produto. Isso evita que as imagens geradas por IA fiquem genéricas.
 
 **Exemplo de pastas a configurar:**
 - Identidade Visual (logos, assets da marca)
-- Fotos do Produto (fotos reais de obras e instalações)
-- Catálogo Técnico (documentação dos produtos)
+- Fotos da Pousada (fotos reais das unidades e dos hóspedes)
+- Material da Pousada (informações das unidades e experiências)
 - Referências Visuais (benchmark de marcas do setor)
 
 ---
@@ -184,10 +186,10 @@ Contém as credenciais necessárias para as integrações com serviços externos
 Chave da OpenAI. Necessária para geração de imagens via `gpt-image-1`. Uma linha, só a chave.
 
 ### `credentials/gemini.txt`
-Chave da API do Google Gemini. Usada pelo motor `nanobanana-unity` como fallback gratuito de geração de imagem.
+Chave da API do Google Gemini. Usada pelo motor `nanobanana-leange` como fallback gratuito de geração de imagem.
 
 ### `credentials/meta.txt`
-Token de acesso à Meta Graph API. Usado pela skill `/publicar-social-unity` para publicar no Instagram e Facebook. **Expira a cada 60 dias** — precisa ser renovado.
+Token de acesso à Meta Graph API. Usado pela skill `/publicar-social-leange` para publicar no Instagram e Facebook. **Expira a cada 60 dias** — precisa ser renovado.
 
 ---
 
@@ -201,7 +203,7 @@ Cada skill é uma pasta com um arquivo `SKILL.md` que contém as instruções de
 Pega um tema e gera 10 lentes criativas para abordá-lo. Use antes do briefing quando você tem o assunto mas não sabe o ângulo de entrada.
 
 ### `gerador-de-angulos-de-conteudo/`
-Versão mais analítica: usa uma matriz perspectivas × audiência × formatos narrativos. Use quando quer segmentar por avatar (arquiteto vs construtor vs proprietário).
+Versão mais analítica: usa uma matriz perspectivas × audiência × formatos narrativos. Use quando quer recortar por perspectiva e nível de consciência da persona LeAnge (ver `_contexto/persona.md`).
 
 ### `banco-de-objecoes-do-avatar/`
 Mapeia as objeções do ICP em 6 tipos (valor, percepção, confiança técnica, confiança em si mesmo, relevância, urgência) com resposta em formato de conteúdo para cada uma. Alimenta o `/carrossel-de-quebra-de-objecao`.
@@ -211,35 +213,35 @@ Mapeia as objeções do ICP em 6 tipos (valor, percepção, confiança técnica,
 ### `calendario-comercial/`
 Cria o mapa estratégico de conteúdo do mês. Pesquisa eventos culturais, esportivos e de entretenimento do período para identificar janelas quentes (🟢), mornas (🟡) e frias (🔴). Usa o framework MOMENTO para cruzar produto × momento cultural.
 
-### `briefing-unity/`
+### `briefing-leange/`
 Gera o briefing completo de um conteúdo. Lê o output do calendário comercial e produz: gancho, copy base, formato recomendado, orientações visuais, hashtags e metadados. Salva o briefing aprovado em `conteudo/[tipo]/[periodo]/[dia-tema]/`.
 
 **Hooks e capas**
 
 ### `hooks-para-carrossel/`
-Gera 5 opções de capa para o carrossel, cada uma com headline, direção visual e tipo de gancho diferente. Use após o briefing e antes do `/carrossel-unity`.
+Gera 5 opções de capa para o carrossel, cada uma com headline, direção visual e tipo de gancho diferente. Use após o briefing e antes do `/carrossel-leange`.
 
 ### `hooks-para-instagram-reels/`
-Gera 7 opções de hook para Reel combinando primeiro frame (visual) com frase de abertura (narração). Use antes do `/roteiro-unity`.
+Gera 7 opções de hook para Reel combinando primeiro frame (visual) com frase de abertura (narração). Use antes do `/roteiro-leange`.
 
 **Produção de conteúdo**
 
-### `carrossel-unity/`
+### `carrossel-leange/`
 Produz um carrossel completo em 3 fases:
 1. Texto dos slides (8-10 slides com texto revisado)
 2. Geração de imagens (capa obrigatória + até 2 slides de impacto)
 3. HTML por slide → PNG via Playwright
 
 ### `carrossel-de-quebra-de-objecao/`
-Cria a estrutura de um carrossel de conversão que desmonta uma objeção em 3 movimentos: nomeação → reframe → prova (9 slides). Use para conteúdo de fundo de funil. Entrega a estrutura para o `/carrossel-unity` produzir o visual.
+Cria a estrutura de um carrossel de conversão que desmonta uma objeção em 3 movimentos: nomeação → reframe → prova (9 slides). Use para conteúdo de fundo de funil. Entrega a estrutura para o `/carrossel-leange` produzir o visual.
 
-### `estatico-unity/`
+### `estatico-leange/`
 Produz um post estático (card único) em 3 fases:
 1. Copy + prompt da foto de fundo
 2. Geração da foto (GPT Image 2)
 3. HTML montado com copy + identidade visual → PNG via Playwright
 
-### `roteiro-unity/`
+### `roteiro-leange/`
 Produz roteiros de vídeo para Reels e TikTok. Usa Ogilvy para vídeos orgânicos (autoridade, educação) e Schwartz para criativos de tráfego pago (conversão).
 
 **Legendas**
@@ -258,7 +260,7 @@ Escreve a legenda para post estático em 4 tipos: narrativa, reflexão, lançame
 ### `gerador-de-prompts-de-imagem/`
 Constrói um prompt estruturado e otimizado para o `gpt-image-1`. Entrega 3 versões (principal, minimalista, impactante) + comando PowerShell pronto para executar.
 
-### `gerador-de-prompts-para-imagens-de-produto/`
+### `gerador-de-prompts-para-imagens-da-pousada/`
 Versão especializada focada nos estilos fotográficos configurados em `marca/DESIGN.md`: `architectural_installation`, `dark_lifestyle` e `product_closeup`. Use quando a imagem precisa mostrar o produto da empresa.
 
 **Distribuição**
@@ -268,7 +270,7 @@ Pega um conteúdo aprovado e adapta para 7 canais (Reel, Carrossel, Post estáti
 
 **Motores internos**
 
-### `gpt-image2-unity/`
+### `gpt-image2-leange/`
 Motor de geração de imagem. Contém a SKILL.md com as instruções e o script Python `gerar-imagem.py` que faz a chamada à API da OpenAI.
 
 **O script `gerar-imagem.py`:**
@@ -314,9 +316,9 @@ conteudo/                                    ← convenção: conteudo/[tipo]/[p
       dashboard.html          ← grid visual do mês
   carrosseis/
     junho/
-      dia-02-5-criterios-especificacao/
+      dia-02-5-criterios-pousada-pet/
         _briefing.md          ← briefing do conteúdo
-        _legenda.md           ← legenda aprovada (lida pelo /publicar-social-unity)
+        _legenda.md           ← legenda aprovada (lida pelo /publicar-social-leange)
         _prompts-imagens.md   ← prompts das imagens
         _aprovado.md          ← registro do que foi aprovado
         instagram/
@@ -328,7 +330,7 @@ conteudo/                                    ← convenção: conteudo/[tipo]/[p
           ...
   post-estatico/
     junho/
-      dia-06-vedacao-perimetral/
+      dia-06-suites-serra/
         _briefing.md
         _legenda.md           ← legenda aprovada
         _prompt.md            ← prompt da foto

@@ -1,6 +1,6 @@
 ---
 name: gerador-de-angulos-para-um-tema
-description: Recebe um tema único e gera múltiplos ângulos diferentes para abordá-lo — cada ângulo com uma perspectiva, gancho e formato distintos. Resolve o problema de quem sabe sobre o que falar mas não sabe como tornar o mesmo assunto interessante de formas diferentes. Use ANTES do /briefing-unity para explorar ângulos antes de definir o formato. Dispara quando: "preciso de ângulos diferentes para um tema", "como falar sobre o mesmo assunto de formas novas", "variações de um tema", "me ajuda a explorar um tema".
+description: Recebe um tema único e gera múltiplos ângulos diferentes para abordá-lo — cada ângulo com uma perspectiva, gancho e formato distintos. Resolve o problema de quem sabe sobre o que falar mas não sabe como tornar o mesmo assunto interessante de formas diferentes. Use ANTES do /briefing-leange para explorar ângulos antes de definir o formato. Dispara quando: "preciso de ângulos diferentes para um tema", "como falar sobre o mesmo assunto de formas novas", "variações de um tema", "me ajuda a explorar um tema".
 ---
 
 # Gerador de Ângulos para um Tema
@@ -8,7 +8,7 @@ description: Recebe um tema único e gera múltiplos ângulos diferentes para ab
 ## Contexto da empresa
 
 Antes de gerar, ler:
-- `_contexto/empresa.md` — produtos/serviços, ICP e posicionamento
+- `_contexto/empresa.md` — pousada/serviços, ICP e posicionamento
 - `_contexto/preferencias.md` — tom de voz, palavras proibidas, restrições de compliance
 - `_contexto/estrategia.md` — foco atual e gaps prioritários
 
@@ -27,9 +27,9 @@ Um tema não é um conteúdo. É uma matéria-prima que pode virar dezenas de pe
 ## Coleta de Informações
 
 **Obrigatório:**
-- `[TEMA]` — o assunto central (ex: isolamento acústico, PVC vs alumínio, instalação em Steel Frame)
+- `[TEMA]` — o assunto central (ex: viajar com pets, experiência pet lover, cachoeiras pet friendly na Serra)
 - `[NICHO]` — segmento de mercado da empresa (conforme `_contexto/empresa.md`)
-- `[AVATAR]` — perfil do cliente-alvo (conforme seção ICP em `_contexto/empresa.md`)
+- `[AVATAR]` — a persona da LeAnge (ver `_contexto/persona.md`)
 
 **Opcional:**
 - `[PLATAFORMA]` — afeta quais formatos sugerir para cada ângulo
@@ -51,7 +51,7 @@ Para qualquer tema, estas lentes geram ângulos distintos:
 7. **Mito vs. realidade** — desmontando uma crença popular sobre o tema
 8. **Custo do problema** — o que acontece se o avatar não resolver isso
 9. **Comparação** — esse método vs. outro método (ou essa crença vs. outra)
-10. **História real** — como o produto ou empresa viveu esse tema na prática
+10. **História real** — como a pousada ou a marca viveu esse tema na prática
 
 ---
 
@@ -84,7 +84,7 @@ AVATAR: [avatar]
 [2-3 ângulos com mais chance de alcance amplo — e por quê]
 
 ÂNGULOS COM MAIOR POTENCIAL DE CONVERSÃO:
-[2-3 ângulos que movem o avatar para mais perto do orçamento — e por quê]
+[2-3 ângulos que movem o avatar para mais perto da reserva — e por quê]
 
 SEQUÊNCIA SUGERIDA:
 Se for criar uma série sobre [tema], publicar na ordem:

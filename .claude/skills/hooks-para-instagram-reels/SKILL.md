@@ -1,6 +1,6 @@
 ---
 name: hooks-para-instagram-reels
-description: Gera hooks específicos para Instagram Reels — combinando o primeiro frame visual com a primeira frase falada ou texto na tela. Usado DENTRO do /roteiro-unity antes de escrever o roteiro completo. Considera a lógica de salvamentos e compartilhamentos do Instagram. Dispara quando: "hook para Reel", "como começar meu Reel", "abertura de Reel Instagram", "como parar o scroll no Instagram", "primeiros segundos do Reel".
+description: Gera hooks específicos para Instagram Reels — combinando o primeiro frame visual com a primeira frase falada ou texto na tela. Usado DENTRO do /roteiro-leange antes de escrever o roteiro completo. Considera a lógica de salvamentos e compartilhamentos do Instagram. Dispara quando: "hook para Reel", "como começar meu Reel", "abertura de Reel Instagram", "como parar o scroll no Instagram", "primeiros segundos do Reel".
 ---
 
 # Hooks para Instagram Reels
@@ -27,11 +27,11 @@ No Instagram, o Reel compete com fotos, carrosseis, stories e outros Reels no me
 
 **Obrigatório:**
 - `[TEMA]` — sobre o que é o Reel
-- `[AVATAR]` — arquiteto / construtor / proprietário
+- `[AVATAR]` — persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)
 - `[OBJETIVO DO REEL]` — salvar, compartilhar, comentar, converter
 
 **Opcional:**
-- `[TOM]` — educativo, técnico, provocativo, revelador
+- `[TOM]` — educativo, informativo, provocativo, revelador
 - `[FORMATO]` — talking head, B-roll com narração, texto na tela
 
 ---
@@ -41,7 +41,7 @@ No Instagram, o Reel compete com fotos, carrosseis, stories e outros Reels no me
 No Instagram, o usuário não está necessariamente em modo de scroll de vídeos. O hook visual (primeiro frame) precisa ser ainda mais forte para parar alguém que não estava esperando um vídeo.
 
 **O que o algoritmo do Instagram recompensa:**
-- Salvamentos → hook que promete valor técnico durável
+- Salvamentos → hook que promete valor prático durável
 - Compartilhamentos → hook de identificação ("isso é exatamente o que eu vivo")
 - Completion rate → hook que cria curiosidade que só se resolve no final
 
@@ -49,13 +49,13 @@ No Instagram, o usuário não está necessariamente em modo de scroll de vídeos
 
 ## Os 7 Tipos de Hook para Reels
 
-1. **O salvável**: "Salva esse porque você vai precisar quando especificar esquadrias"
-2. **O compartilhável**: "Manda para o arquiteto ou construtor que vai te agradecer"
-3. **A promessa de valor técnico**: "[N] coisas sobre [tema técnico] que mudam como você especifica"
-4. **O contraste**: "Antes eu indicava alumínio por padrão. Hoje penso diferente."
-5. **A pergunta de identificação**: "Você também aceita reclamação de ruído pós-entrega de obra?"
-6. **O micro-tutorial técnico**: "Como avaliar o desempenho acústico de uma esquadria em 3 passos"
-7. **A afirmação polarizadora**: "Esquadria de PVC não é opção econômica. É escolha técnica."
+1. **O salvável**: "Salva esse porque você vai precisar quando for planejar a próxima viagem com pet"
+2. **O compartilhável**: "Manda para o amigo tutor de pet que vai te agradecer"
+3. **A promessa de valor prático**: "[N] coisas sobre [tema] que mudam como você escolhe a pousada"
+4. **O contraste**: "Antes eu deixava o pet em casa por padrão. Hoje penso diferente."
+5. **A pergunta de identificação**: "Você também já cancelou uma viagem porque a pousada não aceitava seu pet?"
+6. **O micro-tutorial**: "Como avaliar se uma pousada é realmente pet friendly em 3 passos"
+7. **A afirmação polarizadora**: "Pousada que só 'aceita pet' não é pousada pet lover. É outra experiência."
 
 ---
 
@@ -63,7 +63,7 @@ No Instagram, o usuário não está necessariamente em modo de scroll de vídeos
 
 ```
 TEMA: [tema]
-AVATAR: [arquiteto / construtor / proprietário]
+AVATAR: [persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)]
 OBJETIVO: [salvar / compartilhar / comentar / converter]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -71,7 +71,7 @@ OBJETIVO: [salvar / compartilhar / comentar / converter]
 HOOKS GERADOS:
 
 [Tipo 1 — O salvável]
-Primeiro frame: [o que mostrar — expressão, texto sobreposto, cena técnica]
+Primeiro frame: [o que mostrar — expressão, texto sobreposto, cena da pousada]
 Frase de abertura: "[hook]"
 Por que funciona: [conexão com comportamento de salvamento]
 

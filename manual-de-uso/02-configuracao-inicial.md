@@ -49,7 +49,7 @@ sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ### Gemini (opcional — fallback gratuito)
 
-Usado pelo motor `nanobanana-unity` quando a OpenAI falha.
+Usado pelo motor `nanobanana-leange` quando a OpenAI falha.
 
 1. Acesse [aistudio.google.com](https://aistudio.google.com)
 2. Clique em **Get API Key** → **Create API key**
@@ -57,7 +57,7 @@ Usado pelo motor `nanobanana-unity` quando a OpenAI falha.
 
 ### Meta Graph API (opcional — para publicação automática)
 
-Usado pela skill `/publicar-social-unity` para publicar no Instagram.
+Usado pela skill `/publicar-social-leange` para publicar no Instagram.
 
 **3 arquivos necessários em `credentials/`:**
 
@@ -85,7 +85,7 @@ Usado pela skill `/publicar-social-unity` para publicar no Instagram.
 
 Execute o script de descoberta automática:
 ```powershell
-python ".claude/skills/publicar-social-unity/descobrir-ig-user-id.py"
+python ".claude/skills/publicar-social-leange/descobrir-ig-user-id.py"
 ```
 
 O script lê o token e salva o IG User ID automaticamente. Requer que a conta Instagram Business/Creator esteja vinculada a uma Página do Facebook em [business.facebook.com](https://business.facebook.com).
@@ -170,7 +170,7 @@ Para verificar que tudo está funcionando, faça um teste simples:
 
 **Teste de geração de imagem:**
 ```powershell
-python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "modern apartment, natural light, architectural photography, no text" "conteudo/_teste/foto-teste.png" "square"
+python ".claude/skills/gpt-image2-leange/gerar-imagem.py" "cozy pousada suite, natural light, lifestyle photography, no text" "conteudo/_teste/foto-teste.png" "square"
 ```
 
 Resultado esperado:

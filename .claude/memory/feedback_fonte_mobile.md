@@ -22,10 +22,11 @@ abaixo do padrão.**
 | Subtítulo / nota | 40px | 400 |
 | CTA button | 24px | 700 |
 | Caption | 28px | 400 |
-| Label uppercase | 18px | 700 (Montserrat) |
-| Tagline header | 16px | 700 (Montserrat) |
+| Label uppercase | 18px | 700 |
+| Tagline header | 16px | 700 |
 
-**Famílias:** conforme `marca/DESIGN.md` (`typography.display.fontFamily` + `typography.body.fontFamily`).
-Máximo 2 famílias. Sem serifa em digital. Headline de referência: display 88px / 700 /
-line-height 1.06 / letter-spacing -0.022em. Ver [[feedback-carousel-design-aprovado]].
+**Famílias:** conforme `marca/DESIGN.md` — display/títulos em **Comfortaa**, corpo/labels em **AvenirNext LT Pro Cn**.
+Máximo 2 famílias. Sem serifa em digital.
+
+> Escala de partida (referência de legibilidade mobile). Ajustar conforme os primeiros carrosseis reais da LeAnge forem produzidos e aprovados.
 </content>

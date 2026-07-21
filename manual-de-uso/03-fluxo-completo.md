@@ -7,41 +7,41 @@
         ↓ escolhe 1 ângulo
 /calendario-comercial
         ↓ você aprova
-/briefing-unity
+/briefing-leange
         ↓ você aprova
         │
         ├── formato carrossel  →  /gerador-de-prompts-de-imagem  ← FLUXO PRINCIPAL ★
         │                               ↓ você aprova os prompts
-        │                         /gpt-image2-unity  ← gera todas as imagens (capa + slides)
+        │                         /gpt-image2-leange  ← gera todas as imagens (capa + slides)
         │                               ↓ você aprova as imagens
-        │                         /carrossel-unity   ← monta HTMLs + renderiza
+        │                         /carrossel-leange   ← monta HTMLs + renderiza
         │                               ↓ você aprova
         │                         /legenda-para-carrossel
         │
         │                         — alternativa, sem controle granular de imagem —
         │
-        │                         /carrossel-unity   ← FLUXO RÁPIDO (tudo em um)
+        │                         /carrossel-leange   ← FLUXO RÁPIDO (tudo em um)
         │                               ↓ você aprova
         │                         /legenda-para-carrossel
         │
-        ├── formato imagem     →  /gerador-de-prompts-para-imagens-de-produto
+        ├── formato imagem     →  /gerador-de-prompts-para-imagens-da-pousada
         │                         (ou /gerador-de-prompts-de-imagem)
         │                               ↓ você aprova o prompt
-        │                         /gpt-image2-unity
+        │                         /gpt-image2-leange
         │                               ↓ você aprova a imagem
-        │                         /estatico-unity
+        │                         /estatico-leange
         │                               ↓ você aprova
         │                         /legenda-para-post-estatico
         │
         └── formato vídeo      →  /hooks-para-instagram-reels
                                         ↓ escolhe 1 hook
-                                  /roteiro-unity
+                                  /roteiro-leange
                                         ↓ você aprova
                                   /legenda-para-reel
         ↓ aprova o conteúdo final
 /1-conteudo-em-7-formatos  (opcional — distribui para outros canais)
         ↓
-/publicar-social-unity  (opcional — publicação automática)
+/publicar-social-leange  (opcional — publicação automática)
 ```
 
 **Fluxo alternativo — fundo de funil:**
@@ -50,10 +50,10 @@
         ↓ escolhe uma objeção
 /carrossel-de-quebra-de-objecao
         ↓ aprova a estrutura
-/carrossel-unity  +  /legenda-para-carrossel
+/carrossel-leange  +  /legenda-para-carrossel
 ```
 
-Você pode entrar no fluxo em qualquer etapa. Se já sabe o que quer postar, pode pular direto para `/briefing-unity`. Se já tem o briefing aprovado, pode pular direto para os hooks e a produção.
+Você pode entrar no fluxo em qualquer etapa. Se já sabe o que quer postar, pode pular direto para `/briefing-leange`. Se já tem o briefing aprovado, pode pular direto para os hooks e a produção.
 
 ---
 
@@ -87,7 +87,7 @@ Claude: Qual período você quer cobrir?
 Você: Junho 2026
 Claude: [pesquisa eventos do período]
 Claude: [apresenta o mapa de oportunidades]
-Você: Aprovo. A semana 2 com foco em isolamento acústico está perfeito.
+Você: Aprovo. A semana 2 com foco em viajar com pet está perfeito.
 ```
 
 ---
@@ -98,7 +98,7 @@ Você: Aprovo. A semana 2 com foco em isolamento acústico está perfeito.
 
 **Como chamar:**
 ```
-/briefing-unity
+/briefing-leange
 ```
 
 **O que o Claude precisa saber:**
@@ -125,14 +125,14 @@ Se você escolher **[A]**, o Claude informa qual skill acionar e pode já inicia
 
 **Exemplo de conversa:**
 ```
-Você: /briefing-unity
+Você: /briefing-leange
        Janela: semana 2 de junho — [tema do período]
-       Produto: [linha/produto X]
+       Experiência: [LeAnge Serra]
        Plataforma: Instagram
        Formato: carrossel
 Claude: [entrega briefing completo]
 Você: A — vamos pro carrossel
-Claude: Vou acionar /carrossel-unity com este briefing. Posso começar?
+Claude: Vou acionar /carrossel-leange com este briefing. Posso começar?
 Você: Sim
 ```
 
@@ -160,13 +160,13 @@ Antes de produzir qualquer asset, vale definir o ponto de entrada do post — a 
 Este é o fluxo confirmado para produção de carrossel. Seguir sempre essa ordem:
 
 ```
-/briefing-unity
+/briefing-leange
         ↓ [aprovado]
 /gerador-de-prompts-de-imagem       ← prompts para capa + todos os slides de conteúdo
         ↓ [prompts aprovados]
-/gpt-image2-unity                   ← gera todas as imagens antes de entrar no carrossel
+/gpt-image2-leange                   ← gera todas as imagens antes de entrar no carrossel
         ↓ [imagens aprovadas]        capa = square (1024×1024) | slides internos = portrait (1024×1536)
-/carrossel-unity                    ← recebe imagens prontas, monta HTMLs e renderiza
+/carrossel-leange                    ← recebe imagens prontas, monta HTMLs e renderiza
         ↓ [slides aprovados]
 /legenda-para-carrossel
 ```
@@ -175,7 +175,7 @@ Este é o fluxo confirmado para produção de carrossel. Seguir sempre essa orde
 
 **Como chamar:**
 ```
-/carrossel-unity
+/carrossel-leange
 ```
 
 O briefing e o hook aprovados devem estar em contexto (ou o Claude vai perguntar o tema).
@@ -186,7 +186,7 @@ O Claude lê os arquivos de contexto e produz:
 - 3 opções de título para a capa (você escolhe uma)
 - 8-10 slides com texto completo, organizados em: capa → contexto → desenvolvimento → implicação → CTA
 
-O texto segue `_contexto/preferencias.md` — tom técnico acessível, sem travessões, sem bullet points disfarçados.
+O texto segue `_contexto/preferencias.md` — tom acolhedor acessível, sem travessões, sem bullet points disfarçados.
 
 **Checkpoint:** você vê o texto completo e as 3 opções de capa. Escolhe a capa e aprova (ou pede ajustes).
 
@@ -200,19 +200,19 @@ Após o texto aprovado, o Claude identifica quais slides recebem imagem:
 **Três formas de obter as imagens (em ordem de qualidade):**
 
 **1. Fotos reais do Drive** ← melhor resultado
-Buscar nas pastas de produto do Google Drive (`_contexto/referencias.md`). São fotos reais de instalações e obras — autenticidade que IA não reproduz. O Claude baixa, seleciona e usa diretamente.
+Buscar nas pastas de produto do Google Drive (`_contexto/referencias.md`). São fotos reais das unidades e dos hóspedes — autenticidade que IA não reproduz. O Claude baixa, seleciona e usa diretamente.
 
 **2. Fluxo enriquecido** — gerar antes de entrar no carrossel
-Usar `/gerador-de-prompts-para-imagens-de-produto` (estilos fotográficos configurados em DESIGN.md) ou `/gerador-de-prompts-de-imagem` (genérico) para construir o prompt, aprovar, e só depois gerar. Mais controle sobre o resultado.
+Usar `/gerador-de-prompts-para-imagens-da-pousada` (estilos fotográficos configurados em DESIGN.md) ou `/gerador-de-prompts-de-imagem` (genérico) para construir o prompt, aprovar, e só depois gerar. Mais controle sobre o resultado.
 
 **3. Geração automática** ← padrão do fluxo rápido
-No fluxo rápido, o `/carrossel-unity` constrói os prompts internamente e gera via `/gpt-image2-unity` sem etapa separada.
+No fluxo rápido, o `/carrossel-leange` constrói os prompts internamente e gera via `/gpt-image2-leange` sem etapa separada.
 
 **Checkpoint (fluxos 2 e 3):** você confirma os prompts antes de qualquer geração.
 
 Geração via script Python:
 ```powershell
-python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "PROMPT" "conteudo/carrosseis/TEMA/instagram/img-slide01.png" "portrait"
+python ".claude/skills/gpt-image2-leange/gerar-imagem.py" "PROMPT" "conteudo/carrosseis/TEMA/instagram/img-slide01.png" "portrait"
 ```
 
 Cada imagem leva 60–180 segundos. O Claude avisa antes de executar.
@@ -263,7 +263,7 @@ conteudo/carrosseis/[periodo]/[dia-tema]/
 
 **Como chamar:**
 ```
-/estatico-unity
+/estatico-leange
 ```
 
 ### Fase 1 — Copy e prompt
@@ -280,7 +280,7 @@ E constrói o prompt da foto de fundo em inglês.
 ### Fase 2 — Geração da foto
 
 ```powershell
-python ".claude/skills/gpt-image2-unity/gerar-imagem.py" "PROMPT" "conteudo/post-estatico/PERIODO/DIA/img-post.png" "portrait"
+python ".claude/skills/gpt-image2-leange/gerar-imagem.py" "PROMPT" "conteudo/post-estatico/PERIODO/DIA/img-post.png" "portrait"
 ```
 
 **Checkpoint:** você vê a foto gerada e aprova (ou pede refinamento do prompt).
@@ -316,7 +316,7 @@ conteudo/post-estatico/[periodo]/[dia-tema]/
 
 **Como chamar:**
 ```
-/roteiro-unity
+/roteiro-leange
 ```
 
 O Claude pergunta se é conteúdo orgânico (autoridade, educação) ou tráfego pago (conversão). Baseado na resposta:
@@ -353,7 +353,7 @@ Se o conteúdo aprovado vale distribuir além do Instagram, use `/1-conteudo-em-
 
 **Como chamar:**
 ```
-/publicar-social-unity
+/publicar-social-leange
 ```
 
 Requer `credentials/meta.txt` configurado com o token da Meta. Publica o arquivo PNG aprovado com a legenda gerada no briefing.
@@ -365,13 +365,13 @@ Requer `credentials/meta.txt` configurado com o token da Meta. Publica o arquivo
 Se você já sabe o que quer postar e não precisa do calendário:
 
 ```
-Você: /briefing-unity
-      Tema: [tema do produto — ex.: diferença entre as linhas do portfólio]
+Você: /briefing-leange
+      Tema: [tema da pousada — ex.: inverno na Serra com pets, lareira e fondue]
       Plataforma: Instagram
       Formato: carrossel
 Claude: [entrega briefing]
 Você: A
-Claude: [inicia /carrossel-unity]
+Claude: [inicia /carrossel-leange]
 [... fases com checkpoints ...]
 Claude: [entrega carrossel pronto]
 ```
@@ -383,8 +383,8 @@ Claude: [entrega carrossel pronto]
 Se já tem o briefing aprovado e quer ir direto para o conteúdo:
 
 ```
-Você: /carrossel-unity
-      Tema: [tema técnico do produto]
+Você: /carrossel-leange
+      Tema: [tema da pousada]
       Ângulo: [ângulo escolhido para o post]
       Público: [avatar conforme empresa.md]
 ```

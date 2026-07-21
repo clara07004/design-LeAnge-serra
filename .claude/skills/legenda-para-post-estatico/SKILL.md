@@ -1,6 +1,6 @@
 ---
 name: legenda-para-post-estatico
-description: Escreve a legenda de um post estático do Instagram — imagem única com copy sobreposta. Chamado no final do /estatico-unity antes de entregar o PNG. No post estático, a legenda carrega mais peso porque a imagem não se move — é ela que faz a pessoa engajar. Dispara quando: "escreve a legenda desse post", "caption para post de imagem", "legenda para post estático".
+description: Escreve a legenda de um post estático do Instagram — imagem única com copy sobreposta. Chamado no final do /estatico-leange antes de entregar o PNG. No post estático, a legenda carrega mais peso porque a imagem não se move — é ela que faz a pessoa engajar. Dispara quando: "escreve a legenda desse post", "caption para post de imagem", "legenda para post estático".
 ---
 
 # Legenda para Post Estático
@@ -19,14 +19,14 @@ Antes de escrever, confirmar que tem em contexto:
 ## Coleta de Informações
 
 **Obrigatório:**
-- `[O QUE A IMAGEM MOSTRA]` — cena arquitetônica, produto instalado, close de detalhe
-- `[O QUE A LEGENDA PRECISA ENTREGAR]` — história técnica, reflexão, argumento, lançamento
-- `[AVATAR]` — arquiteto / construtor / proprietário
+- `[O QUE A IMAGEM MOSTRA]` — cena da pousada, pet aproveitando os espaços, close de detalhe
+- `[O QUE A LEGENDA PRECISA ENTREGAR]` — história da experiência, reflexão, argumento, lançamento
+- `[AVATAR]` — persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)
 
 **Opcional:**
-- `[TOM]` — técnico / reflexivo / consultivo / provocador
+- `[TOM]` — informativo / reflexivo / consultivo / provocador
 - `[CTA]` — comentar, compartilhar, salvar, link na bio
-- `[CONTEXTO]` — obra real, detalhe técnico, bastidor, conteúdo recorrente
+- `[CONTEXTO]` — experiência real, detalhe da suíte, bastidor, conteúdo recorrente
 
 ---
 
@@ -34,15 +34,15 @@ Antes de escrever, confirmar que tem em contexto:
 
 **1. Legenda narrativa**
 Conta uma história — a imagem é o ponto de entrada, a legenda é a história completa.
-Funciona melhor com: fotos de obra, instalação concluída, projeto real.
+Funciona melhor com: fotos das unidades, pet aproveitando os espaços, hospedagem real.
 
-**2. Legenda de reflexão técnica**
+**2. Legenda de reflexão**
 Uma perspectiva ou insight desenvolvido com profundidade. Precisa ter argumento.
-Funciona melhor com: imagens de produto, detalhe técnico, seção transversal.
+Funciona melhor com: fotos dos espaços, detalhe da suíte, close de um ambiente.
 
 **3. Legenda de lançamento com contexto**
 Comunica algo novo com a história por trás — não só o fato.
-Funciona melhor com: novo produto, nova linha, parceria técnica.
+Funciona melhor com: nova experiência, novo pacote, nova unidade.
 
 **4. Legenda de conexão**
 Nomeia a situação do avatar, valida o que ele sente, cria identificação.
@@ -61,9 +61,9 @@ O post estático suporta legendas mais longas — use isso.
 A virada ou o insight principal fica no penúltimo parágrafo — não no primeiro.
 
 ### CTA orientado a comentários ou compartilhamentos
-- "Me conta nos comentários: como você especifica esquadrias hoje?"
-- "Manda esse post para o arquiteto ou construtor que precisa ver isso"
-- "Salva para mostrar no próximo briefing de projeto"
+- "Me conta nos comentários: como você escolhe uma pousada pet friendly hoje?"
+- "Manda esse post para o amigo tutor de pet que precisa ver isso"
+- "Salva para planejar a próxima viagem com seu pet"
 
 ---
 
@@ -72,7 +72,7 @@ A virada ou o insight principal fica no penúltimo parágrafo — não no primei
 ```
 IMAGEM: [o que a imagem mostra]
 TIPO DE LEGENDA: [narrativa / reflexão / lançamento / conexão]
-AVATAR: [arquiteto / construtor / proprietário]
+AVATAR: [persona LeAnge (tutora de alta renda 26–55, pet como filho de 4 patas; ver `_contexto/persona.md`)]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -113,7 +113,7 @@ VARIAÇÃO DE PRIMEIRA LINHA:
 - Legenda genérica que poderia ter sido escrita por qualquer empresa
 - Descrever a imagem na legenda — a imagem já se descreve
 - Mais de um CTA
-- Promessas absolutas de desempenho sem base técnica (ver `_contexto/preferencias.md`)
+- Promessas absolutas sem base real (ver `_contexto/preferencias.md`)
 - Ultrapassar 1.500 caracteres sem justificativa real de conteúdo
 
 ---
@@ -122,4 +122,4 @@ VARIAÇÃO DE PRIMEIRA LINHA:
 
 Após aprovação, salvar a legenda como **`_legenda.md`** (sempre com underscore) na pasta do
 conteúdo: `conteudo/post-estatico/[periodo]/[dia-tema]/_legenda.md`, sob a seção "LEGENDA APROVADA".
-É esse arquivo que o `/publicar-social-unity` lê na hora de publicar.
+É esse arquivo que o `/publicar-social-leange` lê na hora de publicar.

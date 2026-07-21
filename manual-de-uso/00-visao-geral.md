@@ -35,17 +35,17 @@ O sistema tem dois tipos de componentes:
 
 *Planejamento:*
 - `/calendario-comercial` — define o que e quando postar no mês
-- `/briefing-unity` — briefing completo de um post específico
+- `/briefing-leange` — briefing completo de um post específico
 
 *Hooks e capas:*
 - `/hooks-para-carrossel` — 5 opções de capa para carrossel
 - `/hooks-para-instagram-reels` — 7 opções de hook para Reel
 
 *Produção de conteúdo:*
-- `/carrossel-unity` — carrossel completo (texto + imagens + PNGs)
+- `/carrossel-leange` — carrossel completo (texto + imagens + PNGs)
 - `/carrossel-de-quebra-de-objecao` — carrossel de conversão que desmonta uma objeção
-- `/estatico-unity` — post estático (card único)
-- `/roteiro-unity` — roteiro de vídeo para Reels/TikTok
+- `/estatico-leange` — post estático (card único)
+- `/roteiro-leange` — roteiro de vídeo para Reels/TikTok
 
 *Legendas:*
 - `/legenda-para-carrossel` — legenda orientada a saves
@@ -54,15 +54,15 @@ O sistema tem dois tipos de componentes:
 
 *Imagem:*
 - `/gerador-de-prompts-de-imagem` — prompt otimizado para gpt-image-1
-- `/gerador-de-prompts-para-imagens-de-produto` — prompts para os estilos fotográficos de produto
+- `/gerador-de-prompts-para-imagens-da-pousada` — prompts para os estilos fotográficos de produto
 
 *Distribuição:*
 - `/1-conteudo-em-7-formatos` — adapta 1 conteúdo para 7 canais
 
 **Motores** — componentes internos chamados pelas skills de produção. Você raramente os chama diretamente:
-- `/gpt-image2-unity` — gera imagens via OpenAI (gpt-image-1)
-- `/nanobanana-unity` — gera imagens via Gemini (fallback gratuito)
-- `/image-gen-unity` — gera imagens via FAL API (fallback pago)
+- `/gpt-image2-leange` — gera imagens via OpenAI (gpt-image-1)
+- `/nanobanana-leange` — gera imagens via Gemini (fallback gratuito)
+- `/image-gen-leange` — gera imagens via FAL API (fallback pago)
 - `/ogilvy-copy` — escreve copy de marca e autoridade
 - `/schwartz-copy` — escreve copy de resposta direta (conversão)
 

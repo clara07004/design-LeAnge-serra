@@ -33,3 +33,18 @@ output/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Acervo de fotos da Serra — PESADO (~10GB de RAW); versionar só o catálogo e o buscador
+/fotos serra/*
+!/fotos serra/catalogo-imagens.md
+!/fotos serra/catalogo-imagens.csv
+!/fotos serra/buscar-fotos.py
+
+# Formatos de imagem/RAW pesados (complementa *.png/*.jpg/*.mp4 acima)
+*.jpeg
+*.JPEG
+*.CR3
+*.cr3
+*.dng
+*.heic
+*.HEIC
