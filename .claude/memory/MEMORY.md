@@ -1,7 +1,7 @@
-# Memória do agente designer-[empresa]
+# Memória do agente agente-leange
 
-Lastro versionado do Diretor de Design. Carregado no bootstrap do agente
-(`.claude/agents/designer-[empresa].md`). Uma linha por arquivo.
+Lastro versionado do Diretor de Arte da LeAnge. Carregado no bootstrap do agente
+(`.claude/agents/agente-leange.md`). Uma linha por arquivo.
 
 - [feedback_fonte_mobile](feedback_fonte_mobile.md) — escala tipográfica mobile de partida (headline 84–90px, body 44–46px); famílias Comfortaa + AvenirNext
 - [feedback_logo_path_html](feedback_logo_path_html.md) — path do logo nos HTMLs (5 níveis) e versão por fundo
