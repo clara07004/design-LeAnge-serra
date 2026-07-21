@@ -113,11 +113,34 @@ spacing: { xs: "16px", sm: "24px", md: "40px", lg: "64px", xl: "96px", section: 
 rounded: { sm: "4px", md: "8px", lg: "16px", pill: "9999px" }                               # OPERACIONAL
 
 # ----------------------------------------------------------------------------
-# ESTILO DE IMAGEM — NÃO DOCUMENTADO
-# Nenhum documento de direção visual / fotografia foi ingerido.
-# O documento de identidade traz apenas grafia, cores, tipografia, logos e boxes.
-# NÃO INFERIR estilos de foto, mood, backgrounds ou templates de layout.
-# Preencher fielmente somente quando houver um documento específico de direção de imagem.
+# ESTILO DE IMAGEM — DOCUMENTADO (jul/2026)
+# Fonte: engenharia reversa do Instagram @pousadaleange (2.258 posts; 183 imagens
+# analisadas visualmente). Consultar ANTES de gerar qualquer imagem/peça:
+#   - Princípios / identidade:  marca/sistema-de-design-leange.md   (topo)
+#   - Evidência observada:       marca/manual-linguagem-visual-instagram.md
+#   - Execução / receitas:       marca/dna-do-design-instagram.md
 # ----------------------------------------------------------------------------
 image_style:
-  status: nao-documentado
+  status: documentado
+  fonte: "marca/sistema-de-design-leange.md (+ manual e dna em marca/)"
+  tese: "A marca vende o fim de uma renúncia — viver descanso/natureza/afeto sem deixar o pet para trás. Provar, não prometer."
+  principio_mestre: "A fotografia real é a mensagem; texto e grafismo são servos da foto."
+  fotografia:
+    tipo: "foto real (celular/drone/action-cam) ou UGC de hóspede; nunca banco de imagens nem still de estúdio"
+    luz: "natural (dia claro, golden hour, contraluz) ou ambiente quente em interiores"
+    protagonista: "o pet, em foco emocional, à frente do humano"
+    mood: "caloroso, afetivo, autêntico; sensação de liberdade, descanso e pertencimento"
+    cenario_assinatura: "piscina de borda infinita + montanha + fachada terracota; ofurô/lareira/suíte de madeira"
+    tratamento: "sem LUT/filtro artificial; qualidade sem perder verdade"
+  texto_sobre_imagem:
+    regra: "foto aspiracional bonita NÃO leva texto; texto só em regra/pergunta/depoimento/institucional/promo"
+    cor: "branco (preto só em caso institucional solene sobre caixa clara)"
+    tipografia: "Comfortaa (arredondada); hierarquia por peso; caixa alta em títulos, sentence-case em copy emocional"
+    caixa: "quando houver, box translúcido (70-85%), cantos arredondados, cor da paleta oficial — preferir verde-oliva/verde-escuro; NÃO usar teal"
+    posicao: "topo (gancho/título) ou base (citação/CTA); nunca centro como elemento principal"
+  proibicoes:
+    - "preço/desconto/valor no criativo (salvo pedido explícito da Paola)"
+    - "logo grande/central, ou logo dentro de carrossel"
+    - "teal como cor de marca (desvio histórico a aposentar)"
+    - "grafia 'Le Ange'; hashtag com erro 'freindly'"
+    - "conteúdo da unidade Mar (este repositório é só Serra)"
